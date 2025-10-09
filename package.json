@@ -5,10 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:story": "bun run build:story && bun run watch:story & bun run dev",
-    "build": "vite build && bun run build:story-prod",
-    "build:story": "tweego src/story -o index.html",
-    "build:story-prod": "tweego src/story -o dist/story.html && cp dist/story.html dist/index.html",
+    "dev:story": "bun run watch:story & bun run dev",
     "watch:story": "tweego src/story -o index.html --watch",
     "preview": "vite preview",
     "format": "bun x prettier --write ."
