@@ -1,0 +1,38 @@
+:: StoryInterface
+<div id="interface">
+  <div id="menu" data-init-passage="menu"></div>
+  <div id="notifications" data-passage="notifications"></div>
+
+  <!-- you must have one element with #id of 'passages' --> 
+  <div id="passages">
+    <div class="passage" id="" data-passage=""></div>
+  </div>
+</div>
+<script>
+// Load the appropriate script based on environment
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+  // Development
+  const script = document.createElement('script');
+  script.src = 'src/main.ts';
+  script.type = 'module';
+  document.head.appendChild(script);
+} else {
+  // Production - load built assets
+  const cssFiles = ['assets/main.css']; // Adjust based on your actual build output
+  const jsFiles = ['assets/main.js'];   // Adjust based on your actual build output
+  
+  cssFiles.forEach(file => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = file;
+    document.head.appendChild(link);
+  });
+  
+  jsFiles.forEach(file => {
+    const script = document.createElement('script');
+    script.src = file;
+    script.type = 'module';
+    document.head.appendChild(script);
+  });
+}
+</script>

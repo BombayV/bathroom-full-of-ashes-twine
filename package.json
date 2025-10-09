@@ -1,21 +1,25 @@
 {
   "name": "the-bathroom-full-of-ashes",
-  "description": "A Twine story.",
-  "module": "index.ts",
-  "version": "1.0.0",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "bun run install-tweego && bun run index.ts",
-    "install-tweego": "bun run scripts/install-tweego.ts",
-    "watch": "bun run index.ts --watch",
-    "dev": "bun run watch"
+    "dev": "vite",
+    "dev:story": "bun run build:story && bun run watch:story & bun run dev",
+    "build": "vite build && bun run build:story-prod",
+    "build:story": "tweego src/story -o index.html",
+    "build:story-prod": "tweego src/story -o dist/story.html && cp dist/story.html dist/index.html",
+    "watch:story": "tweego src/story -o index.html --watch",
+    "preview": "vite preview",
+    "format": "bun x prettier --write ."
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.0.0",
-    "@types/bun": "latest",
-    "tailwindcss": "^4.0.0"
+    "prettier": "3.6.2",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.7"
   },
-  "peerDependencies": {
-    "typescript": "^5"
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "tailwindcss": "^4.1.14"
   }
 }

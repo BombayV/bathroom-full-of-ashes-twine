@@ -1,0 +1,14 @@
+:: Start
+You find yourself standing in a bathroom, the air thick with the scent of ash and something else you can't quite identify.
+
+The mirror above the sink is cracked, reflecting your face in fragmented pieces. A small pile of ashes sits on the edge of the bathtub.
+
+<div class="bg-red-500">
+hello
+</div>
+<button id="counter" type="button"></button>
+What do you do?
+
+[[Examine the mirror->Mirror]]
+[[Look at the ashes->Ashes]]
+[[Try to leave->Door]]

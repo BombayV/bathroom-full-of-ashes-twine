@@ -1,0 +1,71 @@
+:: Mirror
+The mirror's surface is spider-webbed with cracks. In the fractured reflection, you see yourself, but something seems... different. Your eyes look older, more haunted.
+
+As you lean closer, you notice writing etched into the glass: "Remember what you've forgotten."
+
+[[Touch the cracks->Crack]]
+[[Read the writing again->Writing]]
+[[Step back->Start]]
+
+:: Ashes
+The ashes are fine and gray, like the remains of old photographs. As you reach out to touch them, they seem to shift slightly, as if stirred by an unfelt breeze.
+
+There's something underneath... a small, tarnished key.
+
+[[Take the key->Key]]
+[[Disturb the ashes->Disturb]]
+[[Leave them alone->Start]]
+
+:: Door
+You walk to the door and turn the handle. It doesn't budge. You try pushing, pulling, even shouldering against it, but it remains firmly shut.
+
+There's no keyhole visible, just smooth wood and peeling paint.
+
+[[Bang on the door->Bang]]
+[[Examine the door frame->Frame]]
+[[Give up and turn around->Start]]
+
+:: Crack
+As your finger traces one of the cracks, the mirror suddenly becomes warm. The reflection shifts, showing not your current self, but you from years ago, happier, before...
+
+Before what? The memory feels just out of reach.
+
+[[Press harder->Memory]]
+[[Pull your hand away->Mirror]]
+
+:: Writing
+"Remember what you've forgotten." The words seem to pulse with meaning, but what have you forgotten? The bathroom itself feels familiar, like a place from a dream.
+
+[[Close your eyes and try to remember->Remember]]
+[[Look around the room with new eyes->Start]]
+
+:: Key
+The key is small and ornate, with a strange symbol etched into its surface. It feels warm in your palm, almost alive.
+
+[[Examine the symbol->Symbol]]
+[[Look for what it might unlock->Search]]
+[[Put it in your pocket->Pocket]]
+
+:: Disturb
+As you stir the ashes with your finger, they swirl up in an impossible spiral, forming shapes in the air. For a moment, you see faces—people you should know but don't quite remember.
+
+The ashes settle back down, but now they spell out a single word: "SOON"
+
+[[Try to disturb them again->Ashes]]
+[[Back away slowly->Start]]
+
+:: Bang
+Your fists against the door echo strangely, as if the sound is being absorbed. After a moment of silence, you hear something—footsteps on the other side, slow and deliberate.
+
+They stop right outside the door.
+
+[[Call out "Hello?"->Hello]]
+[[Listen carefully->Listen]]
+[[Step away from the door->Start]]
+
+:: Frame
+Running your hands along the door frame, you find it's not quite right. The wood feels newer here, as if this door was added recently to seal something in... or someone.
+
+[[Push against the frame->Push]]
+[[Look for hidden switches->Switch]]
+[[Give up->Start]]
