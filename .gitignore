@@ -1,7 +1,6 @@
 .DS_Store
 .vscode
 
-/dist
 /build
 /node_modules
 !.env

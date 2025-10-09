@@ -37,69 +37,24 @@ async function installTweego() {
     const isLinux = platform === "linux";
     const isMacOS = platform === "darwin";
     
-    let downloadUrl = TWEEGO_URL; // Default to Linux
-    
-    if (isMacOS) {
+    if (isLinux) {
+      console.log("🐧 Detected Linux platform");
+      await $`curl -L ${TWEEGO_URL} | tar -xz -C ./bin --strip-components=1`;
+    } else if (isMacOS) {
       console.log("🍎 Detected macOS platform");
-      downloadUrl = TWEEGO_MACOS_URL;
+      await $`curl -L ${TWEEGO_MACOS_URL} | tar -xz -C ./bin --strip-components=1`;
     } else {
-      console.log("🐧 Using Linux binary");
+      // Fallback to Linux binary for other platforms (like Cloudflare)
+      console.log("☁️ Using Linux binary for deployment");
+      await $`curl -L ${TWEEGO_URL} | tar -xz -C ./bin --strip-components=1`;
     }
     
-    console.log(`📡 Downloading from: ${downloadUrl}`);
-    
-    // Download and extract in separate steps for better error handling
-    await $`curl -L -o ./bin/tweego.tar.gz ${downloadUrl}`;
-    console.log("✅ Download completed");
-    
-    // Extract the tar.gz file
-    await $`cd ./bin && tar -xzf tweego.tar.gz`;
-    console.log("✅ Extraction completed");
-    
-    // Find the tweego binary and move it to the right place
-    try {
-      // Try to find tweego binary in extracted files
-      const result = await $`find ./bin -name "tweego" -type f`.text();
-      const tweegoPath = result.trim().split('\n')[0];
-      
-      if (tweegoPath && tweegoPath !== TWEEGO_PATH) {
-        await $`mv ${tweegoPath} ${TWEEGO_PATH}`;
-        console.log(`✅ Moved tweego from ${tweegoPath} to ${TWEEGO_PATH}`);
-      }
-    } catch (findError) {
-      console.log("⚠️ Could not find tweego binary, trying alternative extraction...");
-      // Alternative: extract with strip-components
-      await $`cd ./bin && tar -xzf tweego.tar.gz --strip-components=1`;
-    }
-    
-    // Clean up tar file
-    await $`rm -f ./bin/tweego.tar.gz`;
-    
-    // Make executable if file exists
-    if (existsSync(TWEEGO_PATH)) {
-      await $`chmod +x ${TWEEGO_PATH}`;
-      console.log("✅ Made tweego executable");
-    } else {
-      throw new Error("Tweego binary not found after extraction");
-    }
+    // Make executable
+    await $`chmod +x ${TWEEGO_PATH}`;
     
     console.log("✅ Tweego installed successfully");
-    
-    // Test the installation
-    await $`${TWEEGO_PATH} --version`;
-    console.log("✅ Tweego installation verified");
-    
   } catch (error) {
     console.error("❌ Failed to install Tweego:", error);
-    
-    // Debug: list what's in the bin directory
-    try {
-      console.log("📁 Contents of ./bin directory:");
-      await $`ls -la ./bin/`;
-    } catch (lsError) {
-      console.log("Could not list bin directory contents");
-    }
-    
     process.exit(1);
   }
 }
