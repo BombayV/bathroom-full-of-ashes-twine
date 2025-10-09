@@ -1,12 +1,14 @@
 {
   "name": "the-bathroom-full-of-ashes",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "dev:story": "bun run watch:story & bun run dev",
     "watch:story": "tweego src/story -o index.html --watch",
+    "build": "vite build && node build-story.js",
+    "build:story": "node build-story.js",
     "preview": "vite preview",
     "format": "bun x prettier --write ."
   },

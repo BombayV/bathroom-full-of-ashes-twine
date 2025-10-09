@@ -1,5 +1,7 @@
 # Ignore artifacts:
 build
+dist
+node_modules
 coverage
 index.html
 /storyformats
