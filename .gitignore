@@ -5,3 +5,7 @@
 /build
 /node_modules
 !.env
+
+# Tweego binary (downloaded during build)
+/bin/tweego
+/bin/

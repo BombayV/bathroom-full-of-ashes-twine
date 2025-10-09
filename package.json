@@ -5,7 +5,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "bun run index.ts",
+    "build": "bun run install-tweego && bun run index.ts",
+    "install-tweego": "bun run scripts/install-tweego.ts",
     "watch": "bun run index.ts --watch",
     "dev": "bun run watch"
   },

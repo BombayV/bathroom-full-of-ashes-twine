@@ -25,7 +25,7 @@ body {
 body[data-passage="Start"] {
   background: linear-gradient(45deg, #1a1a2e, #16213e);
 }
-a
+
 body[data-passage="Bathroom"] {
   background: black;
 }

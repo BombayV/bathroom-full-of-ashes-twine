@@ -3,9 +3,10 @@
 import { $ } from "bun";
 import { watch } from "fs";
 import { join } from "path";
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync, existsSync } from "fs";
 
-const TWEEGO_PATH = "tweego"; // Assumes tweego is in PATH
+// Try to use local tweego first, fall back to PATH
+const TWEEGO_PATH = existsSync("./bin/tweego") ? "./bin/tweego" : "tweego";
 const SRC_DIR = "./src";
 const OUTPUT_DIR = "./dist";
 const OUTPUT_FILE = join(OUTPUT_DIR, "index.html");
