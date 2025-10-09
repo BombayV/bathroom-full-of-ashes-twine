@@ -33,11 +33,33 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Prepare site directory
+        run: |
+          # Copy Twine story files from Stories into a public/ folder
+          mkdir -p public
+          if [ -d "Stories" ]; then
+            cp -R Stories/. public/
+          else
+            echo "No Stories directory found"
+          fi
+          touch public/.nojekyll
+          html_count=$(ls -1 public/*.html 2>/dev/null | wc -l || true)
+          if [ "${html_count}" = "1" ]; then
+            single_html=$(ls public/*.html | head -n1)
+            if [ "$(basename "$single_html")" != "index.html" ]; then
+              mv "$single_html" public/index.html
+              echo "Renamed $single_html to public/index.html"
+            fi
+          fi
+      - name: List prepared site files
+        run: |
+          echo "Prepared public/ contents:" 
+          ls -la public || true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # Upload only the prepared site (Twine story files)
+          path: 'public'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

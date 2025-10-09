@@ -1,0 +1,35 @@
+:: StoryTitle
+The Bathroom Full of Ashes
+
+
+:: StoryData
+{
+  "ifid": "BAB3DCD8-0757-4421-B0D0-CB661C4F2B93",
+  "format": "Snowman",
+  "format-version": "2.0.2",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: Bathroom {"position":"750,575","size":"100,100"}
+
+
+
+:: Start {"position":"625,375","size":"100,100"}
+
+
+
+:: Untitled Passage {"position":"625,725","size":"100,100"}
+
+
+
+:: StoryScript [script]
+(() => {
+  var link = document.createElement('link');
+  link.rel = 'icon';
+
+  link.href = 'https://cdn.bombayv.com/the_bathroom_full_of_ashes.png';
+
+  document.head.appendChild(link);
+})();
