@@ -1,9 +1,7 @@
 import { setupCounter } from '../scripts/counter';
 
 const EVENTS: Record<string, () => void> = {
-  Start: () => {
-    setTimeout(() => setupCounter(document.querySelector<HTMLButtonElement>('#counter')!), 50);
-  },
+  Loading: () => {},
 };
 
 const passageInitHandler = (e: any) => {

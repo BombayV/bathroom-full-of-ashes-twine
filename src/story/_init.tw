@@ -1,11 +1,10 @@
 :: StoryInterface
-<div id="interface">
-  <div id="menu" data-init-passage="menu"></div>
-  <div id="notifications" data-passage="notifications"></div>
-
-  <!-- you must have one element with #id of 'passages' --> 
-  <div id="passages">
-    <div class="passage" id="" data-passage=""></div>
-  </div>
+<div id="interface" class="bg-neutral-950 w-full h-dvh relative flex items-center justify-start">
+  <div id="passages" class="w-full h-full relative"></div>
 </div>
+
 <script src="src/main.ts" type="module"></script>
+
+:: StoryInit
+<<run Config.saves.isAllowed = function() { return false; }>>
+<<run Config.history.controls = false>>

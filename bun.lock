@@ -5,6 +5,7 @@
       "name": "the-bathroom-full-of-ashes",
       "dependencies": {
         "@tailwindcss/vite": "^4.1.14",
+        "@types/twine-sugarcube": "^2.37.2",
         "tailwindcss": "^4.1.14",
       },
       "devDependencies": {
@@ -154,6 +155,12 @@
     "@tailwindcss/vite": ["@tailwindcss/vite@4.1.14", "", { "dependencies": { "@tailwindcss/node": "4.1.14", "@tailwindcss/oxide": "4.1.14", "tailwindcss": "4.1.14" }, "peerDependencies": { "vite": "^5.2.0 || ^6 || ^7" } }, "sha512-BoFUoU0XqgCUS1UXWhmDJroKKhNXeDzD7/XwabjkDIAbMnc4ULn5e2FuEuBbhZ6ENZoSYzKlzvZ44Yr6EUDUSA=="],
 
     "@types/estree": ["@types/estree@1.0.8", "", {}, "sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w=="],
+
+    "@types/jquery": ["@types/jquery@3.5.33", "", { "dependencies": { "@types/sizzle": "*" } }, "sha512-SeyVJXlCZpEki5F0ghuYe+L+PprQta6nRZqhONt9F13dWBtR/ftoaIbdRQ7cis7womE+X2LKhsDdDtkkDhJS6g=="],
+
+    "@types/sizzle": ["@types/sizzle@2.3.10", "", {}, "sha512-TC0dmN0K8YcWEAEfiPi5gJP14eJe30TTGjkvek3iM/1NdHHsdCA/Td6GvNndMOo/iSnIsZ4HuuhrYPDAmbxzww=="],
+
+    "@types/twine-sugarcube": ["@types/twine-sugarcube@2.37.2", "", { "dependencies": { "@types/jquery": "*" } }, "sha512-ta3swJxlp3YUxo9hElYhar+MC5mG+TirKhmBr8+67nU5DfgqJK7SrIF05W54yaIRei9KNZDwAvgg/mu8PyTa4Q=="],
 
     "chownr": ["chownr@3.0.0", "", {}, "sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g=="],
 

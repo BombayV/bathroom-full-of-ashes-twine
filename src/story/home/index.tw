@@ -1,0 +1,49 @@
+:: MainMenu
+<div class="w-full relative flex flex-col h-full px-8 md:px-10 lg:px-24 overflow-y-auto">
+  <h1 class="text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bbh text-neutral-50 drop-shadow-lg z-10 max-w-sm md:max-w-lg xl:max-w-2xl">
+    The Bathroom Full of Ashes
+  </h1>
+  <div class="flex flex-col gap-y-0 z-10 mt-16 font-lora font-medium w-fit">
+    <button
+      class="text-neutral-300 text-3xl lg:text-5xl 2xl:text-6xl text-left flex items-center justify-start -skew-x-12 hover:text-amber-100 cursor-pointer transition-colors duration-300"
+      onclick="Engine.play('StartGame')"
+    >
+      Start Game
+    </button>
+    <button
+      id="fullscreen-button"
+      class="text-neutral-300 text-3xl lg:text-5xl 2xl:text-6xl text-left flex items-center justify-start -skew-x-12 hover:text-amber-100 cursor-pointer transition-colors duration-300"
+    >
+      Full Screen
+    </button>
+  </div>
+  <p class="fixed bottom-4 left-1/2 -translate-x-1/2 text-sm text-neutral-400 z-10 select-none">
+    © 2025 BombayV Games
+  </p>
+  <div class="fixed inset-0 flex items-center justify-center z-0">
+    <img src="/images/background.jpg" alt="Background" class="w-full h-full object-cover" 
+      style="filter: grayscale(100%);"
+    />
+    <span class="absolute inset-0 bg-black/50 backdrop-blur z-50"></span>
+  </div>
+</div>
+
+<<script>>
+const toggleFullscreen = () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+};
+
+setTimeout(() => {
+  const fsButton = document.getElementById('fullscreen-button');
+  const dialog = document.querySelector('dialog');
+  fsButton?.addEventListener('click', toggleFullscreen);
+  dialog?.showModal();
+}, 100);
+
+<</script>>

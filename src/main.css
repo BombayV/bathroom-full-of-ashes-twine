@@ -1,1 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import 'tailwindcss';
+
+@theme {
+  --font-lora: 'Lora', serif;
+  --font-bbh: 'BBH Sans Bartle', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply m-0 p-0 box-border font-lora;
+  }
+
+ .passage {
+    line-height: normal;
+    @apply h-dvh overflow-hidden;
+  } 
+}

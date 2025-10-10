@@ -1,14 +1,22 @@
 :: Start
-You find yourself standing in a bathroom, the air thick with the scent of ash and something else you can't quite identify.
-
-The mirror above the sink is cracked, reflecting your face in fragmented pieces. A small pile of ashes sits on the edge of the bathtub.
-
-<div class="bg-red-950">
-hello
+<div
+  id="loading"
+  class="gap-y-2 w-full relative h-dvh flex flex-col items-center justify-center opacity-100"
+>
+  <img
+    src="/images/the_bathroom_full_of_ashes.png"
+    alt="Hat"
+    class="w-80 h-auto opacity-0 transition-opacity duration-6000"
+  />
+  <p
+    class="text-2xl font-bbh text-neutral-400 drop-shadow transition-opacity duration-6000 opacity-0"
+  >
+    BombayV Games
+  </p>
 </div>
-<button id="counter" type="button"></button>
-What do you do? Idk?
 
-[[Examine the mirror->Mirror]]
-[[Look at the ashes->Ashes]]
-[[Try to leave->Door]]
+<!-- prettier-ignore -->
+<<script>>initLoadingAnimation(() => {
+  console.log("Loading animation complete, starting game...");
+  Engine.play('MainMenu');
+});<</script>>

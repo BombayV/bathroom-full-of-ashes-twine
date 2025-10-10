@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
+    "@types/twine-sugarcube": "^2.37.2",
     "tailwindcss": "^4.1.14"
   }
 }
