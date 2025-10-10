@@ -14,6 +14,30 @@
 
 <!-- prettier-ignore -->
 <<script>>
+const initLoadingAnimation = (cb) => {
+  setTimeout(() => {
+    const loading = document.getElementById('loading');
+    if (loading) {
+      setTimeout(() => {
+        const img = loading.querySelector('img');
+        const p = loading.querySelector('p');
+        if (img) img.classList.remove('opacity-0');
+        if (p) p.classList.remove('opacity-0');
+        setTimeout(() => {
+          if (loading) {
+            if (p) p.classList.add('opacity-0');
+            if (img) img.classList.add('opacity-0');
+            setTimeout(() => {
+              console.log('Loading animation complete');
+              if (cb) cb();
+            }, 6000);
+          }
+        }, 6000);
+      }, 100);
+    }
+  }, 100);
+};
+
 // Set image source with better error handling
 setTimeout(() => {
   const img = document.getElementById('bathroom-image');

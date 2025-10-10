@@ -204,6 +204,30 @@ setTimeout(() =&gt; {
 
 &lt;!-- prettier-ignore --&gt;
 &lt;&lt;script&gt;&gt;
+const initLoadingAnimation = (cb) =&gt; {
+  setTimeout(() =&gt; {
+    const loading = document.getElementById(&#39;loading&#39;);
+    if (loading) {
+      setTimeout(() =&gt; {
+        const img = loading.querySelector(&#39;img&#39;);
+        const p = loading.querySelector(&#39;p&#39;);
+        if (img) img.classList.remove(&#39;opacity-0&#39;);
+        if (p) p.classList.remove(&#39;opacity-0&#39;);
+        setTimeout(() =&gt; {
+          if (loading) {
+            if (p) p.classList.add(&#39;opacity-0&#39;);
+            if (img) img.classList.add(&#39;opacity-0&#39;);
+            setTimeout(() =&gt; {
+              console.log(&#39;Loading animation complete&#39;);
+              if (cb) cb();
+            }, 6000);
+          }
+        }, 6000);
+      }, 100);
+    }
+  }, 100);
+};
+
 // Set image source with better error handling
 setTimeout(() =&gt; {
   const img = document.getElementById(&#39;bathroom-image&#39;);
