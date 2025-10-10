@@ -21,7 +21,7 @@
     © 2025 BombayV Games
   </p>
   <div class="fixed inset-0 flex items-center justify-center z-0">
-    <img src="/images/background.jpg" alt="Background" class="w-full h-full object-cover" 
+    <img id="background-image" alt="Background" class="w-full h-full object-cover" 
       style="filter: grayscale(100%);"
     />
     <span class="absolute inset-0 bg-black/50 backdrop-blur z-50"></span>
@@ -29,6 +29,38 @@
 </div>
 
 <<script>>
+// Load background image with fallback paths
+setTimeout(() => {
+  const backgroundImg = document.getElementById('background-image');
+  if (backgroundImg) {
+    const possiblePaths = [
+      'assets/images/background.jpg',
+      './assets/images/background.jpg',
+      '/assets/images/background.jpg'
+    ];
+    
+    const testBackgroundPath = (path, index = 0) => {
+      if (index >= possiblePaths.length) {
+        console.error('Could not load background image from any path');
+        return;
+      }
+      
+      const testImg = new Image();
+      testImg.onload = () => {
+        backgroundImg.src = path;
+        console.log('Background image loaded successfully from:', path);
+      };
+      testImg.onerror = () => {
+        console.log('Failed to load background from:', path);
+        testBackgroundPath(possiblePaths[index + 1], index + 1);
+      };
+      testImg.src = path;
+    };
+    
+    testBackgroundPath(possiblePaths[0]);
+  }
+}, 10);
+
 const toggleFullscreen = () => {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();

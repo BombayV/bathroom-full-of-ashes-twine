@@ -2,6 +2,9 @@ import './main.css';
 import { passageInitHandler } from './assets/events/passageInitHandler.ts';
 import { passageEndHandler } from './assets/events/passageEndHandler.ts';
 
+// Make image path available globally for Twine
+(window as any).bathroomImagePath = 'assets/images/the_bathroom_full_of_ashes.png';
+
 // Loading animation function
 export const initLoadingAnimation = (cb?: () => void) => {
   setTimeout(() => {

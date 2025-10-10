@@ -3,11 +3,8 @@
   id="loading"
   class="gap-y-2 w-full relative h-dvh flex flex-col items-center justify-center opacity-100"
 >
-  <img
-    src="/images/the_bathroom_full_of_ashes.png"
-    alt="Hat"
-    class="w-80 h-auto opacity-0 transition-opacity duration-6000"
-  />
+  <!-- prettier-ignore -->
+  <img id="bathroom-image" alt="Hat" class="w-80 h-auto opacity-0 transition-opacity duration-6000" />
   <p
     class="text-2xl font-bbh text-neutral-400 drop-shadow transition-opacity duration-6000 opacity-0"
   >
@@ -16,7 +13,43 @@
 </div>
 
 <!-- prettier-ignore -->
-<<script>>initLoadingAnimation(() => {
+<<script>>
+// Set image source with better error handling
+setTimeout(() => {
+  const img = document.getElementById('bathroom-image');
+  if (img) {
+    // Try different possible paths
+    const possiblePaths = [
+      'assets/images/the_bathroom_full_of_ashes.png',
+      './assets/images/the_bathroom_full_of_ashes.png',
+      '/assets/images/the_bathroom_full_of_ashes.png'
+    ];
+    
+    // Test which path works
+    const testPath = (path, index = 0) => {
+      if (index >= possiblePaths.length) {
+        console.error('Could not load image from any path');
+        return;
+      }
+      
+      const testImg = new Image();
+      testImg.onload = () => {
+        img.src = path;
+        console.log('Image loaded successfully from:', path);
+      };
+      testImg.onerror = () => {
+        console.log('Failed to load from:', path);
+        testPath(possiblePaths[index + 1], index + 1);
+      };
+      testImg.src = path;
+    };
+    
+    testPath(possiblePaths[0]);
+  }
+}, 10);
+
+initLoadingAnimation(() => {
   console.log("Loading animation complete, starting game...");
   Engine.play('MainMenu');
-});<</script>>
+});
+<</script>>
