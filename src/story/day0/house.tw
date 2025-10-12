@@ -1,0 +1,107 @@
+:: HouseDay0-0
+<div class="dialog">
+  <p class="title">Narrator</p>
+  <p class="typing-effect">
+Hours later. Your car turns onto your street. But something is horribly wrong. The night sky, which should be dark, is lit by an unnatural, hellish orange glow. Flashing red and blue lights paint the houses and trees.
+</p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->HouseDay0-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: HouseDay0-1
+<div class="dialog">
+  <p class="title">Narrator</p>
+  <p class="typing-effect">
+  <span class="italic text-neutral-400">A knot of dread tightens in your stomach. You slam on the brakes in the middle of the road.</span>
+  Your house... or what's left of it. The structure is a blackened, skeletal frame, smoke still billowing from the charred timbers. The roof has collapsed inward. It is surrounded by police tape, fire trucks, and patrol cars.
+</p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->HouseDay0-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: HouseDay0-2
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+  No... no, no, no...
+  <span class="italic text-neutral-400">You throw the car door open and sprint towards the yellow tape, your mind a roaring void of panic.</span>
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->HouseDay0-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: HouseDay0-3
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+  <span class="italic text-neutral-400">You shout.</span>
+  ELENA! LILY!
+  <span class="italic text-neutral-400">A uniformed officer steps in your path, holding up a hand to stop you.</span>
+</p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->HouseDay0-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: HouseDay0-4
+<div class="dialog">
+  <p class="title">Officer</p>
+  <p class="typing-effect">
+  Sir, please step back. This is an ongoing crime scene. You can't go in there.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->HouseDay0-5]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: HouseDay0-5
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+  <span class="italic text-neutral-400">You are trembling, your voice breaking.</span>
+  That's my house! My family is in there!
+  <span class="italic text-neutral-400">Just then, Chief Miller pushes through the crowd. His face is grim.</span>
+</p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->HouseDay1-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>

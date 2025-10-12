@@ -13,7 +13,7 @@
 
   .passage {
     line-height: normal;
-    transition: opacity 1.5s ease-in !important;
+    transition: opacity 0.7s ease-in !important;
     @apply h-dvh overflow-hidden;
   }
 
@@ -22,9 +22,19 @@
   }
 }
 
+@keyframes blinking-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #61afef;
+  }
+}
+
 @layer components {
   .btn {
-    @apply bg-neutral-800 hover:bg-neutral-700 transition-colors duration-300 text-neutral-200 py-1 px-4 rounded-sm w-full max-w-xs -skew-x-4 text-left border border-transparent hover:border-amber-50/30 cursor-pointer;
+    @apply bg-neutral-800 hover:bg-neutral-700 transition-colors duration-300 text-neutral-200 rounded-sm w-full -skew-x-4 text-left border border-transparent hover:border-amber-50/30 cursor-pointer;
   }
 
   .separator {
@@ -32,6 +42,42 @@
   }
 
   .dialog {
-    @apply fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-xl text-neutral-300 bg-neutral-900 py-3 px-6 rounded-sm border-neutral-700 border flex gap-2 flex-col items-start justify-start -skew-x-6;
+    @apply whitespace-pre-line text-pretty fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-xl text-neutral-300 bg-neutral-900 py-3 px-6 rounded-sm border-neutral-700 border flex gap-2 flex-col items-start justify-start -skew-x-6;
+  }
+
+  .title {
+    @apply text-amber-50 text-lg font-bold underline relative h-fit w-fit;
+  }
+
+  .me {
+    @apply blur-sm rounded-full select-none;
+  }
+
+  .typing-effect .cursor {
+    display: inline-block;
+    background-color: #61afef;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blinking-cursor 0.75s step-end infinite;
+  }
+
+  /* Ensure consistent styling during typing animation */
+  .typing-effect > span:first-child {
+    @apply inline;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .typing-effect > span:first-child * {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .link-internal {
+    display: inline-block;
+    width: 100% !important;
+    @apply py-1 px-4;
   }
 }

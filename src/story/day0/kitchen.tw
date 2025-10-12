@@ -1,0 +1,358 @@
+:: KitchenDay0
+<div class="dialog">
+  <p class="title">Narrator</p>
+  <p class="typing-effect">
+Sunlight streams into a warm, lived-in kitchen in a Newark suburb. The smell of coffee and pancakes is in the air.  
+<strong>Lily</strong>, a bright-eyed girl with a missing front tooth, is sitting at the kitchen table, scribbling furiously in a drawing pad with crayons. 
+<strong>Elena</strong>, her mother, stands at the stove, humming softly as she flips a pancake. She has a kind, gentle face. 
+You are sitting opposite <strong>Lily</strong>, nursing a mug of coffee. You're off-duty, dressed in a simple t-shirt and jeans. You look tired, but happy.
+</p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->KitchenDay0-1]]
+  </button>
+</div>
+
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: KitchenDay0-1
+<div class="dialog">
+  <p class="title">Lily</p>
+  <p class="typing-effect">
+Dad, are you looking? I'm almost done. It's a masterpiece.
+</p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->KitchenDay0-2]]
+  </button>
+</div>
+
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: KitchenDay0-2
+<div class="dialog">
+  <p class="title me">
+    Who am I?
+  </p>
+  <p class="typing-effect">
+I'm always looking, sweetie. Wouldn't miss a masterpiece for the world. 
+<span class="italic text-neutral-400">Elena places a plate with a perfectly golden pancake in front of Lily.</span>
+</p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->KitchenDay0-3]]
+  </button>
+</div>
+
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: KitchenDay0-3
+<div class="dialog">
+  <p class="title">Elena</p>
+  <p class="typing-effect">
+An artist needs her fuel. Eat up, Picasso. 
+<span class="italic text-neutral-400">Lily beams and shows you her drawing. It's a crayon portrait of the three of you holding hands in front of your house. They are all smiling stick-figures.</span>
+</p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->KitchenDay0-3-Dialog]]
+  </button>
+</div>
+
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: KitchenDay0-3-Dialog
+<div class="dialog">
+  <p class="title">
+    What do you say?
+  </p>
+  <p class="typing-effect">
+    Lily shows you her drawing proudly.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[A. It's perfect sweetie. The best team in the whole world.->KitchenDay0-4]]
+  </button>
+  <button class="btn">
+    [[B. Hmm, I notice you gave me bigger ears. Trying to tell me something?->KitchenDay0-4]]
+  </button>
+  <button class="btn">
+    [[C. Look at that composition. This is definitely going on the fridge.->KitchenDay0-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: KitchenDay0-4
+<div class="dialog">
+  <p class="title">Elena</p>
+  <p class="typing-effect">
+    <span class="italic text-neutral-400">Leaning over to kiss your cheek.</span>
+    We'll have to buy a bigger fridge soon. So, you have the day off. Any plans?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[A. I was thinking of finally tackling that leaky faucet, then a movie marathon with my two favorite girls.->KitchenDay0-5]]
+  </button>
+  <button class="btn">
+    [[B. I'll see how long I can sit on that couch before I become a permanent part of it.->KitchenDay0-5]]
+  </button>
+  <button class="btn">
+    [[C. The weather's nice. Maybe we could hit the park before our movie marathon.->KitchenDay0-5]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: KitchenDay0-5
+<div class="dialog">
+  <p class="title">Lily</p>
+  <p class="typing-effect">
+    <span class="italic text-neutral-400">Mouth full of pancake.</span>
+    Can we watch Starship Explorers again? Please!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->KitchenDay0-6]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: KitchenDay0-6
+<div class="dialog">
+  <p class="title">
+  Narrator
+  </p>
+  <p class="typing-effect">
+    Before you can answer, your phone, sitting on the counter, buzzes with a distinct, serious-sounding ringtone. A picture of a gruff, mustached man appears on the screen, labeled <strong>"CHIEF MILLER."</strong>
+    <span class="italic text-neutral-400">Elena and Lily exchange a worried glance.</span>
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->ChiefMillerCall]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: ChiefMillerCall
+<div class="dialog">
+  <p class="title">Elena</p>
+  <p class="typing-effect">
+    Don't they ever rest?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->ChiefMillerCall-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: ChiefMillerCall-1
+<div class="dialog">
+  <p class="title me">
+    Who am I?
+  </p>
+  <p class="typing-effect">
+    Only when we're sleeping.
+    <span class="italic text-neutral-400">You get up and answer the phone, your voice shifting to a more professional tone.</span>
+    Miller.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Answer the call->ChiefMillerCall-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: ChiefMillerCall-2
+<div class="dialog">
+  <p class="title">Who am I?</p>
+  <p class="typing-effect">
+    <span class="italic text-neutral-400">Into phone.</span>
+    Yeah, it's me... I saw the preliminary report... No, no, it's fine. Give me twenty, I'm on my way.
+    <span class="italic text-neutral-400">You hang up, a grim expression on your face.</span>
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Hang up->ChiefMillerCall-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: ChiefMillerCall-3
+<div class="dialog">
+  <p class="title">Elena</p>
+  <p class="typing-effect">
+    The Crimson Syndicate case?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->ChiefMillerCall-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: ChiefMillerCall-4
+<div class="dialog">
+  <p class="title me">
+    Who am I?
+  </p>
+  <p class="typing-effect">
+    We got a new lead. A possible warehouse location down by the port. Miller wants me to do a quiet, preliminary scout. Get some photos, see what the chatter is. I shouldn't be long.
+
+    <span class="italic text-neutral-400">You walk over and kiss Lily on the top of her head.</span> 
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->ChiefMillerCall-5]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: ChiefMillerCall-5
+<div class="dialog">
+  <p class="title me">
+    Who am I?
+  </p>
+  <p class="typing-effect">
+    I'll be back before you can finish that pancake, superstar. And you have to promise to save me a spot on the couch for the movie.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->ChiefMillerCall-6]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+
+:: ChiefMillerCall-6
+<div class="dialog">
+  <p class="title">
+    Lily
+  </p>
+  <p class="typing-effect">
+    I promise daddy! Be careful!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->ChiefMillerCall-7]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: ChiefMillerCall-7
+<div class="dialog">
+  <p class="title me">
+    Who am I?
+  </p>
+  <p class="typing-effect">
+    <span class="italic text-neutral-400">You turn to Elena, your expression softening.</span>
+    I'll be back for dinner. I promise.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->ChiefMillerCall-8]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: ChiefMillerCall-8
+<div class="dialog">
+  <p class="title">Elena</p>
+  <p class="typing-effect">
+    Just.., be safe.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->ChiefMillerCall-9]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: ChiefMillerCall-9
+<div class="dialog">
+  <p class="title me">
+    Who am I?
+  </p>
+  <p class="typing-effect">
+    Always.
+    <span class="italic text-neutral-400">
+      You grab your jacket and keys from a hook by the door and head out. The last thing you see is Elena and Lily, smiling at you from the kitchen table.
+    </span>
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day0ChangeScene]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>

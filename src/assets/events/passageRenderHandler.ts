@@ -10,7 +10,10 @@ const EVENTS: Record<string, () => void> = {
     InitMainMenu();
   },
   Day0: () => {
-    DayTransition('MainMenu', 'day-0');
+    DayTransition('KitchenDay0', 'day-0');
+  },
+  Day0ChangeScene: () => {
+    DayTransition('HouseDay0-0', 'day-0-change');
   },
 };
 
