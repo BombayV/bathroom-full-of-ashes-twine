@@ -15,4 +15,22 @@
     line-height: normal;
     @apply h-dvh overflow-hidden;
   }
+
+  br {
+    display: none;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply bg-neutral-800 hover:bg-neutral-700 transition-colors duration-300 text-neutral-200 py-1 px-4 rounded-sm w-full max-w-xs -skew-x-4 text-left border border-transparent hover:border-amber-50/30 cursor-pointer;
+  }
+
+  .separator {
+    @apply h-0.5 w-3/4 bg-neutral-700/30 mx-auto my-2;
+  }
+
+  .dialog {
+    @apply fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-xl text-neutral-300 bg-neutral-900 py-3 px-6 rounded-sm border-neutral-700 border flex gap-2 flex-col items-start justify-start -skew-x-6;
+  }
 }

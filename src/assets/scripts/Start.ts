@@ -45,5 +45,5 @@ export const InitStart = () => {
         SugarCubeUtils.goToPassage('MainMenu');
       });
     });
-  }, 0);
+  }, 100);
 };

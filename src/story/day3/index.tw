@@ -1,2 +1,6 @@
 :: Day3
-Day 3
+<div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <h1 id="day-3" class="text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out">
+    Day 3
+  </h1>
+</div>

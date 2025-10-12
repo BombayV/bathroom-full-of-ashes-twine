@@ -1,3 +1,4 @@
+import { DayTransition } from '../scripts/DayTransition';
 import { InitMainMenu } from '../scripts/MainMenu';
 import { InitStart } from '../scripts/Start';
 
@@ -7,6 +8,9 @@ const EVENTS: Record<string, () => void> = {
   },
   MainMenu: () => {
     InitMainMenu();
+  },
+  Day0: () => {
+    DayTransition('MainMenu', 'day-0');
   },
 };
 
