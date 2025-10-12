@@ -1,6 +1,7 @@
 import './main.css';
 import { passageInitHandler } from './assets/events/passageInitHandler.ts';
 import { passageEndHandler } from './assets/events/passageEndHandler.ts';
+import { passageRenderHandler } from './assets/events/passageRenderHandler.ts';
 
 // Make image path available globally for Twine
 setTimeout(() => {
@@ -9,14 +10,6 @@ setTimeout(() => {
 
     $(document).on(':passageend', passageEndHandler);
     $(document).on(':passageinit', passageInitHandler);
-
-      document.getElementById('style-core-macro')?.remove();
-      document.getElementById('style-normalize')?.remove();
-      document.getElementById('style-font-emoji')?.remove();
-      document.getElementById('style-core-passage')?.remove();
-      document.getElementById('style-ui-dialog-legacy')?.remove();
-      document.getElementById('style-ui-dialog-settings')?.remove();
-      document.getElementById('style-ui-dialog-saves')?.remove();
-      document.getElementById('style-core')?.remove();
+    $(document).on(':passagerender', passageRenderHandler);
   }
 }, 0);

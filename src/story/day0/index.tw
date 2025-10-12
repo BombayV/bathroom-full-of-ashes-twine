@@ -1,2 +1,11 @@
 :: Day0
-Day 0
+<div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <h1>
+    day 0
+    [[Test|MainMenu]]
+  </h1>
+</div>
+
+<<script>>
+
+<</script>>

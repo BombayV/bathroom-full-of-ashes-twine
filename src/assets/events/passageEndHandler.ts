@@ -1,5 +1,13 @@
+const EVENTS: Record<string, () => void> = {
+  Start: () => {},
+  MainMenu: () => {},
+};
+
 const passageEndHandler = (e: any) => {
-  console.log('Passage ended:', e);
+  const { name } = e.passage;
+  if (EVENTS[name]) {
+    EVENTS[name]();
+  }
 };
 
 export { passageEndHandler };

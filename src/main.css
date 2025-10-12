@@ -11,8 +11,8 @@
     @apply m-0 p-0 box-border font-lora;
   }
 
- .passage {
+  .passage {
     line-height: normal;
     @apply h-dvh overflow-hidden;
-  } 
+  }
 }

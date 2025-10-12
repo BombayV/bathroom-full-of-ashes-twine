@@ -3,9 +3,63 @@
   <div id="passages" class="w-full h-full relative"></div>
 </div>
 
+<script type="module">
+  document.getElementById('style-core-macro')?.remove();
+  document.getElementById('style-normalize')?.remove();
+  document.getElementById('style-font-emoji')?.remove();
+  document.getElementById('style-ui-dialog-legacy')?.remove();
+  document.getElementById('style-ui-dialog-settings')?.remove();
+  document.getElementById('style-ui-dialog-saves')?.remove();
+  document.getElementById('style-core')?.remove();
+</script>
 <link rel="stylesheet" href="assets/main.css">
 <script src="assets/main.js" type="module"></script>
 
 :: StoryInit
 <<run Config.saves.isAllowed = function() { return false; }>>
 <<run Config.history.controls = false>>
+
+<<script>>
+// Make SugarCube objects available globally for all passages
+if (typeof window !== 'undefined') {
+  // Check if SugarCube is already defined and avoid overwriting readonly property
+  if (!window.SugarCube) {
+    try {
+      // Try to define the property
+      Object.defineProperty(window, 'SugarCube', {
+        value: {
+          Engine: typeof Engine !== 'undefined' ? Engine : null,
+          State: typeof State !== 'undefined' ? State : null,
+          Story: typeof Story !== 'undefined' ? Story : null,
+          Config: typeof Config !== 'undefined' ? Config : null,
+          setup: typeof setup !== 'undefined' ? setup : null
+        },
+        writable: true,
+        configurable: true,
+        enumerable: true
+      });
+    } catch (e) {
+      // Fallback: use a different property name if SugarCube is protected
+      window.SugarCubeAPI = {
+        Engine: typeof Engine !== 'undefined' ? Engine : null,
+        State: typeof State !== 'undefined' ? State : null,
+        Story: typeof Story !== 'undefined' ? Story : null,
+        Config: typeof Config !== 'undefined' ? Config : null,
+        setup: typeof setup !== 'undefined' ? setup : null
+      };
+      console.log('Using SugarCubeAPI instead of SugarCube due to readonly property');
+    }
+  }
+  
+  // Dispatch event to notify TypeScript that SugarCube is ready
+  const event = new CustomEvent('sugarcube-ready', {
+    detail: {
+      engine: typeof Engine !== 'undefined',
+      state: typeof State !== 'undefined',
+      story: typeof Story !== 'undefined',
+      propertyName: window.SugarCube ? 'SugarCube' : 'SugarCubeAPI'
+    }
+  });
+  document.dispatchEvent(event);
+}
+<</script>>
