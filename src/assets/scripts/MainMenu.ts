@@ -27,5 +27,5 @@ export const InitMainMenu = () => {
 
     const fsButton = document.getElementById('fullscreen-button');
     fsButton?.addEventListener('click', toggleFullscreen);
-  }, 250);
+  }, 50);
 };
