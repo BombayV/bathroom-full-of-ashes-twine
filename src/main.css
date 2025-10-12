@@ -13,6 +13,7 @@
 
   .passage {
     line-height: normal;
+    transition: opacity 1.5s ease-in !important;
     @apply h-dvh overflow-hidden;
   }
 

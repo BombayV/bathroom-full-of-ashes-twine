@@ -40,10 +40,9 @@ export const InitStart = () => {
     }
 
     initLoadingAnimation(() => {
-      console.log('Loading animation complete');
       SugarCubeUtils.whenReady(() => {
         SugarCubeUtils.goToPassage('MainMenu');
       });
     });
-  }, 100);
+  }, 300);
 };
