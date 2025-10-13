@@ -105,3 +105,91 @@ setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
 }, 100);
 <</script>>
+
+:: HouseDay1-0
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+  Detective. Stand down.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->HouseDay1-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: HouseDay1-1
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+  Chief... where are they? Where are Elena and Lily? Did you get them out?
+  <span class="italic text-neutral-400">Miller puts a heavy hand on your shoulder, his expression pained.</span>
+</p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->HouseDay1-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: HouseDay1-2
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+The fire was too fast. The initial report says arson. Heavy accelerant used. Son... we haven't found them. The paramedics searched the perimeter. There's... there's no sign of them.
+</p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->HouseDay1-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: HouseDay1-3
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+  <span class="italic text-neutral-400">Your voice breaks.</span>
+  No... no sign? What does that mean?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->HouseDay1-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: HouseDay1-4
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+  It means we don't know yet. Now, listen to me. I know you. You're not going to stand here. You're going to go in there. So you go in with me. But you touch nothing. Understand? Let's go.
+  <span class="italic text-neutral-400">Miller lifts the police tape, and you duck under, your world collapsing around you.</span>
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Enter the house->InsideHouseDay0-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>

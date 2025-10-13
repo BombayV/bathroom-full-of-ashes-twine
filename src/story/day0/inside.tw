@@ -1,0 +1,99 @@
+:: InsideHouseDay0-0
+<div class="dialog">
+  <p class="title">Narrator</p>
+  <p class="typing-effect">
+    The air is thick with the acrid smell of smoke and wet ash. Water drips from charred ceiling beams. Every step crunches on debris.
+    There are many rooms to explore, but you should be careful. The structure feels unstable.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go to the Kitchen->Kitchen]]
+  </button>
+  <button class="btn mt-2">
+    [[Go to the Living Room->LivingRoom]]
+  </button>
+  <button class="btn mt-2">
+    [[Go to Bathroom->Bathroom]]
+  </button>
+  <button class="btn mt-2">
+    [[Go to Lily's Room->LilyRoom]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+
+:: LivingRoom
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    The couch where you were supposed to watch movies is a collection of blackened springs.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go Back->InsideHouseDay0-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: LilyRoom
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    A melted plastic doll lies on the floor near the burned remnants of a small bed. The wall with her drawings is gone.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go Back->InsideHouseDay0-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Kitchen
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    The table where you had breakfast is now a pile of charcoal. Only a single pancake remains, with a bite taken out of it.
+    <span class="italic text-neutral-400">Lily is nowhere to be seen.</span>
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go Back->InsideHouseDay0-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Bathroom
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Everything is surprinsingly intact. It seems like the leaky faucet you wanted to fix helped the room avoid catching fire. There is something unusual about this place.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go Back->InsideHouseDay0-1]]
+  </button>
+  <button class="btn mt-2">
+    [[Inspect further->Day1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
