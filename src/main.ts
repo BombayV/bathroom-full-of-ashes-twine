@@ -2,8 +2,9 @@ import './main.css';
 import { passageInitHandler } from './assets/events/passageInitHandler.ts';
 import { passageEndHandler } from './assets/events/passageEndHandler.ts';
 import { passageRenderHandler } from './assets/events/passageRenderHandler.ts';
+import SugarCubeUtils from './assets/utils/sugarcube.ts';
 
-const setupTypingAnimation = (element: HTMLElement) => {
+const setupTypingAnimation = (element: HTMLElement, cb?: () => void) => {
   // Store the original HTML content
   const originalHTML = element.innerHTML;
 
@@ -91,6 +92,7 @@ const setupTypingAnimation = (element: HTMLElement) => {
       });
       // Clean up the hidden element
       document.body.removeChild(hiddenOriginal);
+      if (cb) cb();
     }
   };
 
@@ -98,6 +100,14 @@ const setupTypingAnimation = (element: HTMLElement) => {
 };
 
 (window as any).setupTypingAnimation = setupTypingAnimation;
+
+const restartGame = () => {
+  SugarCubeUtils.whenReady(() => {
+    SugarCubeUtils.restart();
+  });
+};
+
+(window as any).restartGame = restartGame;
 
 // Make image path available globally for Twine
 setTimeout(() => {

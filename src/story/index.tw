@@ -3,10 +3,9 @@
   id="loading"
   class="gap-y-2 w-full relative h-dvh flex flex-col items-center justify-center opacity-100"
 >
-  <!-- prettier-ignore -->
   <img id="bathroom-image" alt="Hat" class="w-80 h-auto opacity-0 transition-opacity duration-6000" />
   <p
-    class="text-2xl font-bbh text-neutral-400 drop-shadow transition-opacity duration-6000 opacity-0"
+    class="text-3xl font-bbh text-neutral-400 drop-shadow transition-opacity duration-6000 opacity-0 mt-4"
   >
     BombayV Games
   </p>

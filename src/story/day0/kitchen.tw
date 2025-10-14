@@ -1,11 +1,10 @@
 :: KitchenDay0
 <div class="dialog">
-  <p class="title">Narrator</p>
   <p class="typing-effect">
 Sunlight streams into a warm, lived-in kitchen in a Newark suburb. The smell of coffee and pancakes is in the air.  
 <strong>Lily</strong>, a bright-eyed girl with a missing front tooth, is sitting at the kitchen table, scribbling furiously in a drawing pad with crayons. 
-<strong>Elena</strong>, her mother, stands at the stove, humming softly as she flips a pancake. She has a kind, gentle face. 
-You are sitting opposite <strong>Lily</strong>, nursing a mug of coffee. You're off-duty, dressed in a simple t-shirt and jeans. You look tired, but happy.
+<strong>Kaitlyn</strong>, her mother, stands at the stove, humming softly as she flips a pancake. She has a kind, gentle face. 
+You are sitting opposite of Lily, nursing a mug of coffee. You're off-duty, dressed in a simple t-shirt and jeans. You look tired, but happy.
 </p>
   <span class="separator"></span>
   <button class="btn">
@@ -44,7 +43,7 @@ setTimeout(() => {
   </p>
   <p class="typing-effect">
 I'm always looking, sweetie. Wouldn't miss a masterpiece for the world. 
-<span class="italic text-neutral-400">Elena places a plate with a perfectly golden pancake in front of Lily.</span>
+<span class="italic text-neutral-400">Kaitlyn places a plate with a perfectly golden pancake in front of Lily.</span>
 </p>
   <span class="separator"></span>
   <button class="btn">
@@ -60,7 +59,7 @@ setTimeout(() => {
 
 :: KitchenDay0-3
 <div class="dialog">
-  <p class="title">Elena</p>
+  <p class="title">Kaitlyn</p>
   <p class="typing-effect">
 An artist needs her fuel. Eat up, Picasso. 
 <span class="italic text-neutral-400">Lily beams and shows you her drawing. It's a crayon portrait of the three of you holding hands in front of your house. They are all smiling stick-figures.</span>
@@ -79,21 +78,52 @@ setTimeout(() => {
 
 :: KitchenDay0-3-Dialog
 <div class="dialog">
-  <p class="title">
-    What do you say?
-  </p>
   <p class="typing-effect">
     Lily shows you her drawing proudly.
   </p>
   <span class="separator"></span>
   <button class="btn">
-    [[A. It's perfect sweetie. The best team in the whole world.->KitchenDay0-4]]
+    [[A. It's perfect sweetie. The best team in the whole world.->KitchenDay0-3-Dialog-End]]
   </button>
   <button class="btn">
-    [[B. Hmm, I notice you gave me bigger ears. Trying to tell me something?->KitchenDay0-4]]
+    [[B. Hmm, I notice you gave me bigger ears. Trying to tell me something?->KitchenDay0-3-Dialog-Laugh]]
   </button>
   <button class="btn">
-    [[C. Look at that composition. This is definitely going on the fridge.->KitchenDay0-4]]
+    [[C. Look at that composition. This is definitely going on the fridge.->KitchenDay0-3-Dialog-End]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: KitchenDay0-3-Dialog-Laugh
+<div class="dialog">
+  <p class="title">Lily</p>
+  <p class="typing-effect">
+    Maybe I did! Heehee!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->KitchenDay0-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: KitchenDay0-3-Dialog-End
+<div class="dialog">
+  <p class="title">Lily</p>
+  <p class="typing-effect">
+    Heehee! You're funny, Daddy! I love you!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->KitchenDay0-4]]
   </button>
 </div>
 <<script>>
@@ -104,14 +134,14 @@ setTimeout(() => {
 
 :: KitchenDay0-4
 <div class="dialog">
-  <p class="title">Elena</p>
+  <p class="title">Kaitlyn</p>
   <p class="typing-effect">
-    <span class="italic text-neutral-400">Leaning over to kiss your cheek.</span>
+    <span class="italic text-neutral-400">She leans over to kiss your cheek.</span>
     We'll have to buy a bigger fridge soon. So, you have the day off. Any plans?
   </p>
   <span class="separator"></span>
   <button class="btn">
-    [[A. I was thinking of finally tackling that leaky faucet, then a movie marathon with my two favorite girls.->KitchenDay0-5]]
+    [[A. I was thinking of finally tackling that leaky faucet, then a movie marathon with my two favorite girls.->KitchenDay0-4-Dialog-Faucet]]
   </button>
   <button class="btn">
     [[B. I'll see how long I can sit on that couch before I become a permanent part of it.->KitchenDay0-5]]
@@ -126,11 +156,28 @@ setTimeout(() => {
 }, 100);
 <</script>>
 
+:: KitchenDay0-4-Dialog-Faucet
+<div class="dialog">
+  <p class="title">Kaitlyn</p>
+  <p class="typing-effect">
+    That bathroom has been dripping for weeks. Hopefully it's an easy fix.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->KitchenDay0-5]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
 :: KitchenDay0-5
 <div class="dialog">
   <p class="title">Lily</p>
   <p class="typing-effect">
-    <span class="italic text-neutral-400">Mouth full of pancake.</span>
+    <span class="italic text-neutral-400">She stuffs a whole pancake inside her cheeks.</span>
     Can we watch Starship Explorers again? Please!
   </p>
   <span class="separator"></span>
@@ -146,12 +193,9 @@ setTimeout(() => {
 
 :: KitchenDay0-6
 <div class="dialog">
-  <p class="title">
-  Narrator
-  </p>
   <p class="typing-effect">
     Before you can answer, your phone, sitting on the counter, buzzes with a distinct, serious-sounding ringtone. A picture of a gruff, mustached man appears on the screen, labeled <strong>"CHIEF MILLER."</strong>
-    <span class="italic text-neutral-400">Elena and Lily exchange a worried glance.</span>
+    <span class="italic text-neutral-400">Kaitlyn and Lily exchange a worried glance.</span>
   </p>
   <span class="separator"></span>
   <button class="btn">
@@ -166,7 +210,7 @@ setTimeout(() => {
 
 :: ChiefMillerCall
 <div class="dialog">
-  <p class="title">Elena</p>
+  <p class="title">Kaitlyn</p>
   <p class="typing-effect">
     Don't they ever rest?
   </p>
@@ -204,9 +248,9 @@ setTimeout(() => {
 
 :: ChiefMillerCall-2
 <div class="dialog">
-  <p class="title">Who am I?</p>
+  <p class="title me">Who am I?</p>
   <p class="typing-effect">
-    <span class="italic text-neutral-400">Into phone.</span>
+    <span class="italic text-neutral-400">You talk into the phone.</span>
     Yeah, it's me... I saw the preliminary report... No, no, it's fine. Give me twenty, I'm on my way.
     <span class="italic text-neutral-400">You hang up, a grim expression on your face.</span>
   </p>
@@ -223,7 +267,7 @@ setTimeout(() => {
 
 :: ChiefMillerCall-3
 <div class="dialog">
-  <p class="title">Elena</p>
+  <p class="title">Kaitlyn</p>
   <p class="typing-effect">
     The Crimson Syndicate case?
   </p>
@@ -304,7 +348,7 @@ setTimeout(() => {
     Who am I?
   </p>
   <p class="typing-effect">
-    <span class="italic text-neutral-400">You turn to Elena, your expression softening.</span>
+    <span class="italic text-neutral-400">You turn to Kaitlyn, your expression softening.</span>
     I'll be back for dinner. I promise.
   </p>
   <span class="separator"></span>
@@ -320,9 +364,9 @@ setTimeout(() => {
 
 :: ChiefMillerCall-8
 <div class="dialog">
-  <p class="title">Elena</p>
+  <p class="title">Kaitlyn</p>
   <p class="typing-effect">
-    Just.., be safe.
+    Just... be safe.
   </p>
   <span class="separator"></span>
   <button class="btn">
@@ -343,7 +387,7 @@ setTimeout(() => {
   <p class="typing-effect">
     Always.
     <span class="italic text-neutral-400">
-      You grab your jacket and keys from a hook by the door and head out. The last thing you see is Elena and Lily, smiling at you from the kitchen table.
+      You grab your jacket and keys from a hook by the door and head out. The last thing you see is Kaitlyn and Lily, smiling at you from the kitchen table.
     </span>
   </p>
   <span class="separator"></span>

@@ -4,3 +4,46 @@
     Hours later...
   </h1>
 </div>
+
+:: Day0EnterHouse
+<div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <h1 id="day-0-enter" class="text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out">
+    Inside the house...
+  </h1>
+</div>
+
+:: Day0Dead
+<div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <h1 id="day-0-dead" class="text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out">
+    You died
+  </h1>
+</div>
+
+:: Day0DeadScreen
+<div class="w-full relative flex flex-col items-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <div class="w-full max-w-xl mt-12 text-lg">
+    <p class="typing-effect">
+      As you opened the fridge, a bottle of milk fell out and caused the entire house to collapse on top of you. You are crushed under the weight of the rubble.
+      <span class="mt-4 block"></span>
+      You were not able to find Lily, nor Kaitlyn. Your last thoughts are of them, and the hope that they are safe. Chief Miller died as he was trying to save you.
+      <span class="mt-4 block"></span>
+      Lily thought you were a hero. You were not.
+
+      <button class="mt-4 block text-neutral-400 transition-all duration-300 hover:text-neutral-300 hover:underline cursor-pointer" id="restart">
+        Play again?
+      </button>
+    </p>
+  </div>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'), () => {
+    setTimeout(() => {
+      const restartButton = document.getElementById('restart');
+      if (restartButton) {
+        restartButton.addEventListener('click', window.restartGame);
+      }
+    }, 300);
+  });
+}, 100);
+<</script>>

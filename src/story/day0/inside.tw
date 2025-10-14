@@ -1,6 +1,5 @@
 :: InsideHouseDay0-0
 <div class="dialog">
-  <p class="title">Narrator</p>
   <p class="typing-effect">
     The air is thick with the acrid smell of smoke and wet ash. Water drips from charred ceiling beams. Every step crunches on debris.
     There are many rooms to explore, but you should be careful. The structure feels unstable.
@@ -9,15 +8,17 @@
   <button class="btn">
     [[Go to the Kitchen->Kitchen]]
   </button>
-  <button class="btn mt-2">
+  <button class="btn">
     [[Go to the Living Room->LivingRoom]]
   </button>
-  <button class="btn mt-2">
+  <button class="btn">
     [[Go to Bathroom->Bathroom]]
   </button>
-  <button class="btn mt-2">
-    [[Go to Lily's Room->LilyRoom]]
-  </button>
+  <<if !$pickedDrawing>>
+    <button class="btn">
+      [[Go to Lily's Room->LilyRoom]]
+    </button>
+  <</if>>
 </div>
 <<script>>
 setTimeout(() => {
@@ -28,13 +29,12 @@ setTimeout(() => {
 
 :: LivingRoom
 <div class="dialog">
-  <p class="title me">Who am I?</p>
   <p class="typing-effect">
     The couch where you were supposed to watch movies is a collection of blackened springs.
   </p>
   <span class="separator"></span>
   <button class="btn">
-    [[Go Back->InsideHouseDay0-1]]
+    [[Go Back->InsideHouseDay0-0]]
   </button>
 </div>
 <<script>>
@@ -45,13 +45,55 @@ setTimeout(() => {
 
 :: LilyRoom
 <div class="dialog">
-  <p class="title me">Who am I?</p>
   <p class="typing-effect">
-    A melted plastic doll lies on the floor near the burned remnants of a small bed. The wall with her drawings is gone.
+    A melted plastic doll lies on the floor near the burned remnants of a small bed. The wall with her drawings is gone. There is only one drawing left.
   </p>
   <span class="separator"></span>
   <button class="btn">
-    [[Go Back->InsideHouseDay0-1]]
+    [[Go Back->InsideHouseDay0-0]]
+  </button>
+  <button class="btn">
+    [[Look at the drawing->LilyRoomDrawing]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: LilyRoomDrawing
+<<set $pickedDrawing = $pickedDrawing ?? false>>
+<div class="dialog">
+  <p class="typing-effect">
+    The drawing is of a happy family: a mother, father, and a little girl with long hair. It looks like the drawing you saw this morning at breakfast.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go Back->LilyRoom]]
+  </button>
+  <<if not $pickedDrawing>>
+  <button class="btn">
+    [[Take the drawing->LilyRoomTakeDrawing]]
+  </button>
+  <</if>>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: LilyRoomTakeDrawing
+<<set $pickedDrawing = true>>
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    I will find you, Lily. I promise.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Leave the room->InsideHouseDay0-0]]
   </button>
 </div>
 <<script>>
@@ -61,15 +103,23 @@ setTimeout(() => {
 <</script>>
 
 :: Kitchen
+<<set $eatenPancake = $eatenPancake ?? false>>
 <div class="dialog">
-  <p class="title me">Who am I?</p>
   <p class="typing-effect">
-    The table where you had breakfast is now a pile of charcoal. Only a single pancake remains, with a bite taken out of it.
-    <span class="italic text-neutral-400">Lily is nowhere to be seen.</span>
+    The table where you had breakfast is now a pile of charcoal. Only a single pancake remains.
   </p>
   <span class="separator"></span>
   <button class="btn">
-    [[Go Back->InsideHouseDay0-1]]
+    [[Go Back->InsideHouseDay0-0]]
+  </button>
+
+  <<if not $eatenPancake>>
+  <button class="btn">
+    [[Inspect the pancake->InsideHousePancake]]
+  </button>
+  <</if>>
+  <button class="btn">
+    [[Open the fridge->Day0Dead]]
   </button>
 </div>
 <<script>>
@@ -78,18 +128,50 @@ setTimeout(() => {
 }, 100);
 <</script>>
 
-:: Bathroom
+:: InsideHousePancake
 <div class="dialog">
-  <p class="title me">Who am I?</p>
   <p class="typing-effect">
-    Everything is surprinsingly intact. It seems like the leaky faucet you wanted to fix helped the room avoid catching fire. There is something unusual about this place.
+    The pancake is mostly burnt, but you can make out a small, unburnt section in the center. It looks oddly appetizing.
   </p>
   <span class="separator"></span>
   <button class="btn">
-    [[Go Back->InsideHouseDay0-1]]
+    [[Go Back->Kitchen]]
   </button>
-  <button class="btn mt-2">
-    [[Inspect further->Day1]]
+  <button class="btn">
+    [[Eat the pancake->EatPancake]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EatPancake
+<<set $eatenPancake = true>>
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    It tastes like shit.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go Back->Kitchen]]
+  </button>
+</div>
+
+:: Bathroom
+<div class="dialog">
+  <p class="typing-effect">
+    Everything is surprinsingly intact. It seems like the leaky faucet you wanted to fix helped the room avoid catching fire. There is something unusual about this place.
+    Maybe there is something worth looking into.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go Back->InsideHouseDay0-0]]
+  </button>
+  <button class="btn">
+    [[Investigate further?->Day1]]
   </button>
 </div>
 <<script>>

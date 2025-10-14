@@ -3,6 +3,7 @@ import SugarCubeUtils from '../utils/sugarcube';
 
 const initLoadingAnimation = (cb: () => void) => {
   setTimeout(() => {
+    console.log('Starting loading animation');
     const loading = document.getElementById('loading');
 
     if (loading) {

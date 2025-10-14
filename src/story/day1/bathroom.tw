@@ -1,0 +1,15 @@
+:: Day1Bathroom
+<div class="dialog">
+  <p class="typing-effect">
+    Ready
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day1Bathroom-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>

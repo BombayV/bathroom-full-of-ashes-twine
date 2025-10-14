@@ -15,6 +15,15 @@ const EVENTS: Record<string, () => void> = {
   Day0ChangeScene: () => {
     DayTransition('HouseDay0-0', 'day-0-change');
   },
+  Day0EnterHouse: () => {
+    DayTransition('InsideHouseDay0-0', 'day-0-enter');
+  },
+  Day0Dead: () => {
+    DayTransition('Day0DeadScreen', 'day-0-dead');
+  },
+  Day1: () => {
+    DayTransition('Day1Bathroom', 'day-1');
+  },
 };
 
 const passageRenderHandler = (e: any) => {
