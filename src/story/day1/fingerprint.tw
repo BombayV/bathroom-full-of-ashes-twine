@@ -1,0 +1,334 @@
+:: Fingerprint-0
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Let me just put the fingerprint on the scanner. <span class="italic text-neutral-400">You proceed to place your finger on the scanner.</span>
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Place fingerprint on scanner->Fingerprint-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Fingerprint-1
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    That should do it. Now to start the analysis and hope I get a match.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Start the analysis->MinigameFingerprint]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: MinigameFingerprint
+<div class="w-full relative flex flex-col items-center justify-start h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <div class="w-full max-w-xl mt-16 bg-neutral-900 rounded-sm py-3 px-4 flex relative gap-3 drop-shadow-md border border-neutral-700 items-center justify-center">
+    <p id="timer" class="text-center font-bbh text-xl">1:30</p>
+  </div>
+  <div class="w-full max-w-xl mt-4 bg-neutral-900 rounded-sm py-5 px-4 flex flex-col relative gap-3 drop-shadow-md border border-neutral-700">
+    <div class="relative w-full flex items-center justify-center bg-neutral-800 font-bbh py-2 px-4 rounded-sm">
+      <h1>Fingerprint Analysis</h1>
+    </div>
+    <div class="w-full flex items-center justify-center gap-x-4 relative h-90">
+      <div class="bg-neutral-900 relative grow h-full grid grid-rows-5 grid-cols-1 gap-1 rounded-sm border border-neutral-500 overflow-hidden">
+        <<for _i = 0; _i < 5; _i++>>
+          <div class="w-full h-full relative bg-neutral-50">
+            <img @id='"fingerprint-option-" + _i' alt="Fingerprint Option" class="w-full h-full object-contain mix-blend-multiply px-8"  />
+            <button class="left-arrow absolute top-1/2 -translate-y-1/2 left-2 bg-black/30 text-white size-10 aspect-square rounded-sm hover:bg-black/50 transition-colors duration-300 cursor-pointer">
+              &larr;
+            </button>
+            <button class="right-arrow absolute top-1/2 -translate-y-1/2 right-2 bg-black/30 text-white size-10 aspect-square rounded-sm hover:bg-black/50 transition-colors duration-300 cursor-pointer">
+              &rarr;
+            </button>
+          </div>
+        <</for>>
+      </div>
+      <div class="bg-neutral-50 relative w-1/2 rounded-sm h-full border border-neutral-500 overflow-hidden relative">
+        <img id="fingerprint-image" alt="Fingerprint" class="w-full h-full object-contain mix-blend-multiply" />
+        <span id="fingerprint-hide" style="transform: scaleY(0)" class="absolute bottom-0 left-0 text-xs text-neutral-400 bg-neutral-50 w-full h-full z-30 origin-bottom transition-transform duration-300"></span>
+      </div>
+    </div>
+    <button id="check-result" class="btn text-center py-3 text-xl font-bold">
+      Check Result
+    </button>
+  </div>
+</div>
+
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Lets see if the fingerprints match... I don't have much time before the fingerprint degrades.
+  </p>
+</div>
+
+<<script>>
+  let gameState = {
+    targetFingerprintId: 0,
+    currentSelections: [0, 0, 0, 0, 0],
+    totalFingerprints: 10,
+    isGameWon: false,
+    totalTime: 90,
+    timeLeft: 90,
+    timerInterval: null,
+    degradationInterval: null
+  };
+
+  const updateTimer = () => {
+    const timerElement = document.getElementById('timer');
+    if (timerElement) {
+      const minutes = Math.floor(gameState.timeLeft / 60);
+      const seconds = gameState.timeLeft % 60;
+      timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    }
+  };
+
+  const updateFingerprintDegradation = () => {
+    const hideElement = document.getElementById('fingerprint-hide');
+    if (hideElement && gameState.timeLeft > 0) {
+      // Calculate scale based on time passed (0 to 1 over total game time)
+      const timeElapsed = gameState.totalTime - gameState.timeLeft;
+      const scale = Math.min(timeElapsed / gameState.totalTime, 1); // Progress from 0 to 1
+      hideElement.style.transform = `scaleY(${scale})`;
+    }
+  };
+
+  const startTimer = () => {
+    // Update timer every second
+    gameState.timerInterval = setInterval(() => {
+      gameState.timeLeft--;
+      updateTimer();
+      
+      if (gameState.timeLeft <= 0) {
+        // Time's up - game over
+        clearInterval(gameState.timerInterval);
+        clearInterval(gameState.degradationInterval);
+        const tryAgain = Math.random() >= 0.5;
+        if (Engine) {
+          Engine.play(tryAgain ? 'FingerprintTryAgain' : 'Day1Dead');
+        }
+      }
+    }, 1000);
+
+    gameState.degradationInterval = setInterval(() => {
+      updateFingerprintDegradation();
+    }, 100);
+  };
+
+  const stopTimer = () => {
+    if (gameState.timerInterval) {
+      clearInterval(gameState.timerInterval);
+    }
+    if (gameState.degradationInterval) {
+      clearInterval(gameState.degradationInterval);
+    }
+  };
+
+  const updateFingerprintImage = (imgElement, fingerprintId, slotIndex = null) => {
+    const possiblePaths = [
+      'assets/',
+      './assets/',
+      '/assets/',
+    ];
+    
+    const paths = possiblePaths.map(path => `${path}finger${fingerprintId}.jpg`);
+    
+    if (slotIndex !== null) {
+      const yPosition = slotIndex * 25;
+      imgElement.style.objectPosition = `center ${yPosition}%`;
+      imgElement.style.objectFit = 'cover';
+      imgElement.style.mixBlendMode = 'multiply';
+    }
+    
+    testPath(paths, imgElement);
+  };
+
+  const rightArrowChange = (slotIndex) => {
+    gameState.currentSelections[slotIndex] = (gameState.currentSelections[slotIndex] % gameState.totalFingerprints) + 1;
+    const imgElement = document.getElementById(`fingerprint-option-${slotIndex}`);
+    if (imgElement) {
+      updateFingerprintImage(imgElement, gameState.currentSelections[slotIndex], slotIndex);
+    }
+  };
+
+  const leftArrowChange = (slotIndex) => {
+    gameState.currentSelections[slotIndex] = gameState.currentSelections[slotIndex] - 1;
+    if (gameState.currentSelections[slotIndex] < 1) {
+      gameState.currentSelections[slotIndex] = gameState.totalFingerprints;
+    }
+    const imgElement = document.getElementById(`fingerprint-option-${slotIndex}`);
+    if (imgElement) {
+      updateFingerprintImage(imgElement, gameState.currentSelections[slotIndex], slotIndex);
+    }
+  };
+
+  const updateDialog = (message) => {
+    const dialogTextEl = document.querySelector('.dialog .typing-effect');
+    if (dialogTextEl) {
+      dialogTextEl.innerHTML = '';
+      dialogTextEl.classList.remove('.typing-effect');
+      
+      // Trigger typing animation on the new content
+      setTimeout(() => {
+        if (dialogTextEl && window.setupTypingAnimation) {
+          dialogTextEl.innerHTML = message;
+          window.setupTypingAnimation(dialogTextEl);
+        }
+      }, 100);
+    }
+  };
+
+  const checkResult = () => {
+    const allMatch = gameState.currentSelections.every(selection => selection === gameState.targetFingerprintId);
+    
+    if (allMatch) {
+      gameState.isGameWon = true;
+      stopTimer();
+      if (Engine) {
+        Engine.play('FingerprintSuccess');
+      }
+    } else {
+      updateDialog('It seems the fingerprints do not match. Maybe I should try different combination.');
+    }
+  };
+
+  const startMinigame = () => {
+    gameState.targetFingerprintId = Math.floor(Math.random() * gameState.totalFingerprints) + 1;
+    
+    const fingerprintImage = document.getElementById('fingerprint-image');
+    if (fingerprintImage) {
+      updateFingerprintImage(fingerprintImage, gameState.targetFingerprintId);
+    }
+
+    for (let i = 0; i < 5; i++) {
+      gameState.currentSelections[i] = Math.floor(Math.random() * gameState.totalFingerprints) + 1;
+      const imgElement = document.getElementById(`fingerprint-option-${i}`);
+      if (imgElement) {
+        updateFingerprintImage(imgElement, gameState.currentSelections[i], i);
+      }
+    }
+
+    const rightArrows = document.querySelectorAll('.right-arrow');
+    rightArrows.forEach((button, index) => {
+      button.addEventListener('click', () => rightArrowChange(index));
+    });
+
+    const leftArrows = document.querySelectorAll('.left-arrow');
+    leftArrows.forEach((button, index) => {
+      button.addEventListener('click', () => leftArrowChange(index));
+    });
+
+    const checkButton = document.querySelector('.btn');
+    if (checkButton) {
+      checkButton.addEventListener('click', checkResult);
+    }
+
+    updateTimer();
+    startTimer();
+  };
+
+  setTimeout(() => {
+    startMinigame();
+    window.setupTypingAnimation?.(document.querySelector('.typing-effect'), () => {
+    
+    });
+  }, 100);
+<</script>>
+
+:: FingerprintTryAgain
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Damn it... I messed up. I should try again quickly before it's too late. It seems like the print might not be too degraded.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Try Again->MinigameFingerprint]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: FingerprintSuccess
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    This is not good... The fingerprints don't belong to Kaitlyn nor Lily.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->FingerprintStoryline-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: FingerprintStoryline-0
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    I never heard that name before. Who could she be?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->FingerprintStoryline-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: FingerprintStoryline-1
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">   
+    There's an address here as well. Maybe I should check it out.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->FingerprintStoryline-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: FingerprintStoryline-2
+<div class="dialog">
+  <p class="typing-effect">
+    You have to decide if you want to go by yourself or call for backup. Is it too risky to go alone? Or is it worth trusting the police department to have my back?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go Alone->Day2Alone]]
+  </button>
+  <button class="btn">
+    [[Call for Backup->Day2Backup]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>

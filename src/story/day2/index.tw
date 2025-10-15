@@ -1,6 +1,13 @@
-:: Day2
+:: Day2Alone
 <div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
   <h1 id="day-2" class="text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out">
-    Day 2
+    Day 2 Alone
+  </h1>
+</div>
+
+:: Day2Backup
+<div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <h1 id="day-2" class="text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out">
+    Day 2 Backup
   </h1>
 </div>

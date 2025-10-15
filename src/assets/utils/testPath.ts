@@ -16,3 +16,6 @@ export const testPath = (possiblePaths: string[], img: HTMLImageElement, index =
   };
   testImg.src = path;
 };
+
+
+(window as any).testPath = testPath;

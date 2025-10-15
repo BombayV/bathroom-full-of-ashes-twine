@@ -17,9 +17,9 @@ export const InitMainMenu = () => {
     const img = document.getElementById('background-image') as HTMLImageElement;
     if (img) {
       const possiblePaths = [
-        'assets/images/background.jpg',
-        './assets/images/background.jpg',
-        '/assets/images/background.jpg',
+        'assets/background.jpg',
+        './assets/background.jpg',
+        '/assets/background.jpg',
       ];
 
       testPath(possiblePaths, img);

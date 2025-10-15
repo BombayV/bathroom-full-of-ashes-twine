@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://F2277A49-95C9-4B14-AE66-62526089F861// --><tw-storydata name="The Bathroom Full of Ashes" startnode="44" creator="Tweego" creator-version="2.1.1" ifid="F2277A49-95C9-4B14-AE66-62526089F861" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryInterface" tags="" position="100,100" size="100,100">&lt;div id=&quot;interface&quot; class=&quot;bg-neutral-950 w-full h-dvh relative flex items-center justify-start&quot;&gt;
+	<!-- UUID://F2277A49-95C9-4B14-AE66-62526089F861// --><tw-storydata name="The Bathroom Full of Ashes" startnode="82" creator="Tweego" creator-version="2.1.1" ifid="F2277A49-95C9-4B14-AE66-62526089F861" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryInterface" tags="" position="100,100" size="100,100">&lt;div id=&quot;interface&quot; class=&quot;bg-neutral-950 w-full h-dvh relative flex items-center justify-start&quot;&gt;
   &lt;div id=&quot;passages&quot; class=&quot;w-full h-full relative&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 
@@ -168,11 +168,44 @@ if (typeof window !== &#39;undefined&#39;) {
   &lt;h1 id=&quot;day-0-change&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
     Hours later...
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="HouseDay0-0" tags="" position="475,100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title&quot;&gt;Narrator&lt;/p&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Day0EnterHouse" tags="" position="475,100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;h1 id=&quot;day-0-enter&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
+    Inside the house...
+  &lt;/h1&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Day0Dead" tags="" position="600,100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;h1 id=&quot;day-0-dead&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
+    You died
+  &lt;/h1&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Day0DeadScreen" tags="" position="725,100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;div class=&quot;w-full max-w-xl mt-12 text-lg&quot;&gt;
+    &lt;p class=&quot;typing-effect&quot;&gt;
+      As you opened the fridge, a bottle of milk fell out and caused the entire house to collapse on top of you. You are crushed under the weight of the rubble.
+      &lt;span class=&quot;mt-4 block&quot;&gt;&lt;/span&gt;
+      You were not able to find Lily, nor Kaitlyn. Your last thoughts are of them, and the hope that they are safe. Chief Miller died as he was trying to save you.
+      &lt;span class=&quot;mt-4 block&quot;&gt;&lt;/span&gt;
+      Lily thought you were a hero. You were not.
+
+      &lt;button class=&quot;mt-4 block text-neutral-400 transition-all duration-300 hover:text-neutral-300 hover:underline cursor-pointer&quot; id=&quot;restart&quot;&gt;
+        Play again?
+      &lt;/button&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;), () =&gt; {
+    setTimeout(() =&gt; {
+      const restartButton = document.getElementById(&#39;restart&#39;);
+      if (restartButton) {
+        restartButton.addEventListener(&#39;click&#39;, window.restartGame);
+      }
+    }, 300);
+  });
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="HouseDay0-0" tags="" position="850,100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-Hours later. Your car turns onto your street. But something is horribly wrong. The night sky, which should be dark, is lit by an unnatural, hellish orange glow. Flashing red and blue lights paint the houses and trees.
-&lt;/p&gt;
+    Your car turns onto your street, but something is horribly wrong. The night sky, which should be dark, is lit by an unnatural, hellish orange glow. Flashing red and blue lights paint the houses and trees.
+  &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
     [[Continue-&gt;HouseDay0-1]]
@@ -182,10 +215,9 @@ Hours later. Your car turns onto your street. But something is horribly wrong. T
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="HouseDay0-1" tags="" position="600,100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title&quot;&gt;Narrator&lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="HouseDay0-1" tags="" position="975,100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-  &lt;span class=&quot;italic text-neutral-400&quot;&gt;A knot of dread tightens in your stomach. You slam on the brakes in the middle of the road.&lt;/span&gt;
+  A knot of dread tightens in your stomach. You slam on the brakes in the middle of the road.
   Your house... or what&#39;s left of it. The structure is a blackened, skeletal frame, smoke still billowing from the charred timbers. The roof has collapsed inward. It is surrounded by police tape, fire trucks, and patrol cars.
 &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
@@ -197,7 +229,7 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="HouseDay0-2" tags="" position="725,100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="HouseDay0-2" tags="" position="1100,100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
   No... no, no, no...
@@ -212,11 +244,11 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="HouseDay0-3" tags="" position="850,100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="HouseDay0-3" tags="" position="1225,100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
   &lt;span class=&quot;italic text-neutral-400&quot;&gt;You shout.&lt;/span&gt;
-  ELENA! LILY!
+  KAITLYN! LILY!
   &lt;span class=&quot;italic text-neutral-400&quot;&gt;A uniformed officer steps in your path, holding up a hand to stop you.&lt;/span&gt;
 &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
@@ -228,7 +260,7 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="HouseDay0-4" tags="" position="975,100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="HouseDay0-4" tags="" position="100,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title&quot;&gt;Officer&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
   Sir, please step back. This is an ongoing crime scene. You can&#39;t go in there.
@@ -242,12 +274,12 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="HouseDay0-5" tags="" position="1100,100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="HouseDay0-5" tags="" position="225,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-  &lt;span class=&quot;italic text-neutral-400&quot;&gt;You are trembling, your voice breaking.&lt;/span&gt;
+  &lt;span class=&quot;italic text-neutral-400&quot;&gt;You tremble, as your voice breaks.&lt;/span&gt;
   That&#39;s my house! My family is in there!
-  &lt;span class=&quot;italic text-neutral-400&quot;&gt;Just then, Chief Miller pushes through the crowd. His face is grim.&lt;/span&gt;
+  &lt;span class=&quot;italic text-neutral-400&quot;&gt;Just then, Chief Miller pushes through the crowd. His face showing a grim expression.&lt;/span&gt;
 &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
@@ -258,7 +290,7 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="HouseDay1-0" tags="" position="1225,100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="HouseDay1-0" tags="" position="350,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title&quot;&gt;Chief Miller&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
   Detective. Stand down.
@@ -272,10 +304,10 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="HouseDay1-1" tags="" position="100,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="HouseDay1-1" tags="" position="475,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-  Chief... where are they? Where are Elena and Lily? Did you get them out?
+  Chief... where are they? Where are Kaitlyn and Lily? Did you get them out?
   &lt;span class=&quot;italic text-neutral-400&quot;&gt;Miller puts a heavy hand on your shoulder, his expression pained.&lt;/span&gt;
 &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
@@ -287,10 +319,10 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="HouseDay1-2" tags="" position="225,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="HouseDay1-2" tags="" position="600,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title&quot;&gt;Chief Miller&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-The fire was too fast. The initial report says arson. Heavy accelerant used. Son... we haven&#39;t found them. The paramedics searched the perimeter. There&#39;s... there&#39;s no sign of them.
+The fire was too fast. The initial report says arson. Heavy accelerant used. Son... we haven&#39;t found them. The paramedics searched the perimeter. There&#39;s... there is no sign of them.
 &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
@@ -301,10 +333,10 @@ The fire was too fast. The initial report says arson. Heavy accelerant used. Son
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="HouseDay1-3" tags="" position="350,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="HouseDay1-3" tags="" position="725,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-  &lt;span class=&quot;italic text-neutral-400&quot;&gt;Your voice breaks.&lt;/span&gt;
+  &lt;span class=&quot;italic text-neutral-400&quot;&gt;Your voice breaks once more.&lt;/span&gt;
   No... no sign? What does that mean?
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
@@ -316,7 +348,7 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="HouseDay1-4" tags="" position="475,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="HouseDay1-4" tags="" position="850,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title&quot;&gt;Chief Miller&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
   It means we don&#39;t know yet. Now, listen to me. I know you. You&#39;re not going to stand here. You&#39;re going to go in there. So you go in with me. But you touch nothing. Understand? Let&#39;s go.
@@ -324,19 +356,18 @@ setTimeout(() =&gt; {
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
-    [[Enter the house-&gt;InsideHouseDay0-0]]
+    [[Enter the house-&gt;Day0EnterHouse]]
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;&lt;script&gt;&gt;
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Day0" tags="" position="600,225" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Day0" tags="" position="975,225" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-0&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
     Day 0
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="InsideHouseDay0-0" tags="" position="725,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title&quot;&gt;Narrator&lt;/p&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="InsideHouseDay0-0" tags="" position="1100,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     The air is thick with the acrid smell of smoke and wet ash. Water drips from charred ceiling beams. Every step crunches on debris.
     There are many rooms to explore, but you should be careful. The structure feels unstable.
@@ -345,87 +376,157 @@ setTimeout(() =&gt; {
   &lt;button class=&quot;btn&quot;&gt;
     [[Go to the Kitchen-&gt;Kitchen]]
   &lt;/button&gt;
-  &lt;button class=&quot;btn mt-2&quot;&gt;
+  &lt;button class=&quot;btn&quot;&gt;
     [[Go to the Living Room-&gt;LivingRoom]]
   &lt;/button&gt;
-  &lt;button class=&quot;btn mt-2&quot;&gt;
+  &lt;button class=&quot;btn&quot;&gt;
     [[Go to Bathroom-&gt;Bathroom]]
   &lt;/button&gt;
-  &lt;button class=&quot;btn mt-2&quot;&gt;
-    [[Go to Lily&#39;s Room-&gt;LilyRoom]]
-  &lt;/button&gt;
+  &lt;&lt;if !$pickedDrawing&gt;&gt;
+    &lt;button class=&quot;btn&quot;&gt;
+      [[Go to Lily&#39;s Room-&gt;LilyRoom]]
+    &lt;/button&gt;
+  &lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 &lt;&lt;script&gt;&gt;
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="LivingRoom" tags="" position="850,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="LivingRoom" tags="" position="1225,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     The couch where you were supposed to watch movies is a collection of blackened springs.
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
-    [[Go Back-&gt;InsideHouseDay0-1]]
+    [[Go Back-&gt;InsideHouseDay0-0]]
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;&lt;script&gt;&gt;
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="LilyRoom" tags="" position="975,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="LilyRoom" tags="" position="100,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-    A melted plastic doll lies on the floor near the burned remnants of a small bed. The wall with her drawings is gone.
+    A melted plastic doll lies on the floor near the burned remnants of a small bed. The wall with her drawings is gone. There is only one drawing left.
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
-    [[Go Back-&gt;InsideHouseDay0-1]]
+    [[Go Back-&gt;InsideHouseDay0-0]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Look at the drawing-&gt;LilyRoomDrawing]]
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;&lt;script&gt;&gt;
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Kitchen" tags="" position="1100,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="LilyRoomDrawing" tags="" position="225,350" size="100,100">&lt;&lt;set $pickedDrawing = $pickedDrawing ?? false&gt;&gt;
+&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-    The table where you had breakfast is now a pile of charcoal. Only a single pancake remains, with a bite taken out of it.
-    &lt;span class=&quot;italic text-neutral-400&quot;&gt;Lily is nowhere to be seen.&lt;/span&gt;
+    The drawing is of a happy family: a mother, father, and a little girl with long hair. It looks like the drawing you saw this morning at breakfast.
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
-    [[Go Back-&gt;InsideHouseDay0-1]]
+    [[Go Back-&gt;LilyRoom]]
+  &lt;/button&gt;
+  &lt;&lt;if not $pickedDrawing&gt;&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Take the drawing-&gt;LilyRoomTakeDrawing]]
+  &lt;/button&gt;
+  &lt;&lt;/if&gt;&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="LilyRoomTakeDrawing" tags="" position="350,350" size="100,100">&lt;&lt;set $pickedDrawing = true&gt;&gt;
+&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    I will find you, Lily. I promise.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Leave the room-&gt;InsideHouseDay0-0]]
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;&lt;script&gt;&gt;
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Bathroom" tags="" position="1225,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Kitchen" tags="" position="475,350" size="100,100">&lt;&lt;set $eatenPancake = $eatenPancake ?? false&gt;&gt;
+&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    The table where you had breakfast is now a pile of charcoal. Only a single pancake remains.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Back-&gt;InsideHouseDay0-0]]
+  &lt;/button&gt;
+
+  &lt;&lt;if not $eatenPancake&gt;&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Inspect the pancake-&gt;InsideHousePancake]]
+  &lt;/button&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Open the fridge-&gt;Day0Dead]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="InsideHousePancake" tags="" position="600,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    The pancake is mostly burnt, but you can make out a small, unburnt section in the center. It looks oddly appetizing.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Back-&gt;Kitchen]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Eat the pancake-&gt;EatPancake]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="EatPancake" tags="" position="725,350" size="100,100">&lt;&lt;set $eatenPancake = true&gt;&gt;
+&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    It tastes like shit.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Back-&gt;Kitchen]]
+  &lt;/button&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="Bathroom" tags="" position="850,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     Everything is surprinsingly intact. It seems like the leaky faucet you wanted to fix helped the room avoid catching fire. There is something unusual about this place.
+    Maybe there is something worth looking into.
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
-    [[Go Back-&gt;InsideHouseDay0-1]]
+    [[Go Back-&gt;InsideHouseDay0-0]]
   &lt;/button&gt;
-  &lt;button class=&quot;btn mt-2&quot;&gt;
-    [[Inspect further-&gt;Day1]]
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Investigate further?-&gt;Day1]]
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;&lt;script&gt;&gt;
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="KitchenDay0" tags="" position="100,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title&quot;&gt;Narrator&lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="KitchenDay0" tags="" position="975,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
 Sunlight streams into a warm, lived-in kitchen in a Newark suburb. The smell of coffee and pancakes is in the air.  
 &lt;strong&gt;Lily&lt;/strong&gt;, a bright-eyed girl with a missing front tooth, is sitting at the kitchen table, scribbling furiously in a drawing pad with crayons. 
-&lt;strong&gt;Elena&lt;/strong&gt;, her mother, stands at the stove, humming softly as she flips a pancake. She has a kind, gentle face. 
-You are sitting opposite &lt;strong&gt;Lily&lt;/strong&gt;, nursing a mug of coffee. You&#39;re off-duty, dressed in a simple t-shirt and jeans. You look tired, but happy.
+&lt;strong&gt;Kaitlyn&lt;/strong&gt;, her mother, stands at the stove, humming softly as she flips a pancake. She has a kind, gentle face. 
+You are sitting opposite of Lily, nursing a mug of coffee. You&#39;re off-duty, dressed in a simple t-shirt and jeans. You look tired, but happy.
 &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
@@ -437,7 +538,7 @@ You are sitting opposite &lt;strong&gt;Lily&lt;/strong&gt;, nursing a mug of cof
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="KitchenDay0-1" tags="" position="225,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="KitchenDay0-1" tags="" position="1100,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title&quot;&gt;Lily&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
 Dad, are you looking? I&#39;m almost done. It&#39;s a masterpiece.
@@ -452,13 +553,13 @@ Dad, are you looking? I&#39;m almost done. It&#39;s a masterpiece.
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="KitchenDay0-2" tags="" position="350,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="KitchenDay0-2" tags="" position="1225,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;
     Who am I?
   &lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
 I&#39;m always looking, sweetie. Wouldn&#39;t miss a masterpiece for the world. 
-&lt;span class=&quot;italic text-neutral-400&quot;&gt;Elena places a plate with a perfectly golden pancake in front of Lily.&lt;/span&gt;
+&lt;span class=&quot;italic text-neutral-400&quot;&gt;Kaitlyn places a plate with a perfectly golden pancake in front of Lily.&lt;/span&gt;
 &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
@@ -470,8 +571,8 @@ I&#39;m always looking, sweetie. Wouldn&#39;t miss a masterpiece for the world.
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="KitchenDay0-3" tags="" position="475,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title&quot;&gt;Elena&lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="KitchenDay0-3" tags="" position="100,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Kaitlyn&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
 An artist needs her fuel. Eat up, Picasso. 
 &lt;span class=&quot;italic text-neutral-400&quot;&gt;Lily beams and shows you her drawing. It&#39;s a crayon portrait of the three of you holding hands in front of your house. They are all smiling stick-figures.&lt;/span&gt;
@@ -486,37 +587,62 @@ An artist needs her fuel. Eat up, Picasso.
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="KitchenDay0-3-Dialog" tags="" position="600,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title&quot;&gt;
-    What do you say?
-  &lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="KitchenDay0-3-Dialog" tags="" position="225,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     Lily shows you her drawing proudly.
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
-    [[A. It&#39;s perfect sweetie. The best team in the whole world.-&gt;KitchenDay0-4]]
+    [[A. It&#39;s perfect sweetie. The best team in the whole world.-&gt;KitchenDay0-3-Dialog-End]]
   &lt;/button&gt;
   &lt;button class=&quot;btn&quot;&gt;
-    [[B. Hmm, I notice you gave me bigger ears. Trying to tell me something?-&gt;KitchenDay0-4]]
+    [[B. Hmm, I notice you gave me bigger ears. Trying to tell me something?-&gt;KitchenDay0-3-Dialog-Laugh]]
   &lt;/button&gt;
   &lt;button class=&quot;btn&quot;&gt;
-    [[C. Look at that composition. This is definitely going on the fridge.-&gt;KitchenDay0-4]]
+    [[C. Look at that composition. This is definitely going on the fridge.-&gt;KitchenDay0-3-Dialog-End]]
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;&lt;script&gt;&gt;
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="KitchenDay0-4" tags="" position="725,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title&quot;&gt;Elena&lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="KitchenDay0-3-Dialog-Laugh" tags="" position="350,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Lily&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-    &lt;span class=&quot;italic text-neutral-400&quot;&gt;Leaning over to kiss your cheek.&lt;/span&gt;
+    Maybe I did! Heehee!
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Continue-&gt;KitchenDay0-4]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="KitchenDay0-3-Dialog-End" tags="" position="475,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Lily&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Heehee! You&#39;re funny, Daddy! I love you!
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Continue-&gt;KitchenDay0-4]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="KitchenDay0-4" tags="" position="600,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Kaitlyn&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    &lt;span class=&quot;italic text-neutral-400&quot;&gt;She leans over to kiss your cheek.&lt;/span&gt;
     We&#39;ll have to buy a bigger fridge soon. So, you have the day off. Any plans?
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
-    [[A. I was thinking of finally tackling that leaky faucet, then a movie marathon with my two favorite girls.-&gt;KitchenDay0-5]]
+    [[A. I was thinking of finally tackling that leaky faucet, then a movie marathon with my two favorite girls.-&gt;KitchenDay0-4-Dialog-Faucet]]
   &lt;/button&gt;
   &lt;button class=&quot;btn&quot;&gt;
     [[B. I&#39;ll see how long I can sit on that couch before I become a permanent part of it.-&gt;KitchenDay0-5]]
@@ -529,10 +655,24 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="KitchenDay0-5" tags="" position="850,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="KitchenDay0-4-Dialog-Faucet" tags="" position="725,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Kaitlyn&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    That bathroom has been dripping for weeks. Hopefully it&#39;s an easy fix.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Continue-&gt;KitchenDay0-5]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="KitchenDay0-5" tags="" position="850,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title&quot;&gt;Lily&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-    &lt;span class=&quot;italic text-neutral-400&quot;&gt;Mouth full of pancake.&lt;/span&gt;
+    &lt;span class=&quot;italic text-neutral-400&quot;&gt;She stuffs a whole pancake inside her cheeks.&lt;/span&gt;
     Can we watch Starship Explorers again? Please!
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
@@ -544,13 +684,10 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="KitchenDay0-6" tags="" position="975,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title&quot;&gt;
-  Narrator
-  &lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="KitchenDay0-6" tags="" position="975,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     Before you can answer, your phone, sitting on the counter, buzzes with a distinct, serious-sounding ringtone. A picture of a gruff, mustached man appears on the screen, labeled &lt;strong&gt;&quot;CHIEF MILLER.&quot;&lt;/strong&gt;
-    &lt;span class=&quot;italic text-neutral-400&quot;&gt;Elena and Lily exchange a worried glance.&lt;/span&gt;
+    &lt;span class=&quot;italic text-neutral-400&quot;&gt;Kaitlyn and Lily exchange a worried glance.&lt;/span&gt;
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
@@ -561,8 +698,8 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="ChiefMillerCall" tags="" position="1100,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title&quot;&gt;Elena&lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="ChiefMillerCall" tags="" position="1100,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Kaitlyn&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     Don&#39;t they ever rest?
   &lt;/p&gt;
@@ -575,7 +712,7 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="ChiefMillerCall-1" tags="" position="1225,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="ChiefMillerCall-1" tags="" position="1225,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;
     Who am I?
   &lt;/p&gt;
@@ -593,10 +730,10 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="ChiefMillerCall-2" tags="" position="100,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title&quot;&gt;Who am I?&lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="ChiefMillerCall-2" tags="" position="100,600" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-    &lt;span class=&quot;italic text-neutral-400&quot;&gt;Into phone.&lt;/span&gt;
+    &lt;span class=&quot;italic text-neutral-400&quot;&gt;You talk into the phone.&lt;/span&gt;
     Yeah, it&#39;s me... I saw the preliminary report... No, no, it&#39;s fine. Give me twenty, I&#39;m on my way.
     &lt;span class=&quot;italic text-neutral-400&quot;&gt;You hang up, a grim expression on your face.&lt;/span&gt;
   &lt;/p&gt;
@@ -609,8 +746,8 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="ChiefMillerCall-3" tags="" position="225,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title&quot;&gt;Elena&lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="ChiefMillerCall-3" tags="" position="225,600" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Kaitlyn&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     The Crimson Syndicate case?
   &lt;/p&gt;
@@ -623,7 +760,7 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="ChiefMillerCall-4" tags="" position="350,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="ChiefMillerCall-4" tags="" position="350,600" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;
     Who am I?
   &lt;/p&gt;
@@ -641,7 +778,7 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="ChiefMillerCall-5" tags="" position="475,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="ChiefMillerCall-5" tags="" position="475,600" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;
     Who am I?
   &lt;/p&gt;
@@ -657,7 +794,7 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="ChiefMillerCall-6" tags="" position="600,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="ChiefMillerCall-6" tags="" position="600,600" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title&quot;&gt;
     Lily
   &lt;/p&gt;
@@ -673,12 +810,12 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="ChiefMillerCall-7" tags="" position="725,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="ChiefMillerCall-7" tags="" position="725,600" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;
     Who am I?
   &lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-    &lt;span class=&quot;italic text-neutral-400&quot;&gt;You turn to Elena, your expression softening.&lt;/span&gt;
+    &lt;span class=&quot;italic text-neutral-400&quot;&gt;You turn to Kaitlyn, your expression softening.&lt;/span&gt;
     I&#39;ll be back for dinner. I promise.
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
@@ -690,10 +827,10 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="ChiefMillerCall-8" tags="" position="850,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title&quot;&gt;Elena&lt;/p&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="ChiefMillerCall-8" tags="" position="850,600" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Kaitlyn&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-    Just.., be safe.
+    Just... be safe.
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
@@ -704,14 +841,14 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="ChiefMillerCall-9" tags="" position="975,475" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="ChiefMillerCall-9" tags="" position="975,600" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;
     Who am I?
   &lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     Always.
     &lt;span class=&quot;italic text-neutral-400&quot;&gt;
-      You grab your jacket and keys from a hook by the door and head out. The last thing you see is Elena and Lily, smiling at you from the kitchen table.
+      You grab your jacket and keys from a hook by the door and head out. The last thing you see is Kaitlyn and Lily, smiling at you from the kitchen table.
     &lt;/span&gt;
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
@@ -723,23 +860,614 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Day1" tags="" position="1100,475" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Day1Bathroom" tags="" position="1100,600" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    It is morning aleady. Miller brought you outside for a few hours while the team searched the house. They found nothing. No sign of Lily or Kaitlyn.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Continue-&gt;Day1Bathroom-0]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Day1Bathroom-0" tags="" position="1225,600" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    No one knows where they might be. Miller says they will keep looking, but you have a bad feeling about this.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Continue-&gt;Day1Bathroom-1]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="Day1Bathroom-1" tags="" position="100,725" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    You decide to look at the bathroom again. You believe there might be something you missed.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Inspect the bathroom-&gt;Day1Bathroom-2]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="Day1Bathroom-2" tags="" position="225,725" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Alright, let&#39;s see if there&#39;s anything useful here. I don&#39;t really have time so I should probably just check for one thing and leave.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Look at the sink-&gt;BathroomSink-0]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Look at shower-&gt;BathroomShower-0]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Look at the floor-&gt;BathroomFloor-0]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="BathroomSink-0" tags="" position="350,725" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    The sink is old and rusty, with a cracked mirror above it. There&#39;s a toothbrush and a tube of toothpaste on the counter. The faucet is dripping slightly.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Look around-&gt;BathroomSink-1]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Back-&gt;Day1Bathroom-2]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="BathroomSink-1" tags="" position="475,725" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    On the edge of the sink, there is a fingerprint smudge that looks recent. It is blood mixed with dirt. It could be useful.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Take a sample and leave-&gt;Fingerprint-0]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Back-&gt;BathroomSink-0]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="BathroomShower-0" tags="" position="600,725" size="100,100">&lt;&lt;set $tastedHair = $tastedHair ?? false&gt;&gt;
+&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    There is a lot of blood on the shower wall and floor. It looks like someone was injured here. There are also some hair strands stuck to the wall.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Examine the hair strands-&gt;BathroomShower-1]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Examine the blood stains-&gt;BathroomShower-1-0]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Back-&gt;Day1Bathroom-2]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="BathroomShower-1" tags="" position="725,725" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    The hair strands are long and dark, possibly belonging to a female. They could be from Lily or Kaitlyn.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Smell the hair strands-&gt;BathroomShower-3]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Taste the hair strands-&gt;BathroomShower-4]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Back-&gt;BathroomShower-0]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="BathroomShower-3" tags="" position="850,725" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Hmm, it smells like shampoo. I don&#39;t really know how Lily or Kaitlyn smell, but it doesn&#39;t smell like anything unusual.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Back-&gt;BathroomShower-1]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="BathroomShower-4" tags="" position="975,725" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;&lt;if not $tastedHair&gt;&gt;
+    &lt;p class=&quot;typing-effect&quot;&gt;
+      Why did I do that? It tastes like shit. I should probably not do that again.
+    &lt;/p&gt;
+  &lt;&lt;else&gt;&gt;
+    &lt;p class=&quot;typing-effect&quot;&gt;
+      I&#39;ve already tasted the hair. It still tastes like shit.
+    &lt;/p&gt;
+  &lt;&lt;/if&gt;&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Back-&gt;BathroomShower-1]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;set $tastedHair = true&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="BathroomShower-1-0" tags="" position="1100,725" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    The blood stains are fresh and smeared, indicating a struggle. There are also some footprints leading out of the shower area. There is a large pool of blood near the drain.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Take a sample and leave-&gt;Blood-0]]
+  &lt;/button&gt;
+    &lt;button class=&quot;btn&quot;&gt;
+    [[Go Back-&gt;BathroomShower-0]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="BathroomFloor-0" tags="" position="1225,725" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    The entire floor is wet and slippery, with water pooling near the drain. There are muddy footprints leading towards the door.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Look around more-&gt;BathroomFloor-1]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Back-&gt;Day1Bathroom-2]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="BathroomFloor-1" tags="" position="100,850" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Behind the door, you find a small bullet casing. It looks like it was fired from a handgun. A professional would be able to tell what kind of gun it came from.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Take the casing and leave-&gt;Casing-0]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Back-&gt;BathroomFloor-0]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Blood-0" tags="" position="225,850" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Lets see if I get this sample on my computer. &lt;span class=&quot;italic text-neutral-400&quot;&gt;You proceed to insert the blood sample into your laptop.&lt;/span&gt;
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Wait for it to boot up-&gt;Blood-1]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Blood-1" tags="" position="350,850" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Alright, I should be able to get it working. Lets do this. Hopefully I don&#39;t mess up the sample.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Start the analysis-&gt;MinigameBlood]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="MinigameBlood" tags="" position="475,850" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;div class=&quot;text-4xl&quot;&gt;
+    [[Test-&gt;Start]]
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Casing-0" tags="" position="600,850" size="100,100"></tw-passagedata><tw-passagedata pid="66" name="Day1Dead" tags="" position="725,850" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;h1 id=&quot;day-1-dead&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
+    You lost the evidence
+  &lt;/h1&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="Day1DeadScreen" tags="" position="850,850" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;div class=&quot;w-full max-w-xl mt-12 text-lg&quot;&gt;
+    &lt;p class=&quot;typing-effect&quot;&gt;
+      You couldn&#39;t finish the analysis in time. The fingerprint got too damaged and unusable. The police never found out who the killer was.
+      &lt;span class=&quot;mt-4 block&quot;&gt;&lt;/span&gt;
+      You were not able to find Lily, nor Kaitlyn. You lost your house and decided to move away.
+      &lt;span class=&quot;mt-4 block&quot;&gt;&lt;/span&gt;
+      Lily thought you were a hero. You were not.
+
+      &lt;button class=&quot;mt-4 block text-neutral-400 transition-all duration-300 hover:text-neutral-300 hover:underline cursor-pointer&quot; id=&quot;restart&quot;&gt;
+        Play again?
+      &lt;/button&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;), () =&gt; {
+    setTimeout(() =&gt; {
+      const restartButton = document.getElementById(&#39;restart&#39;);
+      if (restartButton) {
+        restartButton.addEventListener(&#39;click&#39;, window.restartGame);
+      }
+    }, 300);
+  });
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Fingerprint-0" tags="" position="975,850" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Let me just put the fingerprint on the scanner. &lt;span class=&quot;italic text-neutral-400&quot;&gt;You proceed to place your finger on the scanner.&lt;/span&gt;
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Place fingerprint on scanner-&gt;Fingerprint-1]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Fingerprint-1" tags="" position="1100,850" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    That should do it. Now to start the analysis and hope I get a match.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Start the analysis-&gt;MinigameFingerprint]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="MinigameFingerprint" tags="" position="1225,850" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-start h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;div class=&quot;w-full max-w-xl mt-16 bg-neutral-900 rounded-sm py-3 px-4 flex relative gap-3 drop-shadow-md border border-neutral-700 items-center justify-center&quot;&gt;
+    &lt;p id=&quot;timer&quot; class=&quot;text-center font-bbh text-xl&quot;&gt;1:30&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;w-full max-w-xl mt-4 bg-neutral-900 rounded-sm py-5 px-4 flex flex-col relative gap-3 drop-shadow-md border border-neutral-700&quot;&gt;
+    &lt;div class=&quot;relative w-full flex items-center justify-center bg-neutral-800 font-bbh py-2 px-4 rounded-sm&quot;&gt;
+      &lt;h1&gt;Fingerprint Analysis&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;w-full flex items-center justify-center gap-x-4 relative h-90&quot;&gt;
+      &lt;div class=&quot;bg-neutral-900 relative grow h-full grid grid-rows-5 grid-cols-1 gap-1 rounded-sm border border-neutral-500 overflow-hidden&quot;&gt;
+        &lt;&lt;for _i = 0; _i &lt; 5; _i++&gt;&gt;
+          &lt;div class=&quot;w-full h-full relative bg-neutral-50&quot;&gt;
+            &lt;img @id=&#39;&quot;fingerprint-option-&quot; + _i&#39; alt=&quot;Fingerprint Option&quot; class=&quot;w-full h-full object-contain mix-blend-multiply px-8&quot;  /&gt;
+            &lt;button class=&quot;left-arrow absolute top-1/2 -translate-y-1/2 left-2 bg-black/30 text-white size-10 aspect-square rounded-sm hover:bg-black/50 transition-colors duration-300 cursor-pointer&quot;&gt;
+              &amp;larr;
+            &lt;/button&gt;
+            &lt;button class=&quot;right-arrow absolute top-1/2 -translate-y-1/2 right-2 bg-black/30 text-white size-10 aspect-square rounded-sm hover:bg-black/50 transition-colors duration-300 cursor-pointer&quot;&gt;
+              &amp;rarr;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;&lt;/for&gt;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;bg-neutral-50 relative w-1/2 rounded-sm h-full border border-neutral-500 overflow-hidden relative&quot;&gt;
+        &lt;img id=&quot;fingerprint-image&quot; alt=&quot;Fingerprint&quot; class=&quot;w-full h-full object-contain mix-blend-multiply&quot; /&gt;
+        &lt;span id=&quot;fingerprint-hide&quot; style=&quot;transform: scaleY(0)&quot; class=&quot;absolute bottom-0 left-0 text-xs text-neutral-400 bg-neutral-50 w-full h-full z-30 origin-bottom transition-transform duration-300&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button id=&quot;check-result&quot; class=&quot;btn text-center py-3 text-xl font-bold&quot;&gt;
+      Check Result
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Lets see if the fingerprints match... I don&#39;t have much time before the fingerprint degrades.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;&lt;script&gt;&gt;
+  let gameState = {
+    targetFingerprintId: 0,
+    currentSelections: [0, 0, 0, 0, 0],
+    totalFingerprints: 10,
+    isGameWon: false,
+    totalTime: 90,
+    timeLeft: 90,
+    timerInterval: null,
+    degradationInterval: null
+  };
+
+  const updateTimer = () =&gt; {
+    const timerElement = document.getElementById(&#39;timer&#39;);
+    if (timerElement) {
+      const minutes = Math.floor(gameState.timeLeft / 60);
+      const seconds = gameState.timeLeft % 60;
+      timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, &#39;0&#39;)}`;
+    }
+  };
+
+  const updateFingerprintDegradation = () =&gt; {
+    const hideElement = document.getElementById(&#39;fingerprint-hide&#39;);
+    if (hideElement &amp;&amp; gameState.timeLeft &gt; 0) {
+      // Calculate scale based on time passed (0 to 1 over total game time)
+      const timeElapsed = gameState.totalTime - gameState.timeLeft;
+      const scale = Math.min(timeElapsed / gameState.totalTime, 1); // Progress from 0 to 1
+      hideElement.style.transform = `scaleY(${scale})`;
+    }
+  };
+
+  const startTimer = () =&gt; {
+    // Update timer every second
+    gameState.timerInterval = setInterval(() =&gt; {
+      gameState.timeLeft--;
+      updateTimer();
+      
+      if (gameState.timeLeft &lt;= 0) {
+        // Time&#39;s up - game over
+        clearInterval(gameState.timerInterval);
+        clearInterval(gameState.degradationInterval);
+        const tryAgain = Math.random() &gt;= 0.5;
+        if (Engine) {
+          Engine.play(tryAgain ? &#39;FingerprintTryAgain&#39; : &#39;Day1Dead&#39;);
+        }
+      }
+    }, 1000);
+
+    gameState.degradationInterval = setInterval(() =&gt; {
+      updateFingerprintDegradation();
+    }, 100);
+  };
+
+  const stopTimer = () =&gt; {
+    if (gameState.timerInterval) {
+      clearInterval(gameState.timerInterval);
+    }
+    if (gameState.degradationInterval) {
+      clearInterval(gameState.degradationInterval);
+    }
+  };
+
+  const updateFingerprintImage = (imgElement, fingerprintId, slotIndex = null) =&gt; {
+    const possiblePaths = [
+      &#39;assets/&#39;,
+      &#39;./assets/&#39;,
+      &#39;/assets/&#39;,
+    ];
+    
+    const paths = possiblePaths.map(path =&gt; `${path}finger${fingerprintId}.jpg`);
+    
+    if (slotIndex !== null) {
+      const yPosition = slotIndex * 25;
+      imgElement.style.objectPosition = `center ${yPosition}%`;
+      imgElement.style.objectFit = &#39;cover&#39;;
+      imgElement.style.mixBlendMode = &#39;multiply&#39;;
+    }
+    
+    testPath(paths, imgElement);
+  };
+
+  const rightArrowChange = (slotIndex) =&gt; {
+    gameState.currentSelections[slotIndex] = (gameState.currentSelections[slotIndex] % gameState.totalFingerprints) + 1;
+    const imgElement = document.getElementById(`fingerprint-option-${slotIndex}`);
+    if (imgElement) {
+      updateFingerprintImage(imgElement, gameState.currentSelections[slotIndex], slotIndex);
+    }
+  };
+
+  const leftArrowChange = (slotIndex) =&gt; {
+    gameState.currentSelections[slotIndex] = gameState.currentSelections[slotIndex] - 1;
+    if (gameState.currentSelections[slotIndex] &lt; 1) {
+      gameState.currentSelections[slotIndex] = gameState.totalFingerprints;
+    }
+    const imgElement = document.getElementById(`fingerprint-option-${slotIndex}`);
+    if (imgElement) {
+      updateFingerprintImage(imgElement, gameState.currentSelections[slotIndex], slotIndex);
+    }
+  };
+
+  const updateDialog = (message) =&gt; {
+    const dialogTextEl = document.querySelector(&#39;.dialog .typing-effect&#39;);
+    if (dialogTextEl) {
+      dialogTextEl.innerHTML = &#39;&#39;;
+      dialogTextEl.classList.remove(&#39;.typing-effect&#39;);
+      
+      // Trigger typing animation on the new content
+      setTimeout(() =&gt; {
+        if (dialogTextEl &amp;&amp; window.setupTypingAnimation) {
+          dialogTextEl.innerHTML = message;
+          window.setupTypingAnimation(dialogTextEl);
+        }
+      }, 100);
+    }
+  };
+
+  const checkResult = () =&gt; {
+    const allMatch = gameState.currentSelections.every(selection =&gt; selection === gameState.targetFingerprintId);
+    
+    if (allMatch) {
+      gameState.isGameWon = true;
+      stopTimer();
+      if (Engine) {
+        Engine.play(&#39;FingerprintSuccess&#39;);
+      }
+    } else {
+      updateDialog(&#39;It seems the fingerprints do not match. Maybe I should try different combination.&#39;);
+    }
+  };
+
+  const startMinigame = () =&gt; {
+    gameState.targetFingerprintId = Math.floor(Math.random() * gameState.totalFingerprints) + 1;
+    
+    const fingerprintImage = document.getElementById(&#39;fingerprint-image&#39;);
+    if (fingerprintImage) {
+      updateFingerprintImage(fingerprintImage, gameState.targetFingerprintId);
+    }
+
+    for (let i = 0; i &lt; 5; i++) {
+      gameState.currentSelections[i] = Math.floor(Math.random() * gameState.totalFingerprints) + 1;
+      const imgElement = document.getElementById(`fingerprint-option-${i}`);
+      if (imgElement) {
+        updateFingerprintImage(imgElement, gameState.currentSelections[i], i);
+      }
+    }
+
+    const rightArrows = document.querySelectorAll(&#39;.right-arrow&#39;);
+    rightArrows.forEach((button, index) =&gt; {
+      button.addEventListener(&#39;click&#39;, () =&gt; rightArrowChange(index));
+    });
+
+    const leftArrows = document.querySelectorAll(&#39;.left-arrow&#39;);
+    leftArrows.forEach((button, index) =&gt; {
+      button.addEventListener(&#39;click&#39;, () =&gt; leftArrowChange(index));
+    });
+
+    const checkButton = document.querySelector(&#39;.btn&#39;);
+    if (checkButton) {
+      checkButton.addEventListener(&#39;click&#39;, checkResult);
+    }
+
+    updateTimer();
+    startTimer();
+  };
+
+  setTimeout(() =&gt; {
+    startMinigame();
+    window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;), () =&gt; {
+    
+    });
+  }, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="FingerprintTryAgain" tags="" position="100,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Damn it... I messed up. I should try again quickly before it&#39;s too late. It seems like the print might not be too degraded.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Try Again-&gt;MinigameFingerprint]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="FingerprintSuccess" tags="" position="225,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    This is not good... The fingerprints don&#39;t belong to Kaitlyn nor Lily.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Continue-&gt;FingerprintStoryline-0]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="FingerprintStoryline-0" tags="" position="350,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    I never heard that name before. Who could she be?
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Continue-&gt;FingerprintStoryline-1]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="FingerprintStoryline-1" tags="" position="475,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;   
+    There&#39;s an address here as well. Maybe I should check it out.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Continue-&gt;FingerprintStoryline-2]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="FingerprintStoryline-2" tags="" position="600,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    You have to decide if you want to go by yourself or call for backup. Is it too risky to go alone? Or is it worth trusting the police department to have my back?
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Alone-&gt;Day2Alone]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Call for Backup-&gt;Day2Backup]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Day1" tags="" position="725,975" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-1&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
     Day 1
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Day2" tags="" position="1225,475" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="Day2Alone" tags="" position="850,975" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-2&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
-    Day 2
+    Day 2 Alone
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="Day3" tags="" position="100,600" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="Day2Backup" tags="" position="975,975" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;h1 id=&quot;day-2&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
+    Day 2 Backup
+  &lt;/h1&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="Day3" tags="" position="1100,975" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-3&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
     Day 3
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="Day4" tags="" position="225,600" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="80" name="Day4" tags="" position="1225,975" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-4&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
     Day 4
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="MainMenu" tags="" position="350,600" size="100,100">&lt;div class=&quot;w-full relative flex flex-col h-full px-8 md:px-10 lg:px-24 py-16 overflow-y-auto&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="MainMenu" tags="" position="100,1100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col h-full px-8 md:px-10 lg:px-24 py-16 overflow-y-auto&quot;&gt;
   &lt;h1 class=&quot;text-3xl md:text-4xl xl:text-5xl font-bbh text-neutral-50 drop-shadow-lg z-10 max-w-sm md:max-w-lg xl:max-w-2xl&quot;&gt;
     The Bathroom Full of Ashes
   &lt;/h1&gt;
@@ -752,7 +1480,7 @@ setTimeout(() =&gt; {
     &lt;button
       class=&quot;text-neutral-300 text-3xl lg:text-5xl text-left flex items-center justify-start -skew-x-12 hover:text-amber-100 cursor-pointer transition-colors duration-300&quot;
     &gt;
-      [[Test-&gt;Test]]
+      [[Test-&gt;MinigameFingerprint]]
     &lt;/button&gt;
     &lt;button
       id=&quot;fullscreen-button&quot;
@@ -770,20 +1498,19 @@ setTimeout(() =&gt; {
     /&gt;
     &lt;span class=&quot;absolute inset-0 bg-black/50 backdrop-blur z-50&quot;&gt;&lt;/span&gt;
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="Start" tags="" position="475,600" size="100,100">&lt;div
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="Start" tags="" position="225,1100" size="100,100">&lt;div
   id=&quot;loading&quot;
   class=&quot;gap-y-2 w-full relative h-dvh flex flex-col items-center justify-center opacity-100&quot;
 &gt;
-  &lt;!-- prettier-ignore --&gt;
   &lt;img id=&quot;bathroom-image&quot; alt=&quot;Hat&quot; class=&quot;w-80 h-auto opacity-0 transition-opacity duration-6000&quot; /&gt;
   &lt;p
-    class=&quot;text-2xl font-bbh text-neutral-400 drop-shadow transition-opacity duration-6000 opacity-0&quot;
+    class=&quot;text-3xl font-bbh text-neutral-400 drop-shadow transition-opacity duration-6000 opacity-0 mt-4&quot;
   &gt;
     BombayV Games
   &lt;/p&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="Test" tags="" position="600,600" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="Test" tags="" position="350,1100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-0&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 ease-in-out&quot;&gt;
-    Day 0 [[Test-&gt;MainMenu]]
+    Day 0 [[Test-&gt;InsideHouseDay0-0]]
   &lt;/h1&gt;
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">

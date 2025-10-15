@@ -32,9 +32,9 @@ export const InitStart = () => {
     if (img) {
       // Try different possible paths
       const possiblePaths = [
-        'assets/images/the_bathroom_full_of_ashes.png',
-        './assets/images/the_bathroom_full_of_ashes.png',
-        '/assets/images/the_bathroom_full_of_ashes.png',
+        'assets/the_bathroom_full_of_ashes.png',
+        './assets/the_bathroom_full_of_ashes.png',
+        '/assets/the_bathroom_full_of_ashes.png',
       ];
 
       testPath(possiblePaths, img);

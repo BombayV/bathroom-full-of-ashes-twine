@@ -1,0 +1,46 @@
+:: Blood-0
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Lets see if I get this sample on my computer. <span class="italic text-neutral-400">You proceed to insert the blood sample into your laptop.</span>
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Wait for it to boot up->Blood-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Blood-1
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Alright, I should be able to get it working. Lets do this. Hopefully I don't mess up the sample.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Start the analysis->MinigameBlood]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: MinigameBlood
+<div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <div class="text-4xl">
+    [[Test->Start]]
+  </div>
+</div>
+
+<<script>>
+setTimeout(() => {
+
+}, 100);
+<</script>>

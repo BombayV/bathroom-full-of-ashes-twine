@@ -1,11 +1,242 @@
 :: Day1Bathroom
 <div class="dialog">
   <p class="typing-effect">
-    Ready
+    It is morning aleady. Miller brought you outside for a few hours while the team searched the house. They found nothing. No sign of Lily or Kaitlyn.
   </p>
   <span class="separator"></span>
   <button class="btn">
     [[Continue->Day1Bathroom-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day1Bathroom-0
+<div class="dialog">
+  <p class="typing-effect">
+    No one knows where they might be. Miller says they will keep looking, but you have a bad feeling about this.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day1Bathroom-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day1Bathroom-1
+<div class="dialog">
+  <p class="typing-effect">
+    You decide to look at the bathroom again. You believe there might be something you missed.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Inspect the bathroom->Day1Bathroom-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day1Bathroom-2
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Alright, let's see if there's anything useful here. I don't really have time so I should probably just check for one thing and leave.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Look at the sink->BathroomSink-0]]
+  </button>
+  <button class="btn">
+    [[Look at shower->BathroomShower-0]]
+  </button>
+  <button class="btn">
+    [[Look at the floor->BathroomFloor-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BathroomSink-0
+<div class="dialog">
+  <p class="typing-effect">
+    The sink is old and rusty, with a cracked mirror above it. There's a toothbrush and a tube of toothpaste on the counter. The faucet is dripping slightly.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Look around->BathroomSink-1]]
+  </button>
+  <button class="btn">
+    [[Go Back->Day1Bathroom-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BathroomSink-1
+<div class="dialog">
+  <p class="typing-effect">
+    On the edge of the sink, there is a fingerprint smudge that looks recent. It is blood mixed with dirt. It could be useful.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Take a sample and leave->Fingerprint-0]]
+  </button>
+  <button class="btn">
+    [[Go Back->BathroomSink-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BathroomShower-0
+<<set $tastedHair = $tastedHair ?? false>>
+<div class="dialog">
+  <p class="typing-effect">
+    There is a lot of blood on the shower wall and floor. It looks like someone was injured here. There are also some hair strands stuck to the wall.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Examine the hair strands->BathroomShower-1]]
+  </button>
+  <button class="btn">
+    [[Examine the blood stains->BathroomShower-1-0]]
+  </button>
+  <button class="btn">
+    [[Go Back->Day1Bathroom-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BathroomShower-1
+<div class="dialog">
+  <p class="typing-effect">
+    The hair strands are long and dark, possibly belonging to a female. They could be from Lily or Kaitlyn.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Smell the hair strands->BathroomShower-3]]
+  </button>
+  <button class="btn">
+    [[Taste the hair strands->BathroomShower-4]]
+  </button>
+  <button class="btn">
+    [[Go Back->BathroomShower-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BathroomShower-3
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Hmm, it smells like shampoo. I don't really know how Lily or Kaitlyn smell, but it doesn't smell like anything unusual.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go Back->BathroomShower-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BathroomShower-4
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <<if not $tastedHair>>
+    <p class="typing-effect">
+      Why did I do that? It tastes like shit. I should probably not do that again.
+    </p>
+  <<else>>
+    <p class="typing-effect">
+      I've already tasted the hair. It still tastes like shit.
+    </p>
+  <</if>>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go Back->BathroomShower-1]]
+  </button>
+</div>
+<<set $tastedHair = true>>
+
+:: BathroomShower-1-0
+<div class="dialog">
+  <p class="typing-effect">
+    The blood stains are fresh and smeared, indicating a struggle. There are also some footprints leading out of the shower area. There is a large pool of blood near the drain.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Take a sample and leave->Blood-0]]
+  </button>
+    <button class="btn">
+    [[Go Back->BathroomShower-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BathroomFloor-0
+<div class="dialog">
+  <p class="typing-effect">
+    The entire floor is wet and slippery, with water pooling near the drain. There are muddy footprints leading towards the door.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Look around more->BathroomFloor-1]]
+  </button>
+  <button class="btn">
+    [[Go Back->Day1Bathroom-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BathroomFloor-1
+<div class="dialog">
+  <p class="typing-effect">
+    Behind the door, you find a small bullet casing. It looks like it was fired from a handgun. A professional would be able to tell what kind of gun it came from.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Take the casing and leave->Casing-0]]
+  </button>
+  <button class="btn">
+    [[Go Back->BathroomFloor-0]]
   </button>
 </div>
 <<script>>
