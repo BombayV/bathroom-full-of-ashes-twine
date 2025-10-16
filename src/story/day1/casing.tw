@@ -1,1 +1,77 @@
 :: Casing-0
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    The police will take too long to analyze the casing.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Look at casing closer->Casing-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+
+:: Casing-1
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Wait, there's a serial number on the casing. If I can trace the provider of the casing, I might be able to find who bought it.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Trace the serial number->Casing-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Casing-2
+<div class="dialog">
+  <p class="typing-effect">
+    ...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Casting-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Casting-3
+<div class="dialog">
+  <p class="typing-effect">
+    ...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Casting-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Casting-4
+<div class="dialog">
+  <p class="typing-effect">
+    ...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Casting-5]]
+  </button>
+</div>

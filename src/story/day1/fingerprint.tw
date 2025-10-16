@@ -35,7 +35,7 @@ setTimeout(() => {
 :: MinigameFingerprint
 <div class="w-full relative flex flex-col items-center justify-start h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
   <div class="w-full max-w-xl mt-16 bg-neutral-900 rounded-sm py-3 px-4 flex relative gap-3 drop-shadow-md border border-neutral-700 items-center justify-center">
-    <p id="timer" class="text-center font-bbh text-xl">1:30</p>
+    <p id="timer" class="text-center font-bbh text-xl">2:00</p>
   </div>
   <div class="w-full max-w-xl mt-4 bg-neutral-900 rounded-sm py-5 px-4 flex flex-col relative gap-3 drop-shadow-md border border-neutral-700">
     <div class="relative w-full flex items-center justify-center bg-neutral-800 font-bbh py-2 px-4 rounded-sm">
@@ -79,8 +79,8 @@ setTimeout(() => {
     currentSelections: [0, 0, 0, 0, 0],
     totalFingerprints: 10,
     isGameWon: false,
-    totalTime: 90,
-    timeLeft: 90,
+    totalTime: 120,
+    timeLeft: 120,
     timerInterval: null,
     degradationInterval: null
   };
@@ -97,21 +97,18 @@ setTimeout(() => {
   const updateFingerprintDegradation = () => {
     const hideElement = document.getElementById('fingerprint-hide');
     if (hideElement && gameState.timeLeft > 0) {
-      // Calculate scale based on time passed (0 to 1 over total game time)
       const timeElapsed = gameState.totalTime - gameState.timeLeft;
-      const scale = Math.min(timeElapsed / gameState.totalTime, 1); // Progress from 0 to 1
+      const scale = Math.min(timeElapsed / gameState.totalTime, 1);
       hideElement.style.transform = `scaleY(${scale})`;
     }
   };
 
   const startTimer = () => {
-    // Update timer every second
     gameState.timerInterval = setInterval(() => {
       gameState.timeLeft--;
       updateTimer();
       
       if (gameState.timeLeft <= 0) {
-        // Time's up - game over
         clearInterval(gameState.timerInterval);
         clearInterval(gameState.degradationInterval);
         const tryAgain = Math.random() >= 0.5;
@@ -179,7 +176,6 @@ setTimeout(() => {
       dialogTextEl.innerHTML = '';
       dialogTextEl.classList.remove('.typing-effect');
       
-      // Trigger typing animation on the new content
       setTimeout(() => {
         if (dialogTextEl && window.setupTypingAnimation) {
           dialogTextEl.innerHTML = message;
@@ -321,10 +317,10 @@ setTimeout(() => {
   </p>
   <span class="separator"></span>
   <button class="btn">
-    [[Go Alone->Day2Alone]]
+    [[Go Alone->Day2AloneFinger]]
   </button>
   <button class="btn">
-    [[Call for Backup->Day2Backup]]
+    [[Call for Backup->Day2BackupFinger]]
   </button>
 </div>
 <<script>>

@@ -4,7 +4,9 @@ import { passageEndHandler } from './assets/events/passageEndHandler.ts';
 import { passageRenderHandler } from './assets/events/passageRenderHandler.ts';
 import SugarCubeUtils from './assets/utils/sugarcube.ts';
 
-const setupTypingAnimation = (element: HTMLElement, cb?: () => void) => {
+const setupTypingAnimation = (element: HTMLElement | null, cb?: () => void) => {
+  if (!element) return;
+  
   // Store the original HTML content
   const originalHTML = element.innerHTML;
 

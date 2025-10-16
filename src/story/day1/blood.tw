@@ -2,11 +2,11 @@
 <div class="dialog">
   <p class="title me">Who am I?</p>
   <p class="typing-effect">
-    Lets see if I get this sample on my computer. <span class="italic text-neutral-400">You proceed to insert the blood sample into your laptop.</span>
+    I should be able mix the blood sample and run it through the analyzer.
   </p>
   <span class="separator"></span>
   <button class="btn">  
-    [[Wait for it to boot up->Blood-1]]
+    [[Get Materials->Blood-1]]
   </button>
 </div>
 <<script>>
@@ -19,11 +19,11 @@ setTimeout(() => {
 <div class="dialog">
   <p class="title me">Who am I?</p>
   <p class="typing-effect">
-    Alright, I should be able to get it working. Lets do this. Hopefully I don't mess up the sample.
+    If I remember correctly, I only need to match the sequence of colors, and then press start. Lets see what happens.
   </p>
   <span class="separator"></span>
   <button class="btn">  
-    [[Start the analysis->MinigameBlood]]
+    [[Begin Analysis->MinigameBlood]]
   </button>
 </div>
 <<script>>
@@ -33,14 +33,314 @@ setTimeout(() => {
 <</script>>
 
 :: MinigameBlood
-<div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
-  <div class="text-4xl">
-    [[Test->Start]]
+<div class="w-full relative flex flex-col items-center justify-start h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <div class="w-full max-w-2xl mt-16 bg-neutral-900 rounded-sm py-3 px-4 flex relative gap-3 drop-shadow-md border border-neutral-700 items-center justify-center">
+    <p id="timer" class="text-center font-bbh text-xl">30</p>
+  </div>
+  <div class="w-full max-w-2xl mt-4 bg-neutral-900 rounded-sm py-5 px-4 flex flex-col relative gap-3 drop-shadow-md border border-neutral-700">
+    <div class="relative w-full flex items-center justify-center bg-neutral-800 font-bbh py-2 px-4 rounded-sm">
+      <h1>Blood Analysis</h1>
+    </div>
+    
+    <div class="w-full bg-neutral-800 rounded-sm p-4 border border-neutral-500">
+      <div id="target-colors" class="w-full flex h-12 rounded-sm overflow-hidden border border-neutral-400">
+      </div>
+    </div>
+    
+    <div class="w-full bg-neutral-800 rounded-sm p-4 border border-neutral-500">
+      <div id="draggable-container" class="flex gap-2 flex-wrap justify-center">
+      </div>
+    </div>
+    
+    <div class="w-full bg-neutral-800 rounded-sm p-4 border border-neutral-500">
+      <div class="flex gap-1 h-16">
+        <<for _i = 0; _i < 7; _i++>>
+          <div @id='"drop-zone-" + _i' class="drop-zone flex-1 rounded border-2 border-dashed border-neutral-700 bg-neutral-900/50 flex items-center justify-center text-xs text-neutral-400 transition-all duration-200" @data-zone-index=_i>
+            <span class="text-center text-neutral-500"></span>
+          </div>
+        <</for>>
+      </div>
+    </div>
+    
+    <button id="check-result" class="btn text-center py-3 text-xl font-bold">
+      Check Result
+    </button>
   </div>
 </div>
 
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Lets see if I can match the colors in the correct order for the blood sample.
+  </p>
+</div>
+
+<<script>>
+  let rainbowGameState = {
+    targetColors: [],
+    shuffledColors: [],
+    userSequence: [null, null, null, null, null, null, null],
+    isGameWon: false,
+    totalTime: 30,
+    timeLeft: 30,
+    timerInterval: null,
+    draggedElement: null
+  };
+
+  const generateRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+  const shuffleArray = (array) => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
+  const updateTimer = () => {
+    const timerElement = document.getElementById('timer');
+    if (timerElement) {
+      const minutes = Math.floor(rainbowGameState.timeLeft / 60);
+      const seconds = rainbowGameState.timeLeft % 60;
+      timerElement.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    }
+  };
+
+  const startTimer = () => {
+    rainbowGameState.timerInterval = setInterval(() => {
+      rainbowGameState.timeLeft--;
+      updateTimer();
+      
+      if (rainbowGameState.timeLeft <= 0) {
+        clearInterval(rainbowGameState.timerInterval);
+        const tryAgain = Math.random() >= 0.5;
+        if (Engine) {
+          Engine.play(tryAgain ? 'BloodTryAgain' : 'Day1Dead');
+        }
+      }
+    }, 1000);
+  };
+
+  const stopTimer = () => {
+    if (rainbowGameState.timerInterval) {
+      clearInterval(rainbowGameState.timerInterval);
+    }
+  };
+
+  const updateDialog = (message) => {
+    const dialogTextEl = document.querySelector('.dialog .typing-effect');
+    if (dialogTextEl) {
+      dialogTextEl.innerHTML = '';
+      
+      setTimeout(() => {
+        if (dialogTextEl && window.setupTypingAnimation) {
+          dialogTextEl.innerHTML = message;
+          window.setupTypingAnimation(dialogTextEl);
+        }
+      }, 100);
+    }
+  };
+
+  const checkResult = () => {
+    const allCorrect = rainbowGameState.userSequence.every((color, index) => {
+      console.log(color, rainbowGameState.targetColors[index], '1');
+      return color === rainbowGameState.targetColors[index];
+    });
+    
+    if (allCorrect) {
+      rainbowGameState.isGameWon = true;
+      stopTimer();
+      if (Engine) {
+        Engine.play('BloodSuccess');
+      }
+    } else {
+      updateDialog('The color sequence is not quite right. I need to try again with the correct order.');
+    }
+  };
+
+  const setupDragAndDrop = () => {
+    const draggables = document.querySelectorAll('.draggable-color');
+    draggables.forEach(draggable => {
+      draggable.addEventListener('dragstart', (e) => {
+        rainbowGameState.draggedElement = draggable;
+        draggable.style.opacity = '0.5';
+        e.dataTransfer.effectAllowed = 'copy';
+      });
+      
+      draggable.addEventListener('dragend', (e) => {
+        draggable.style.opacity = '1';
+        rainbowGameState.draggedElement = null;
+      });
+    });
+
+    const dropZones = document.querySelectorAll('.drop-zone');
+    dropZones.forEach(zone => {
+      zone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'copy';
+        zone.style.borderColor = '#fff';
+        zone.style.backgroundColor = 'rgba(59, 130, 246, 0.1)';
+      });
+      
+      zone.addEventListener('dragleave', (e) => {
+        const zoneIndex = parseInt(zone.dataset.zoneIndex);
+        const currentColor = rainbowGameState.userSequence[zoneIndex];
+        
+        if (currentColor) {
+          zone.style.borderColor = currentColor;
+          zone.style.backgroundColor = currentColor;
+        } else {
+          zone.style.borderColor = 'rgb(115, 115, 115)';
+          zone.style.backgroundColor = 'rgba(23, 23, 23, 0.5)';
+        }
+      });
+      
+      zone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        zone.style.borderColor = 'rgb(115, 115, 115)';
+        zone.style.backgroundColor = 'rgba(23, 23, 23, 0.5)';
+        
+        if (rainbowGameState.draggedElement) {
+          const colorIndex = parseInt(rainbowGameState.draggedElement.dataset.colorIndex);
+          const zoneIndex = parseInt(zone.dataset.zoneIndex);
+          const color = rainbowGameState.shuffledColors[colorIndex];
+          
+          rainbowGameState.userSequence[zoneIndex] = color;
+          
+          setTimeout(() => {
+            zone.style.backgroundColor = color;
+            zone.style.borderColor = color;
+            zone.innerHTML = '';
+            zone.style.opacity = '0.9';
+          }, 0);
+        }
+      });
+    });
+  };
+
+  const renderTargetColors = () => {
+    const container = document.getElementById('target-colors');
+    if (container) {
+      container.innerHTML = '';
+      rainbowGameState.targetColors.forEach(color => {
+        const div = document.createElement('div');
+        div.className = 'flex-1';
+        div.style.backgroundColor = color;
+        container.appendChild(div);
+      });
+    }
+  };
+
+  const renderDraggableColors = () => {
+    const container = document.getElementById('draggable-container');
+    if (container) {
+      container.innerHTML = '';
+      rainbowGameState.shuffledColors.forEach((color, index) => {
+        const div = document.createElement('div');
+        div.className = 'draggable-color w-12 h-12 rounded cursor-move border-2 border-neutral-500 hover:border-white transition-all duration-200 shadow-lg';
+        div.id = `draggable-${index}`;
+        div.style.backgroundColor = color;
+        div.draggable = true;
+        div.dataset.colorIndex = index;
+        container.appendChild(div);
+      });
+      setupDragAndDrop();
+    }
+  };
+
+  const startMinigame = () => {
+    rainbowGameState.targetColors = Array.from({ length: 7 }, () => generateRandomColor());
+    rainbowGameState.shuffledColors = shuffleArray(rainbowGameState.targetColors);
+    
+    renderTargetColors();
+    renderDraggableColors();
+    
+    const checkButton = document.getElementById('check-result');
+    if (checkButton) {
+      checkButton.addEventListener('click', checkResult);
+    }
+
+    updateTimer();
+    startTimer();
+  };
+
+  setTimeout(() => {
+    startMinigame();
+    window.setupTypingAnimation?.(document.querySelector('.typing-effect'), () => {
+    
+    });
+  }, 100);
+<</script>>
+
+:: BloodTryAgain
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    I messed up the sequence. Let me try again before the sample degrades completely.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Try Again->MinigameBlood]]
+  </button>
+</div>
 <<script>>
 setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
 
+:: BloodSuccess
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    I'm surprised I managed to get it right. My vision must be improving.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->BloodStoryline-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BloodStoryline-0
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    It can't be...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->BloodStoryline-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+
+:: BloodStoryline-1
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    It's her.
+  </p>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
 }, 100);
 <</script>>

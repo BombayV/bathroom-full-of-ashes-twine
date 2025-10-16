@@ -27,11 +27,11 @@ const EVENTS: Record<string, () => void> = {
   Day1Dead: () => {
     DayTransition('Day1DeadScreen', 'day-1-dead');
   },
-  Day2Alone: () => {
-    DayTransition('Day2Alone', 'day-2-alone');
+  Day2AloneFinger: () => {
+    DayTransition('Day2AloneFinger', 'day-2-alone-finger');
   },
-  Day2Backup: () => {
-    DayTransition('Day2Backup', 'day-2-backup');
+  Day2BackupFinger: () => {
+    DayTransition('Day2BackupFinger', 'day-2-backup-finger');
   },
 };
 
