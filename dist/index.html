@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://F2277A49-95C9-4B14-AE66-62526089F861// --><tw-storydata name="The Bathroom Full of Ashes" startnode="90" creator="Tweego" creator-version="2.1.1" ifid="F2277A49-95C9-4B14-AE66-62526089F861" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryInterface" tags="" position="100,100" size="100,100">&lt;div id=&quot;interface&quot; class=&quot;bg-neutral-950 w-full h-dvh relative flex items-center justify-start&quot;&gt;
+	<!-- UUID://F2277A49-95C9-4B14-AE66-62526089F861// --><tw-storydata name="The Bathroom Full of Ashes" startnode="123" creator="Tweego" creator-version="2.1.1" ifid="F2277A49-95C9-4B14-AE66-62526089F861" zoom="1" format="SugarCube" format-version="2.37.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryInterface" tags="" position="100,100" size="100,100">&lt;div id=&quot;interface&quot; class=&quot;bg-neutral-950 w-full h-dvh relative flex items-center justify-start&quot;&gt;
   &lt;div id=&quot;passages&quot; class=&quot;w-full h-full relative&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 
@@ -367,7 +367,9 @@ setTimeout(() =&gt; {
   &lt;h1 id=&quot;day-0&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
     Day 0
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="InsideHouseDay0-0" tags="" position="1100,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;/div&gt;
+&lt;&lt;audio &quot;rain&quot; stop&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="InsideHouseDay0-0" tags="" position="1100,225" size="100,100">&lt;&lt;set $visitedLivingRoom = $visitedLivingRoom ?? false&gt;&gt;
+&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     The air is thick with the acrid smell of smoke and wet ash. Water drips from charred ceiling beams. Every step crunches on debris.
     There are many rooms to explore, but you should be careful. The structure feels unstable.
@@ -376,9 +378,11 @@ setTimeout(() =&gt; {
   &lt;button class=&quot;btn&quot;&gt;
     [[Go to the Kitchen-&gt;Kitchen]]
   &lt;/button&gt;
-  &lt;button class=&quot;btn&quot;&gt;
-    [[Go to the Living Room-&gt;LivingRoom]]
-  &lt;/button&gt;
+  &lt;&lt;if !$visitedLivingRoom&gt;&gt;
+    &lt;button class=&quot;btn&quot;&gt;
+      [[Go to the Living Room-&gt;LivingRoom]]
+    &lt;/button&gt;
+  &lt;&lt;/if&gt;&gt;
   &lt;button class=&quot;btn&quot;&gt;
     [[Go to Bathroom-&gt;Bathroom]]
   &lt;/button&gt;
@@ -392,7 +396,8 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="LivingRoom" tags="" position="1225,225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="LivingRoom" tags="" position="1225,225" size="100,100">&lt;&lt;set $visitedLivingRoom = true&gt;&gt;
+&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     The couch where you were supposed to watch movies is a collection of blackened springs.
   &lt;/p&gt;
@@ -458,7 +463,7 @@ setTimeout(() =&gt; {
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Kitchen" tags="" position="475,350" size="100,100">&lt;&lt;set $eatenPancake = $eatenPancake ?? false&gt;&gt;
 &lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-    The table where you had breakfast is now a pile of charcoal. Only a single pancake remains.
+    The table where you had breakfast is now a pile of charcoal. &lt;&lt;if !$eatenPancake&gt;&gt;Only a single pancake remains.&lt;&lt;/if&gt;&gt;
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
@@ -523,7 +528,7 @@ setTimeout(() =&gt; {
 }, 100);
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="KitchenDay0" tags="" position="975,350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-Sunlight streams into a warm, lived-in kitchen in a Newark suburb. The smell of coffee and pancakes is in the air.  
+Sunlight streams into a warm, lived-in kitchen in a small town. The smell of coffee and pancakes is in the air.  
 &lt;strong&gt;Lily&lt;/strong&gt;, a bright-eyed girl with a missing front tooth, is sitting at the kitchen table, scribbling furiously in a drawing pad with crayons. 
 &lt;strong&gt;Kaitlyn&lt;/strong&gt;, her mother, stands at the stove, humming softly as she flips a pancake. She has a kind, gentle face. 
 You are sitting opposite of Lily, nursing a mug of coffee. You&#39;re off-duty, dressed in a simple t-shirt and jeans. You look tired, but happy.
@@ -1386,28 +1391,118 @@ setTimeout(() =&gt; {
 &lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="BloodStoryline-1" tags="" position="975,850" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-    It&#39;s her.
-  &lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;script&gt;&gt;
-setTimeout(() =&gt; {
-  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
-}, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Casing-0" tags="" position="1100,850" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
-  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
-  &lt;p class=&quot;typing-effect&quot;&gt;
-    The police will take too long to analyze the casing.
+    It&#39;s her. The blood sample matches the DNA of my daughter.
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
-  &lt;button class=&quot;btn&quot;&gt;  
-    [[Look at casing closer-&gt;Casing-1]]
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Continue-&gt;BloodStoryline-2]]
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;&lt;script&gt;&gt;
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="Casing-1" tags="" position="1225,850" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="BloodStoryline-2" tags="" position="1100,850" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    A member of the forensic team just enters the lab, as he notices you are staring at the results.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Continue-&gt;BloodStoryline-3]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="BloodStoryline-3" tags="" position="1225,850" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title him&quot;&gt;Forensic Team Member&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Hey, I just wanted to let you know that we also took a sample from the bathroom. Here are the results.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Read Results-&gt;BloodStoryline-4]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="BloodStoryline-4" tags="" position="100,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    This is very strange. The DNA is not from Lily...
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Continue-&gt;BloodStoryline-5]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="BloodStoryline-5" tags="" position="225,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    It looks like it&#39;s from a random person. Could the intruder be hurt too? I need to find o...
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Continue-&gt;BloodStoryline-6]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="BloodStoryline-6" tags="" position="350,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title him&quot;&gt;Forensic Team Member&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    &lt;span class=&quot;italic text-neutral-400&quot;&gt;He interrupts before you can finish your sentence.&lt;/span&gt;
+    We know who the intruder is. He recently left prison under parole. There is a record of criminal activity, but nothing violent. We should be able to track him down quickly.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Continue-&gt;BloodStoryline-7]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="BloodStoryline-7" tags="" position="475,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    You have to decide if you want to go by yourself or call for backup. Is it too risky to go alone? Or is it worth trusting the police department to have my back?
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go Alone-&gt;Day2AloneBlood]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;
+    [[Go with Backup-&gt;Day2BackupBlood]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="Casing-0" tags="" position="600,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    The police will take too long to analyze the casing. Let me take out my magnifying glass and look at it closer.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Look at casing-&gt;Casing-1]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Casing-1" tags="" position="725,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     Wait, there&#39;s a serial number on the casing. If I can trace the provider of the casing, I might be able to find who bought it.
@@ -1421,45 +1516,263 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="Casing-2" tags="" position="100,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Casing-2" tags="" position="850,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     ...
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;  
-    [[Continue-&gt;Casting-3]]
+    [[Continue-&gt;Casing-3]]
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;&lt;script&gt;&gt;
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="Casting-3" tags="" position="225,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="Casing-3" tags="" position="975,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     ...
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;  
-    [[Continue-&gt;Casting-4]]
+    [[Continue-&gt;Casing-4]]
   &lt;/button&gt;
 &lt;/div&gt;
 &lt;&lt;script&gt;&gt;
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="Casting-4" tags="" position="350,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="Casing-4" tags="" position="1100,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     ...
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;  
-    [[Continue-&gt;Casting-5]]
+    [[Continue-&gt;Casing-5]]
   &lt;/button&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="Day1Dead" tags="" position="475,975" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="Casing-5" tags="" position="1225,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    I know this guy. He sold me a gun a while back but I have not talked to him in almost 4 years. Let me call him.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Call him-&gt;Casing-6]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="81" name="Casing-6" tags="" position="100,1100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    ...
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Continue-&gt;Casing-Call-0]]
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="Casing-Call-0" tags="" position="225,1100" size="100,100">&lt;&lt;set $successChance = 0.0;&gt;&gt;
+&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Unknown Caller&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Hello? Who is this?
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    &lt;&lt;link &quot;Hey, it&#39;s [REDACTED], we met a while back.&quot;&gt;&gt;
+      &lt;&lt;set $successChance += 0.10&gt;&gt;
+      &lt;&lt;goto &quot;Casing-Story-1&quot;&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Wrong number, sorry.-&gt;Day1DeadCasing]]
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="Casing-Story-1" tags="" position="350,1100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Unknown Caller&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    What do you want?
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    &lt;&lt;link &quot;I&#39;m looking for some information regarding a casing I found inside my house. It was recently completely burned.&quot;&gt;&gt;
+      &lt;&lt;set $successChance += 0.00&gt;&gt;
+      &lt;&lt;goto &quot;Casing-Story-2-0&quot;&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    &lt;&lt;link &quot;My daughter and wife disappeared a day ago. I&#39;m just trying to find them. I thought you might be able to help since I found a casing with your usual branding.&quot;&gt;&gt;
+      &lt;&lt;set $successChance += 0.25&gt;&gt;
+      &lt;&lt;goto &quot;Casing-Story-2-0&quot;&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    &lt;&lt;link &quot;I think you sold me a gun a while back. Do you remember me? I&#39;m trying to find some information about someone.&quot;&gt;&gt;
+      &lt;&lt;set $successChance += 0.05&gt;&gt;
+      &lt;&lt;goto &quot;Casing-Story-2-0&quot;&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Casing-Story-2-0" tags="" position="475,1100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Unknown Caller&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    I see. And why should I help you? Are you with the police?
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    &lt;&lt;link &quot;Yes, I&#39;m with the police but they are taking too long to analyze the casing. I need your help.&quot;&gt;&gt;
+      &lt;&lt;set $successChance -= 0.10&gt;&gt;
+      &lt;&lt;goto &quot;Casing-Story-2-1&quot;&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    &lt;&lt;link &quot;No, I&#39;m a detective, trying to find some information regarding a case. If you help me, I can make it worth your while.&quot;&gt;&gt;
+      &lt;&lt;set $successChance += 0.10&gt;&gt;
+      &lt;&lt;goto &quot;Casing-Story-2-1&quot;&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    &lt;&lt;link &quot;Look man, I just want to find my wife and kid. The casing was found in my house, and I thought you might be able to help.&quot;&gt;&gt;
+      &lt;&lt;set $successChance += 0.25&gt;&gt;
+      &lt;&lt;goto &quot;Casing-Story-2-1&quot;&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="Casing-Story-2-1" tags="" position="600,1100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Unknown Caller&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    I don&#39;t know... What makes you think I can help you?
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    &lt;&lt;link &quot;The casing has your branding on it. I thought you might know something about it.&quot;&gt;&gt;
+      &lt;&lt;set $successChance += 0.10&gt;&gt;
+      &lt;&lt;goto &quot;Casing-Story-2-2&quot;&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    &lt;&lt;link &quot;I mean, I understand you&#39;re putting yourself at risk by helping me, but I really need to find them.&quot;&gt;&gt;
+      &lt;&lt;set $successChance += 0.20&gt;&gt;
+      &lt;&lt;goto &quot;Casing-Story-2-2&quot;&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    &lt;&lt;link &quot;Look, I don&#39;t have time for this. If you don&#39;t help me, you&#39;ll be listed as an accomplice.&quot;&gt;&gt;
+      &lt;&lt;set $successChance =0&gt;&gt;
+      &lt;&lt;goto &quot;Casing-Story-2-2&quot;&gt;&gt;
+    &lt;&lt;/link&gt;&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="Casing-Story-2-2" tags="" position="725,1100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Unknown Caller&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    ...
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button id=&quot;continue-button&quot; class=&quot;btn hidden&quot;&gt;  
+    [[Thank you so much, I really appreciate it. The number I found was [REDACTED]. Can you tell me anything about it?-&gt;Casing-Story-3]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn hidden&quot; id=&quot;fail-button&quot;&gt;  
+    [[No, wait. Please help me fi....-&gt;Day1DeadCasing]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+const passedChance = () =&gt; {
+  const chance = State.variables.successChance;
+  if (chance &gt;= 1.0) return true;
+  if (chance &lt;= 0.0) return false;
+  const randomValue = Math.random();
+  return randomValue &lt; chance;
+};
+
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+  const success = passedChance();
+  const continueButton = document.getElementById(&#39;continue-button&#39;);
+  const failButton = document.getElementById(&#39;fail-button&#39;);
+  const typingEffect = document.querySelector(&#39;.typing-effect&#39;);
+  setTimeout(() =&gt; {
+    typingEffect.textContent = &#39;&#39;;
+    typingEffect.classList.remove(&#39;typing-effect&#39;);
+    setTimeout(() =&gt; {
+      typingEffect.textContent = success ? &quot;Alright, I&#39;ll help you. But if you&#39;re lying, I&#39;ll make sure you regret it.&quot; : &quot;I&#39;m sorry, I can&#39;t help you.&quot;;
+      typingEffect.classList.add(&#39;typing-effect&#39;);
+      window.setupTypingAnimation?.(typingEffect, () =&gt; {
+        if (success) {
+          continueButton.classList.remove(&#39;hidden&#39;);
+        } else {
+          failButton.classList.remove(&#39;hidden&#39;);
+        }
+      });
+    }, 100);
+  }, 3000);
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="Casing-Story-3" tags="" position="850,1100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Unknown Caller&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Hmm, let me check my records... Ah yes, that casing was sold to a guy named Danny Morales a couple of days ago. He mentioned something about needing it for protection. I don&#39;t know much more than that, sorry.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Thank you, that&#39;s very helpful. I&#39;ll look into it.-&gt;Day1CasingSuccess]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="Day1CasingSuccess" tags="" position="975,1100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    With the information I got from the guy, I can now look for Danny Morales and hopefully find some clues about my wife and daughter.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Continue-&gt;Day2Casing]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="Day1Dead" tags="" position="1100,1100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-1-dead&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
     You lost the evidence
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="Day1DeadScreen" tags="" position="600,975" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="90" name="Day1DeadCasing" tags="" position="1225,1100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;h1 id=&quot;day-1-dead-casing&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
+    You couldn&#39;t obtain any information
+  &lt;/h1&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="Day1DeadScreen" tags="" position="100,1225" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;div class=&quot;w-full max-w-xl mt-12 text-lg&quot;&gt;
     &lt;p class=&quot;typing-effect&quot;&gt;
       You couldn&#39;t finish the analysis in time. The piece of evidence you had was destroyed in the process. 
@@ -1485,7 +1798,33 @@ setTimeout(() =&gt; {
     }, 300);
   });
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Fingerprint-0" tags="" position="725,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="Day1DeadScreenCasing" tags="" position="225,1225" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;div class=&quot;w-full max-w-xl mt-12 text-lg&quot;&gt;
+    &lt;p class=&quot;typing-effect&quot;&gt;
+      You couldn&#39;t finish the analysis in time. The piece of evidence you had was destroyed in the process. 
+      &lt;span class=&quot;mt-4 block&quot;&gt;&lt;/span&gt;
+      You were not able to find Lily, nor Kaitlyn.
+      &lt;span class=&quot;mt-4 block&quot;&gt;&lt;/span&gt;
+      Lily thought you were a hero. You were not.
+
+      &lt;button class=&quot;mt-4 block text-neutral-400 transition-all duration-300 hover:text-neutral-300 hover:underline cursor-pointer&quot; id=&quot;restart&quot;&gt;
+        Play again?
+      &lt;/button&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;), () =&gt; {
+    setTimeout(() =&gt; {
+      const restartButton = document.getElementById(&#39;restart&#39;);
+      if (restartButton) {
+        restartButton.addEventListener(&#39;click&#39;, window.restartGame);
+      }
+    }, 300);
+  });
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="Fingerprint-0" tags="" position="350,1225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     Let me just put the fingerprint on the scanner. &lt;span class=&quot;italic text-neutral-400&quot;&gt;You proceed to place your finger on the scanner.&lt;/span&gt;
@@ -1499,7 +1838,7 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Fingerprint-1" tags="" position="850,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Fingerprint-1" tags="" position="475,1225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     That should do it. Now to start the analysis and hope I get a match.
@@ -1513,7 +1852,7 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="MinigameFingerprint" tags="" position="975,975" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-start h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="MinigameFingerprint" tags="" position="600,1225" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-start h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;div class=&quot;w-full max-w-xl mt-16 bg-neutral-900 rounded-sm py-3 px-4 flex relative gap-3 drop-shadow-md border border-neutral-700 items-center justify-center&quot;&gt;
     &lt;p id=&quot;timer&quot; class=&quot;text-center font-bbh text-xl&quot;&gt;2:00&lt;/p&gt;
   &lt;/div&gt;
@@ -1613,22 +1952,16 @@ setTimeout(() =&gt; {
   };
 
   const updateFingerprintImage = (imgElement, fingerprintId, slotIndex = null) =&gt; {
-    const possiblePaths = [
-      &#39;assets/&#39;,
-      &#39;./assets/&#39;,
-      &#39;/assets/&#39;,
-    ];
-    
-    const paths = possiblePaths.map(path =&gt; `${path}finger${fingerprintId}.jpg`);
-    
+    const imgUrl = `https://cdn.bombayv.com/finger${fingerprintId}.jpg`;
+
     if (slotIndex !== null) {
       const yPosition = slotIndex * 25;
       imgElement.style.objectPosition = `center ${yPosition}%`;
       imgElement.style.objectFit = &#39;cover&#39;;
       imgElement.style.mixBlendMode = &#39;multiply&#39;;
     }
-    
-    testPath(paths, imgElement);
+
+    imgElement.src = imgUrl;
   };
 
   const rightArrowChange = (slotIndex) =&gt; {
@@ -1720,7 +2053,7 @@ setTimeout(() =&gt; {
     
     });
   }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="FingerprintTryAgain" tags="" position="1100,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="FingerprintTryAgain" tags="" position="725,1225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     Damn it... I messed up. I should try again quickly before it&#39;s too late. It seems like the print might not be too degraded.
@@ -1734,7 +2067,7 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="FingerprintSuccess" tags="" position="1225,975" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="97" name="FingerprintSuccess" tags="" position="850,1225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     This is not good... The fingerprints don&#39;t belong to Kaitlyn nor Lily.
@@ -1748,10 +2081,10 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="81" name="FingerprintStoryline-0" tags="" position="100,1100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="FingerprintStoryline-0" tags="" position="975,1225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
-    I never heard that name before. Who could she be?
+    I never heard that name before. Who could he be?
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;
@@ -1762,10 +2095,10 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="FingerprintStoryline-1" tags="" position="225,1100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="FingerprintStoryline-1" tags="" position="1100,1225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;   
-    There&#39;s an address here as well. Maybe I should check it out.
+    He has an address listed in the system. It&#39;s not too far from here. Maybe I should check it out.
   &lt;/p&gt;
   &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
   &lt;button class=&quot;btn&quot;&gt;  
@@ -1776,7 +2109,7 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="FingerprintStoryline-2" tags="" position="350,1100" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="FingerprintStoryline-2" tags="" position="1225,1225" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
   &lt;p class=&quot;typing-effect&quot;&gt;
     You have to decide if you want to go by yourself or call for backup. Is it too risky to go alone? Or is it worth trusting the police department to have my back?
   &lt;/p&gt;
@@ -1792,27 +2125,171 @@ setTimeout(() =&gt; {
 setTimeout(() =&gt; {
   window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
 }, 100);
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="Day1" tags="" position="475,1100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="Day1" tags="" position="100,1350" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-1&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
     Day 1
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="Day2AloneFinger" tags="" position="600,1100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="102" name="Day2AloneBloodStory" tags="" position="225,1350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    This should be the house. I can see there is only one light on what appears to be the bedroom. I should be able to get in through the front door.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Go inside-&gt;AloneBlood-0]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="AloneBlood-0" tags="" position="350,1350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    You sneak into the house through the front door, lockpicking it open with a bobby pin Kaitlyn gave you. You step inside, and slowly make your way to the stairs.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Continue-&gt;AloneBlood-1]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="AloneBlood-1" tags="" position="475,1350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    As your about to reach the top, you see a figure coming out of the bedroom. As soon as you both lock eyes, he runs away towards a window.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Chase after him-&gt;AloneBlood-2]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="AloneBlood-2" tags="" position="600,1350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    STOP! You don&#39;t have anywhere to go!
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Continue-&gt;AloneBlood-3]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="AloneBlood-3" tags="" position="725,1350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    He jumps out of the window, landing on the ground below. As his feet hit the ground, he screams in pain, running towards the woods as he is fueled by adrenaline.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Continue-&gt;AloneBlood-4]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="AloneBlood-4" tags="" position="850,1350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Damn it. I should have brought my gun with me. I don&#39;t think I will find him in the woods at night.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Continue-&gt;AloneBlood-5]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="AloneBlood-5" tags="" position="975,1350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    Maybe I could look around the house for clues and see how he got involved in all this. Let me go downstairs and start from there.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Go downstairs-&gt;AloneBloodSearch-0]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="AloneBloodSearch-0" tags="" position="1100,1350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    What room should I search first?
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Search the living room-&gt;AloneBloodLivingRoom-0]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Search the kitchen-&gt;MainMenu]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Search the bedroom-&gt;AloneBloodBedroom-0]]
+  &lt;/button&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Search the bathroom-&gt;AloneBloodBathroom-0]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="AloneBloodLivingRoom-0" tags="" position="1225,1350" size="100,100">&lt;div class=&quot;dialog&quot;&gt;
+  &lt;p class=&quot;title me&quot;&gt;Who am I?&lt;/p&gt;
+  &lt;p class=&quot;typing-effect&quot;&gt;
+    The living room is a mess. There are broken picture frames and furniture scattered around the room.
+  &lt;/p&gt;
+  &lt;span class=&quot;separator&quot;&gt;&lt;/span&gt;
+  &lt;button class=&quot;btn&quot;&gt;  
+    [[Search the room-&gt;AloneBloodLivingRoom-1]]
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;&lt;script&gt;&gt;
+setTimeout(() =&gt; {
+  window.setupTypingAnimation?.(document.querySelector(&#39;.typing-effect&#39;));
+}, 100);
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="Day2BackupBloodStory" tags="" position="100,1475" size="100,100"></tw-passagedata><tw-passagedata pid="112" name="Day2CasingStory" tags="" position="225,1475" size="100,100"></tw-passagedata><tw-passagedata pid="113" name="Day2AloneFingerStory" tags="" position="350,1475" size="100,100"></tw-passagedata><tw-passagedata pid="114" name="Day2BackupFingerStory" tags="" position="475,1475" size="100,100"></tw-passagedata><tw-passagedata pid="115" name="Day2AloneFinger" tags="" position="600,1475" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-2-alone-finger&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
-    Day 2 Alone
+    Day 2
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="Day2BackupFinger" tags="" position="725,1100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="116" name="Day2BackupFinger" tags="" position="725,1475" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-2-backup-finger&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
-    Day 2 Backup
+    Day 2
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="87" name="Day3" tags="" position="850,1100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="117" name="Day2AloneBlood" tags="" position="850,1475" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;h1 id=&quot;day-2-alone-blood&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
+    Day 2
+  &lt;/h1&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="118" name="Day2BackupBlood" tags="" position="975,1475" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;h1 id=&quot;day-2-backup-blood&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
+    Day 2
+  &lt;/h1&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="119" name="Day2Casing" tags="" position="1100,1475" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+  &lt;h1 id=&quot;day-2-casing&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
+    Day 2
+  &lt;/h1&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="120" name="Day3" tags="" position="1225,1475" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-3&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
     Day 3
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="88" name="Day4" tags="" position="975,1100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="121" name="Day4" tags="" position="100,1600" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-4&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out&quot;&gt;
     Day 4
   &lt;/h1&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="89" name="MainMenu" tags="" position="1100,1100" size="100,100">&lt;div class=&quot;w-full relative flex flex-col h-full px-8 md:px-10 lg:px-24 py-16 overflow-y-auto&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="122" name="MainMenu" tags="" position="225,1600" size="100,100">&lt;div class=&quot;w-full relative flex flex-col h-full px-8 md:px-10 lg:px-24 py-16 overflow-y-auto&quot;&gt;
   &lt;h1 class=&quot;text-3xl md:text-4xl xl:text-5xl font-bbh text-neutral-50 drop-shadow-lg z-10 max-w-sm md:max-w-lg xl:max-w-2xl&quot;&gt;
     The Bathroom Full of Ashes
   &lt;/h1&gt;
@@ -1838,25 +2315,34 @@ setTimeout(() =&gt; {
     © 2025 BombayV Games
   &lt;/p&gt;
   &lt;div class=&quot;fixed inset-0 flex items-center justify-center z-0&quot;&gt;
-    &lt;img id=&quot;background-image&quot; alt=&quot;Background&quot; class=&quot;w-full h-full object-cover&quot; 
+    &lt;img id=&quot;background-image&quot; src=&quot;https://cdn.bombayv.com/background.jpg&quot; alt=&quot;Background&quot; class=&quot;w-full h-full object-cover object-center&quot; 
       style=&quot;filter: grayscale(100%);&quot;
     /&gt;
     &lt;span class=&quot;absolute inset-0 bg-black/50 backdrop-blur z-50&quot;&gt;&lt;/span&gt;
   &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="90" name="Start" tags="" position="1225,1100" size="100,100">&lt;div
+&lt;/div&gt;
+
+&lt;&lt;cacheaudio &quot;rain&quot; &quot;https://cdn.bombayv.com/rain.mp3&quot;&gt;&gt;
+&lt;&lt;audio &quot;rain&quot; volume 0.3&gt;&gt;
+&lt;&lt;audio &quot;rain&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Start" tags="" position="350,1600" size="100,100">&lt;div
   id=&quot;loading&quot;
   class=&quot;gap-y-2 w-full relative h-dvh flex flex-col items-center justify-center opacity-100&quot;
 &gt;
-  &lt;img id=&quot;bathroom-image&quot; alt=&quot;Hat&quot; class=&quot;w-80 h-auto opacity-0 transition-opacity duration-6000&quot; /&gt;
+  &lt;img src=&quot;https://cdn.bombayv.com/the_bathroom_full_of_ashes.png&quot; id=&quot;bathroom-image&quot; alt=&quot;Hat&quot; class=&quot;w-80 h-auto opacity-0 transition-opacity duration-6000&quot; /&gt;
   &lt;p
     class=&quot;text-3xl font-bbh text-neutral-400 drop-shadow transition-opacity duration-6000 opacity-0 mt-4&quot;
   &gt;
     BombayV Games
   &lt;/p&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="Test" tags="" position="100,1225" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="124" name="Test" tags="" position="475,1600" size="100,100">&lt;div class=&quot;w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white&quot;&gt;
   &lt;h1 id=&quot;day-0&quot; class=&quot;text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 ease-in-out&quot;&gt;
-    Day 0 [[Test-&gt;Fingerprint-0]]
+    $successChance
   &lt;/h1&gt;
+      &lt;button class=&quot;btn&quot;&gt;
+      &lt;&lt;link &quot;Look at casing&quot;&gt;&gt;
+        &lt;&lt;goto &quot;MinigameFingerprint&quot;&gt;&gt;
+      &lt;&lt;/link&gt;&gt;
+    &lt;/button&gt;
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */

@@ -133,22 +133,16 @@ setTimeout(() => {
   };
 
   const updateFingerprintImage = (imgElement, fingerprintId, slotIndex = null) => {
-    const possiblePaths = [
-      'assets/',
-      './assets/',
-      '/assets/',
-    ];
-    
-    const paths = possiblePaths.map(path => `${path}finger${fingerprintId}.jpg`);
-    
+    const imgUrl = `https://cdn.bombayv.com/finger${fingerprintId}.jpg`;
+
     if (slotIndex !== null) {
       const yPosition = slotIndex * 25;
       imgElement.style.objectPosition = `center ${yPosition}%`;
       imgElement.style.objectFit = 'cover';
       imgElement.style.mixBlendMode = 'multiply';
     }
-    
-    testPath(paths, imgElement);
+
+    imgElement.src = imgUrl;
   };
 
   const rightArrowChange = (slotIndex) => {
@@ -280,7 +274,7 @@ setTimeout(() => {
 <div class="dialog">
   <p class="title me">Who am I?</p>
   <p class="typing-effect">
-    I never heard that name before. Who could she be?
+    I never heard that name before. Who could he be?
   </p>
   <span class="separator"></span>
   <button class="btn">
@@ -297,7 +291,7 @@ setTimeout(() => {
 <div class="dialog">
   <p class="title me">Who am I?</p>
   <p class="typing-effect">   
-    There's an address here as well. Maybe I should check it out.
+    He has an address listed in the system. It's not too far from here. Maybe I should check it out.
   </p>
   <span class="separator"></span>
   <button class="btn">  

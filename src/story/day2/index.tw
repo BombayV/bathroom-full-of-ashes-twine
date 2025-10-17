@@ -1,13 +1,34 @@
 :: Day2AloneFinger
 <div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
   <h1 id="day-2-alone-finger" class="text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out">
-    Day 2 Alone
+    Day 2
   </h1>
 </div>
 
 :: Day2BackupFinger
 <div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
   <h1 id="day-2-backup-finger" class="text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out">
-    Day 2 Backup
+    Day 2
+  </h1>
+</div>
+
+:: Day2AloneBlood
+<div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <h1 id="day-2-alone-blood" class="text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out">
+    Day 2
+  </h1>
+</div>
+
+:: Day2BackupBlood
+<div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <h1 id="day-2-backup-blood" class="text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out">
+    Day 2
+  </h1>
+</div>
+
+:: Day2Casing
+<div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <h1 id="day-2-casing" class="text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out">
+    Day 2
   </h1>
 </div>

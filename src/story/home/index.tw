@@ -25,9 +25,13 @@
     © 2025 BombayV Games
   </p>
   <div class="fixed inset-0 flex items-center justify-center z-0">
-    <img id="background-image" alt="Background" class="w-full h-full object-cover" 
+    <img id="background-image" src="https://cdn.bombayv.com/background.jpg" alt="Background" class="w-full h-full object-cover object-center" 
       style="filter: grayscale(100%);"
     />
     <span class="absolute inset-0 bg-black/50 backdrop-blur z-50"></span>
   </div>
 </div>
+
+<<cacheaudio "rain" "https://cdn.bombayv.com/rain.mp3">>
+<<audio "rain" volume 0.3>>
+<<audio "rain" play>>

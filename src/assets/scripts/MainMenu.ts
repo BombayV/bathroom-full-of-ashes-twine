@@ -1,5 +1,3 @@
-import { testPath } from '../utils/testPath';
-
 const toggleFullscreen = () => {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen().catch((err) => {
@@ -14,17 +12,6 @@ const toggleFullscreen = () => {
 
 export const InitMainMenu = () => {
   setTimeout(() => {
-    const img = document.getElementById('background-image') as HTMLImageElement;
-    if (img) {
-      const possiblePaths = [
-        'assets/background.jpg',
-        './assets/background.jpg',
-        '/assets/background.jpg',
-      ];
-
-      testPath(possiblePaths, img);
-    }
-
     const fsButton = document.getElementById('fullscreen-button');
     fsButton?.addEventListener('click', toggleFullscreen);
   }, 0);

@@ -1,0 +1,158 @@
+:: Day2AloneBloodStory
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    This should be the house. I can see there is only one light on what appears to be the bedroom. I should be able to get in through the front door.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Go inside->AloneBlood-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBlood-0
+<div class="dialog">
+  <p class="typing-effect">
+    You sneak into the house through the front door, lockpicking it open with a bobby pin Kaitlyn gave you. You step inside, and slowly make your way to the stairs.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneBlood-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBlood-1
+<div class="dialog">
+  <p class="typing-effect">
+    As your about to reach the top, you see a figure coming out of the bedroom. As soon as you both lock eyes, he runs away towards a window.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Chase after him->AloneBlood-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBlood-2
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    STOP! You don't have anywhere to go!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneBlood-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBlood-3
+<div class="dialog">
+  <p class="typing-effect">
+    He jumps out of the window, landing on the ground below. As his feet hit the ground, he screams in pain, running towards the woods as he is fueled by adrenaline.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneBlood-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBlood-4
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Damn it. I should have brought my gun with me. I don't think I will find him in the woods at night.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneBlood-5]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBlood-5
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Maybe I could look around the house for clues and see how he got involved in all this. Let me go downstairs and start from there.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Go downstairs->AloneBloodSearch-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBloodSearch-0
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    What room should I search first?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Search the living room->AloneBloodLivingRoom-0]]
+  </button>
+  <button class="btn">  
+    [[Search the kitchen->MainMenu]]
+  </button>
+  <button class="btn">  
+    [[Search the bedroom->AloneBloodBedroom-0]]
+  </button>
+  <button class="btn">  
+    [[Search the bathroom->AloneBloodBathroom-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBloodLivingRoom-0
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    The living room is a mess. There are broken picture frames and furniture scattered around the room.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Search the room->AloneBloodLivingRoom-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>

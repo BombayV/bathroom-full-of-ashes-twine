@@ -336,8 +336,116 @@ setTimeout(() => {
 <div class="dialog">
   <p class="title me">Who am I?</p>
   <p class="typing-effect">
-    It's her.
+    It's her. The blood sample matches the DNA of my daughter.
   </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->BloodStoryline-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BloodStoryline-2
+<div class="dialog">
+  <p class="typing-effect">
+    A member of the forensic team just enters the lab, as he notices you are staring at the results.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->BloodStoryline-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BloodStoryline-3
+<div class="dialog">
+  <p class="title him">Forensic Team Member</p>
+  <p class="typing-effect">
+    Hey, I just wanted to let you know that we also took a sample from the bathroom. Here are the results.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Read Results->BloodStoryline-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BloodStoryline-4
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    This is very strange. The DNA is not from Lily...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->BloodStoryline-5]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BloodStoryline-5
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    It looks like it's from a random person. Could the intruder be hurt too? I need to find o...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->BloodStoryline-6]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BloodStoryline-6
+<div class="dialog">
+  <p class="title him">Forensic Team Member</p>
+  <p class="typing-effect">
+    <span class="italic text-neutral-400">He interrupts before you can finish your sentence.</span>
+    We know who the intruder is. He recently left prison under parole. There is a record of criminal activity, but nothing violent. We should be able to track him down quickly.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->BloodStoryline-7]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: BloodStoryline-7
+<div class="dialog">
+  <p class="typing-effect">
+    You have to decide if you want to go by yourself or call for backup. Is it too risky to go alone? Or is it worth trusting the police department to have my back?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go Alone->Day2AloneBlood]]
+  </button>
+  <button class="btn">
+    [[Go with Backup->Day2BackupBlood]]
+  </button>
 </div>
 <<script>>
 setTimeout(() => {

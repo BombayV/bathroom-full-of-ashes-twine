@@ -1,4 +1,5 @@
 :: InsideHouseDay0-0
+<<set $visitedLivingRoom = $visitedLivingRoom ?? false>>
 <div class="dialog">
   <p class="typing-effect">
     The air is thick with the acrid smell of smoke and wet ash. Water drips from charred ceiling beams. Every step crunches on debris.
@@ -8,9 +9,11 @@
   <button class="btn">
     [[Go to the Kitchen->Kitchen]]
   </button>
-  <button class="btn">
-    [[Go to the Living Room->LivingRoom]]
-  </button>
+  <<if !$visitedLivingRoom>>
+    <button class="btn">
+      [[Go to the Living Room->LivingRoom]]
+    </button>
+  <</if>>
   <button class="btn">
     [[Go to Bathroom->Bathroom]]
   </button>
@@ -28,6 +31,7 @@ setTimeout(() => {
 
 
 :: LivingRoom
+<<set $visitedLivingRoom = true>>
 <div class="dialog">
   <p class="typing-effect">
     The couch where you were supposed to watch movies is a collection of blackened springs.
@@ -106,7 +110,7 @@ setTimeout(() => {
 <<set $eatenPancake = $eatenPancake ?? false>>
 <div class="dialog">
   <p class="typing-effect">
-    The table where you had breakfast is now a pile of charcoal. Only a single pancake remains.
+    The table where you had breakfast is now a pile of charcoal. <<if !$eatenPancake>>Only a single pancake remains.<</if>>
   </p>
   <span class="separator"></span>
   <button class="btn">

@@ -1,4 +1,3 @@
-import { testPath } from '../utils/testPath';
 import SugarCubeUtils from '../utils/sugarcube';
 
 const initLoadingAnimation = (cb: () => void) => {
@@ -28,18 +27,6 @@ const initLoadingAnimation = (cb: () => void) => {
 
 export const InitStart = () => {
   setTimeout(() => {
-    const img = document.getElementById('bathroom-image') as HTMLImageElement;
-    if (img) {
-      // Try different possible paths
-      const possiblePaths = [
-        'assets/the_bathroom_full_of_ashes.png',
-        './assets/the_bathroom_full_of_ashes.png',
-        '/assets/the_bathroom_full_of_ashes.png',
-      ];
-
-      testPath(possiblePaths, img);
-    }
-
     initLoadingAnimation(() => {
       SugarCubeUtils.whenReady(() => {
         SugarCubeUtils.goToPassage('MainMenu');

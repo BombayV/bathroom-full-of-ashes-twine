@@ -27,12 +27,24 @@ const EVENTS: Record<string, () => void> = {
   Day1Dead: () => {
     DayTransition('Day1DeadScreen', 'day-1-dead');
   },
+  Day1DeadCasing: () => {
+    DayTransition('Day1DeadScreenCasing', 'day-1-dead-casing');
+  },
   Day2AloneFinger: () => {
-    DayTransition('Day2AloneFinger', 'day-2-alone-finger');
+    DayTransition('Day2AloneFingerStory', 'day-2-alone-finger');
   },
   Day2BackupFinger: () => {
-    DayTransition('Day2BackupFinger', 'day-2-backup-finger');
+    DayTransition('Day2BackupFingerStory', 'day-2-backup-finger');
   },
+  Day2AloneBlood: () => {
+    DayTransition('Day2AloneBloodStory', 'day-2-alone-blood');
+  },
+  Day2BackupBlood: () => {
+    DayTransition('Day2BackupBloodStory', 'day-2-backup-blood');
+  },
+  Day2Casing: () => {
+    DayTransition('Day2CasingStory', 'day-2-casing');
+  }
 };
 
 const passageRenderHandler = (e: any) => {

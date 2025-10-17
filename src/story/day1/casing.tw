@@ -2,11 +2,11 @@
 <div class="dialog">
   <p class="title me">Who am I?</p>
   <p class="typing-effect">
-    The police will take too long to analyze the casing.
+    The police will take too long to analyze the casing. Let me take out my magnifying glass and look at it closer.
   </p>
   <span class="separator"></span>
   <button class="btn">  
-    [[Look at casing closer->Casing-1]]
+    [[Look at casing->Casing-1]]
   </button>
 </div>
 <<script>>
@@ -40,7 +40,7 @@ setTimeout(() => {
   </p>
   <span class="separator"></span>
   <button class="btn">  
-    [[Continue->Casting-3]]
+    [[Continue->Casing-3]]
   </button>
 </div>
 <<script>>
@@ -49,14 +49,14 @@ setTimeout(() => {
 }, 100);
 <</script>>
 
-:: Casting-3
+:: Casing-3
 <div class="dialog">
   <p class="typing-effect">
     ...
   </p>
   <span class="separator"></span>
   <button class="btn">  
-    [[Continue->Casting-4]]
+    [[Continue->Casing-4]]
   </button>
 </div>
 <<script>>
@@ -65,13 +65,254 @@ setTimeout(() => {
 }, 100);
 <</script>>
 
-:: Casting-4
+:: Casing-4
 <div class="dialog">
   <p class="typing-effect">
     ...
   </p>
   <span class="separator"></span>
   <button class="btn">  
-    [[Continue->Casting-5]]
+    [[Continue->Casing-5]]
   </button>
 </div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Casing-5
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    I know this guy. He sold me a gun a while back but I have not talked to him in almost 4 years. Let me call him.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Call him->Casing-6]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Casing-6
+<div class="dialog">
+  <p class="typing-effect">
+    ...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Casing-Call-0]]
+  </button>
+</div>
+
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Casing-Call-0
+<<set $successChance = 0.0;>>
+<div class="dialog">
+  <p class="title me">Unknown Caller</p>
+  <p class="typing-effect">
+    Hello? Who is this?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    <<link "Hey, it's [REDACTED], we met a while back.">>
+      <<set $successChance += 0.10>>
+      <<goto "Casing-Story-1">>
+    <</link>>
+  </button>
+  <button class="btn">  
+    [[Wrong number, sorry.->Day1DeadCasing]]
+  </button>
+</div>
+
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Casing-Story-1
+<div class="dialog">
+  <p class="title me">Unknown Caller</p>
+  <p class="typing-effect">
+    What do you want?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    <<link "I'm looking for some information regarding a casing I found inside my house. It was recently completely burned.">>
+      <<set $successChance += 0.00>>
+      <<goto "Casing-Story-2-0">>
+    <</link>>
+  </button>
+  <button class="btn">  
+    <<link "My daughter and wife disappeared a day ago. I'm just trying to find them. I thought you might be able to help since I found a casing with your usual branding.">>
+      <<set $successChance += 0.25>>
+      <<goto "Casing-Story-2-0">>
+    <</link>>
+  </button>
+  <button class="btn">  
+    <<link "I think you sold me a gun a while back. Do you remember me? I'm trying to find some information about someone.">>
+      <<set $successChance += 0.05>>
+      <<goto "Casing-Story-2-0">>
+    <</link>>
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Casing-Story-2-0
+<div class="dialog">
+  <p class="title me">Unknown Caller</p>
+  <p class="typing-effect">
+    I see. And why should I help you? Are you with the police?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    <<link "Yes, I'm with the police but they are taking too long to analyze the casing. I need your help.">>
+      <<set $successChance -= 0.10>>
+      <<goto "Casing-Story-2-1">>
+    <</link>>
+  </button>
+  <button class="btn">  
+    <<link "No, I'm a detective, trying to find some information regarding a case. If you help me, I can make it worth your while.">>
+      <<set $successChance += 0.10>>
+      <<goto "Casing-Story-2-1">>
+    <</link>>
+  </button>
+  <button class="btn">  
+    <<link "Look man, I just want to find my wife and kid. The casing was found in my house, and I thought you might be able to help.">>
+      <<set $successChance += 0.25>>
+      <<goto "Casing-Story-2-1">>
+    <</link>>
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Casing-Story-2-1
+<div class="dialog">
+  <p class="title me">Unknown Caller</p>
+  <p class="typing-effect">
+    I don't know... What makes you think I can help you?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    <<link "The casing has your branding on it. I thought you might know something about it.">>
+      <<set $successChance += 0.10>>
+      <<goto "Casing-Story-2-2">>
+    <</link>>
+  </button>
+  <button class="btn">  
+    <<link "I mean, I understand you're putting yourself at risk by helping me, but I really need to find them.">>
+      <<set $successChance += 0.20>>
+      <<goto "Casing-Story-2-2">>
+    <</link>>
+  </button>
+  <button class="btn">  
+    <<link "Look, I don't have time for this. If you don't help me, you'll be listed as an accomplice.">>
+      <<set $successChance =0>>
+      <<goto "Casing-Story-2-2">>
+    <</link>>
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Casing-Story-2-2
+<div class="dialog">
+  <p class="title me">Unknown Caller</p>
+  <p class="typing-effect">
+    ...
+  </p>
+  <span class="separator"></span>
+  <button id="continue-button" class="btn hidden">  
+    [[Thank you so much, I really appreciate it. The number I found was [REDACTED]. Can you tell me anything about it?->Casing-Story-3]]
+  </button>
+  <button class="btn hidden" id="fail-button">  
+    [[No, wait. Please help me fi....->Day1DeadCasing]]
+  </button>
+</div>
+<<script>>
+const passedChance = () => {
+  const chance = State.variables.successChance;
+  if (chance >= 1.0) return true;
+  if (chance <= 0.0) return false;
+  const randomValue = Math.random();
+  return randomValue < chance;
+};
+
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+  const success = passedChance();
+  const continueButton = document.getElementById('continue-button');
+  const failButton = document.getElementById('fail-button');
+  const typingEffect = document.querySelector('.typing-effect');
+  setTimeout(() => {
+    typingEffect.textContent = '';
+    typingEffect.classList.remove('typing-effect');
+    setTimeout(() => {
+      typingEffect.textContent = success ? "Alright, I'll help you. But if you're lying, I'll make sure you regret it." : "I'm sorry, I can't help you.";
+      typingEffect.classList.add('typing-effect');
+      window.setupTypingAnimation?.(typingEffect, () => {
+        if (success) {
+          continueButton.classList.remove('hidden');
+        } else {
+          failButton.classList.remove('hidden');
+        }
+      });
+    }, 100);
+  }, 3000);
+}, 100);
+<</script>>
+
+:: Casing-Story-3
+<div class="dialog">
+  <p class="title me">Unknown Caller</p>
+  <p class="typing-effect">
+    Hmm, let me check my records... Ah yes, that casing was sold to a guy named Danny Morales a couple of days ago. He mentioned something about needing it for protection. I don't know much more than that, sorry.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Thank you, that's very helpful. I'll look into it.->Day1CasingSuccess]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day1CasingSuccess
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    With the information I got from the guy, I can now look for Danny Morales and hopefully find some clues about my wife and daughter.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day2Casing]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
