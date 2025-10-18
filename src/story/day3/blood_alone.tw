@@ -75,7 +75,341 @@ setTimeout(() => {
   </p>
   <span class="separator"></span>
   <button class="btn">
-    [[TBD->Day3BloodAlone-6]]
+    [[What will you do if I refuse?->Day3BloodAlone-6]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-6
+<div class="dialog">
+  <p class="title me">Mavin</p>
+  <p class="typing-effect">
+    If you refuse, well... you will search two meters under the ground. Simple as that.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[...->Day3BloodAlone-7]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-7
+<div class="dialog">
+  <p class="typing-effect">
+    A cold shiver runs down your spine as you process Mavin's words. The weight of the situation presses heavily on your shoulders. You have a choice to make, and it won't be easy.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Accept the deal->Day3BloodAlone-8]]
+  </button>
+  <button class="btn">
+    [[Refuse and prepare for a fight->Day3BloodAlone-badfinal1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-8
+<div class="dialog">
+  <p class="title me">Mavin</p>
+  <p class="typing-effect">
+    Wise choice. Your family will be released soon. Remember, stay away from the Crimson Syndicate.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[When will I see them?->Day3BloodAlone-9]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-9
+<div class="dialog">
+  <p class="title me">Mavin</p>
+  <p class="typing-effect">
+    Soon enough. Now, go home and forget everything you've seen here.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Leave->Day3BloodAlone-10]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-10
+<div class="dialog">
+  <p class="typing-effect">
+    You turn and walk away from Mavin without another word. There's nothing left to say. The warehouse echoes with emptiness as you make your way back to your car, each step feeling heavier than the last.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodAlone-11]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-11
+<div class="dialog">
+  <p class="typing-effect">
+    The drive home is a blur. Rain drums against the windshield. You don't remember the route. Your mind is elsewhere—caught between relief that your family will live and the gnawing weight of your compromise.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodAlone-12]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-12
+<div class="dialog">
+  <p class="typing-effect">
+    When you finally pull into the driveway, the house is dark except for a single light in the living room window. Your heart races. Is this a trap? Another game?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go inside->Day3BloodAlone-13]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-13
+<div class="dialog">
+  <p class="typing-effect">
+    You unlock the door slowly. The house smells like home—familiar and safe, yet somehow foreign now.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodAlone-14]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-14
+<div class="dialog">
+  <p class="title">Kaitlyn</p>
+  <p class="typing-effect">
+    Is that you?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodAlone-15]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-15
+<div class="dialog">
+  <p class="typing-effect">
+    Your wife appears in the doorway, her face streaked with tears. Behind her, Lily peeks out, eyes wide with uncertainty.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodAlone-16]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-16
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    I'm here. I'm home.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodAlone-17]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-17
+<div class="dialog">
+  <p class="typing-effect">
+    Kaitlyn rushes to you, throwing her arms around you. Her body shakes with sobs. Lily joins her, burying her face in your chest. You hold them both, breathing in the scent of their hair, the warmth of their presence.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodAlone-18]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-18
+<div class="dialog">
+  <p class="title">Kaitlyn</p>
+  <p class="typing-effect">
+    Thank god. Thank god you came back to us. I thought... I thought we'd never see you again.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodAlone-19]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-19
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    I'm here now. That's what matters. We're together.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodAlone-20]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-20
+<div class="dialog">
+  <p class="typing-effect">
+    But even as you speak the words, the truth sits heavy in your chest. You've made a choice. Your family lives, but justice is compromised. The Crimson Syndicate will continue their operations. Criminals will walk free because of your silence.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodAlone-21]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-21
+<div class="dialog">
+  <p class="typing-effect">
+    You look at Lily's tear-stained face, at Kaitlyn's exhaustion, at the fear that still lingers in their eyes. And you know you'd make the same choice again.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodAlone-22]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-22
+<div class="dialog">
+  <p class="typing-effect">
+    <i>Family first. Always. But the cost of that choice will haunt you forever.</i>
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[END->MainMenu]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+
+:: Day3BloodAlone-badfinal1
+<div class="dialog">
+  <p class="typing-effect">
+    You tighten your grip on your weapon, steeling yourself for the confrontation ahead. Mavin smirks, clearly expecting resistance. The warehouse seems to close in around you as the tension mounts.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Something's not right here->Day3BloodAlone-badfinal1-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-badfinal1-2
+<<cacheaudio "gunshot" "https://cdn.bombayv.com/gunshot.mp3">>
+<<audio "gunshot" volume 0.5>>
+<<audio "gunshot" play>>
+<div class="dialog">
+  <p class="typing-effect">
+    ...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodAlone-badfinal2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-badfinal2
+<div class="dialog">
+  <p class="typing-effect">
+    You feel how your world goes dark as a sharp pain erupts in your chest. Mavin's laughter echoes in your fading consciousness. Your last thoughts are of your wife and daughter, hoping they will be safe without you.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[End->MainMenu]]
   </button>
 </div>
 <<script>>
