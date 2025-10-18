@@ -55,6 +55,12 @@ const EVENTS: Record<string, () => void> = {
   Day3FingerBackup: () => {
     DayTransition('Day3FingerBackup-0', 'day-3-finger-backup');
   },
+  Day3BloodBackupBackup: () => {
+    DayTransition('Day3BloodBackupBackup-0', 'day-3-blood-backup-backup');
+  },
+  Day3BloodBackupAlone: () => {
+    DayTransition('Day3BloodBackupAlone-0', 'day-3-blood-backup-alone');
+  },
 };
 
 const passageRenderHandler = (e: any) => {

@@ -4,7 +4,7 @@ import SugarCubeUtils from './assets/utils/sugarcube.ts';
 
 const setupTypingAnimation = (element: HTMLElement | null, cb?: () => void) => {
   if (!element) return;
-  
+
   // Store the original HTML content
   const originalHTML = element.innerHTML;
 

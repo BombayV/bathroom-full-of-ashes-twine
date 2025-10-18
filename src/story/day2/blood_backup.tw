@@ -1,1 +1,187 @@
 :: Day2BackupBloodStory
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    This should be the place. Miller, is the team ready?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day2BackupBloodStory-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupBloodStory-1
+<div class="dialog">
+  <p class="title">Miller (radio)</p>
+  <p class="typing-effect">
+    Affirmative, team is in position. Awaiting your signal. Ready to enter through the back.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Move in->Day2BackupBloodStory-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupBloodStory-2
+<div class="dialog">
+  <p class="typing-effect">
+    You quietly approach the building, signaling your team to move in. The tension is palpable as you prepare to confront the unknown assailant.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Enter the building->Day2BackupBloodStory-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupBloodStory-3
+<div class="dialog">
+  <p class="title">Police Team</p>
+  <p class="typing-effect">
+    Police! Drop your weapon and surrender!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day2BackupBloodStory-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupBloodStory-4
+<div class="dialog">
+  <p class="typing-effect">
+    As the team moves in, the suspect suddenly turns, aims a weapon at you. A shot rings out, and everything goes dark.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day2BackupBloodStory-5]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupBloodStory-5
+<div class="dialog">
+  <p class="typing-effect">
+    ...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day2BackupBloodStory-6]]
+  </button>
+</div>
+<<cacheaudio "gunshot" "https://cdn.bombayv.com/gunshot.mp3">>
+<<audio "gunshot" volume 0.5>>
+<<audio "gunshot" play>>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupBloodStory-6
+<div class="dialog">
+  <p class="title">Danny</p>
+  <p class="typing-effect">
+    AGGGH! PLEASE DON'T KILL ME! I'LL TELL YOU EVERYTHING!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Where is my wife and daughter?->Day2BackupBloodStory-7]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupBloodStory-7
+<div class="dialog">
+  <p class="title">Danny</p>
+  <p class="typing-effect">
+    They... they took them. I gave them to my boss, Mavin. Please, don't hurt me!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Where is your boss Mavin?->Day2BackupBloodStory-8]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupBloodStory-8
+<div class="dialog">
+  <p class="title">Danny</p>
+  <p class="typing-effect">
+    He... he operates out of an old warehouse down by the docks. Please, I beg you, don't hurt me anymore.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Secure the area team->Day2BackupBloodStory-9]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupBloodStory-9
+<div class="dialog">
+  <p class="typing-effect">
+    You signal your team to secure the area while you prepare to call for backup and plan your next move. The team secures the perimeter, ensuring there is not a threat nearby.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day2BackupBloodStory-10]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupBloodStory-10
+<div class="dialog">
+  <p class="typing-effect">
+    You have to decided between going after Mavin alone or calling for backup from Miller and the team. What will you do?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Call Miller for help->Day3BloodBackupBackup]]
+  </button>
+  <button class="btn">  
+    [[Go after Mavin alone->Day3BloodBackupAlone]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
