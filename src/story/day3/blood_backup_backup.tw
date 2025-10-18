@@ -1,1 +1,918 @@
 :: Day3BloodBackupBackup-0
+<div class="dialog">
+  <p class="typing-effect">
+    The air is cold and smells of salt and rust. A driving, miserable rain slicks the asphalt. Several black SWAT vans and police cruisers are parked in a semi-circle, all focused on a massive, decaying brick warehouse.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-1
+<div class="dialog">
+  <p class="typing-effect">
+    You stand next to Chief Miller, who is coordinating the raid from behind the door of his cruiser. You're wearing a tactical vest over your jacket, your hand not trembling, but gripping your pistol with white-knuckle intensity.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-2
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    (Into radio) All teams, final check. We go on my signal. We have two confirmed civilian hostages. Primary objective is recovery. Mavin is to be taken alive if possible...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-3
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    (Cutting him off, voice like gravel) He's not being taken alive.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-4
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    (Turns to you, face hard) We'll get them, son. But you're not going in. You're too close. You're a liability.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-5]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-5
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    You're not stopping me.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-6]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-6
+<div class="dialog">
+  <p class="typing-effect">
+    You start to move forward with the breach team. Miller's hand shoots out and grabs your shoulder.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-7]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-7
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    That's a direct order, Detective! Don't make me have my men—
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[(Shove him) Get out of my way, Miller.->EndingVictor-8]]
+  </button>
+  <button class="btn">
+    [[(Cold) They are my family. I am going in. You can shoot me or you can follow me.->EndingVictor-8]]
+  </button>
+  <button class="btn">
+    [[(Desperate) You need me. I know how he thinks. Don't do this!->EndingVictor-8]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-8
+<div class="dialog">
+  <p class="typing-effect">
+    You shove past his grip. You don't look back. Miller stares at you for a split second, his face a mask of fury and resignation.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-9]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-9
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    (Screaming into his radio) Dammit! Alright! He's with you! Alpha team, he's with you! Watch his back! ALL TEAMS... BREACH! BREACH! BREACH!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-10]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-10
+<div class="dialog">
+  <p class="typing-effect">
+    The world explodes in noise. The door blows inward. You are the second man through, your pistol up, scanning the darkness.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-11]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-11
+<div class="dialog">
+  <p class="typing-effect">
+    <b>INT. WAREHOUSE - NIGHT</b>
+  </p>
+  <p class="typing-effect">
+    It's chaos. SWAT flashlights cut the darkness. "GO! GO! GO!"
+  </p>
+  <p class="typing-effect">
+    <b>SWAT (V.O.):</b> "CLEAR!"
+  </p>
+  <p class="typing-effect">
+    <b>SWAT (V.O.):</b> "CLEAR!"
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-12]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-12
+<div class="dialog">
+  <p class="typing-effect">
+    <b>YOU (V.O.):</b> "Kaitlyn! Lily!"
+  </p>
+  <p class="typing-effect">
+    <b>SWAT (V.O.):</b> "UPPER GANTRY! MOVEMENT!"
+  </p>
+  <p class="typing-effect">
+    Gunfire erupts from above. The team takes cover, returning fire.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-13]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-13
+<div class="dialog">
+  <p class="typing-effect">
+    <b>SWAT (V.O.):</b> "In the center! I've got eyes on the hostages!"
+  </p>
+  <p class="typing-effect">
+    You see them. Kaitlyn and Lily, bound to chairs, surrounded by large chemical barrels. They are both crying, gagged.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-14]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-14
+<div class="dialog">
+  <p class="typing-effect">
+    <b>SWAT (V.O.):</b> "Bomb! I see wires! It's a dead-man's switch!"
+  </p>
+  <p class="typing-effect">
+    A single spotlight floods the gantry above, revealing Mavin. He's holding a detonator.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-15]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-15
+<div class="dialog">
+  <p class="title">Mavin</p>
+  <p class="typing-effect">
+    (His voice booming over a loudspeaker) Welcome, Detective! I was hoping you'd disobey orders! You always were so predictable!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-16]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-16
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    (Shouting) Let them go, Mavin! It's me you want!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-17]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-17
+<div class="dialog">
+  <p class="title">Mavin</p>
+  <p class="typing-effect">
+    (Laughing) Oh, I want you. But I want you to watch this. You took my entire operation. My life! You burned it to the ground for... what? Justice? You get to watch your life burn now.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-18]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-18
+<div class="dialog">
+  <p class="typing-effect">
+    He holds up the detonator. Kaitlyn shakes her head, muffled screams coming from behind her gag.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-19]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-19
+<div class="dialog">
+  <p class="title">Mavin</p>
+  <p class="typing-effect">
+    Goodbye, Detective.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-20]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-20
+<div class="dialog">
+  <p class="typing-effect">
+    He presses the button. A loud BEEP echoes.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[...->EndingVictor-21]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-21
+<div class="dialog">
+  <p class="typing-effect">
+    Nothing happens.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[...->EndingVictor-22]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-22
+<div class="dialog">
+  <p class="typing-effect">
+    Mavin looks at the detonator, confused, and slams the button again.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-23]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-23
+<div class="dialog">
+  <p class="typing-effect">
+    <b>SWAT (V.O.):</b> "Jammed! The signal is jammed! EOD team is on the hostages, go! Go!"
+  </p>
+  <p class="typing-effect">
+    The SWAT team rushes forward to free Kaitlyn and Lily.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-24]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-24
+<div class="dialog">
+  <p class="title">Mavin</p>
+  <p class="typing-effect">
+    (Enraged) NO! I'll do it myself!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-25]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-25
+<div class="dialog">
+  <p class="typing-effect">
+    Mavin pulls out a machine pistol and opens fire on the floor below. Bullets spark off the concrete around you.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-26]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-26
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    (To SWAT) Cover me! He's mine!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-27]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-27
+<div class="dialog">
+  <p class="typing-effect">
+    You break from cover and sprint for the metal staircase leading to the gantry.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-28]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-28
+<div class="dialog">
+  <p class="typing-effect">
+    A bullet rips through your shoulder. The pain is a white-hot flash. You stumble but keep climbing.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-29]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-29
+<div class="dialog">
+  <p class="typing-effect">
+    Another bullet tears into your thigh. Your leg almost gives out. You roar in pain and anger, pulling yourself up the last few steps.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-30]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-30
+<div class="dialog">
+  <p class="typing-effect">
+    You reach the top. Mavin turns to fire at you, but you're too close. You slam into him with all your weight.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-31]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-31
+<div class="dialog">
+  <p class="typing-effect">
+    The two of you crash through the rusted railing, falling. The world tumbles.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-32]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-32
+<div class="dialog">
+  <p class="typing-effect">
+    You hit the concrete floor with a sickening, bone-shattering CRUNCH.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[...->EndingVictor-33]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-33
+<div class="dialog">
+  <p class="typing-effect">
+    Your vision is black, spotted. Everything hurts. You hear Mavin groaning a few feet away. He's reaching for his fallen pistol.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-34]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-34
+<div class="dialog">
+  <p class="typing-effect">
+    Your arm feels like it's full of lead and broken glass. You ignore it. You draw your weapon.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-35]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-35
+<div class="dialog">
+  <p class="title">Mavin</p>
+  <p class="typing-effect">
+    (Coughing blood) You... you're... dead...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-36]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-36
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    This... is for them.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-37]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-37
+<div class="dialog">
+  <p class="typing-effect">
+    You fire. The shot is deafening. Mavin goes still.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-38]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-38
+<div class="dialog">
+  <p class="typing-effect">
+    Silence. You try to push yourself up, but collapse. You hear frantic footsteps.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-39]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-39
+<div class="dialog">
+  <p class="typing-effect">
+    <b>KAITLYN (V.O.):</b> "DAD! Oh my god! DAD!"
+  </p>
+  <p class="typing-effect">
+    <b>LILY (V.O.):</b> "DADDY!"
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-40]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-40
+<div class="dialog">
+  <p class="typing-effect">
+    Chief Miller is kneeling over you, his hand pressing on your shoulder wound.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-41]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-41
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    You crazy bastard. You crazy, stupid bastard. MEDIC! GET A MEDIC IN HERE NOW! Stay with me, son. Stay with me.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-42]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-42
+<div class="dialog">
+  <p class="typing-effect">
+    Your vision fades in and out. You see them. Kaitlyn and Lily, being held back by a SWAT officer, both sobbing. They're safe.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-43]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-43
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    (Coughing) Are they... safe, Miller?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-44]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-44
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    (Nodding, his voice thick) Yeah. They're safe. You got 'em. You got 'em both. Now just... just hold on.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-45]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-45
+<div class="dialog">
+  <p class="typing-effect">
+    Kaitlyn breaks free and rushes to you, grabbing your hand.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-46]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-46
+<div class="dialog">
+  <p class="title">KAITLYN</p>
+  <p class="typing-effect">
+    (Sobbing) We're safe. We're safe. You did it. You promised. Just stay awake! Please, please stay awake!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-47]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-47
+<div class="dialog">
+  <p class="typing-effect">
+    You look past her, at Lily, who is crying but watching you. You try to smile.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-48]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-48
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Movie... marathon...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-49]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-49
+<div class="dialog">
+  <p class="typing-effect">
+    Your eyes close. The world goes black.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[...->EndingVictor-50]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-50
+<div class="dialog">
+  <p class="typing-effect">
+    <b>[FADE IN]</b>
+  </p>
+  <p class="typing-effect">
+    The steady beeping of a heart monitor. Your vision is blurry. You're in a hospital room.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-51]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-51
+<div class="dialog">
+  <p class="typing-effect">
+    Your arm is in a cast. Your chest is heavily bandaged. You turn your head.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-52]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-52
+<div class="dialog">
+  <p class="typing-effect">
+    Kaitlyn is asleep in a chair by your bed, her hand resting on your arm. Lily is curled up on a cot against the far wall, clutching her drawing pad. They are bruised and bandaged, but they are here. They are alive.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingVictor-53]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingVictor-53
+<div class="dialog">
+  <p class="typing-effect">
+    <i>You saved them. But the cost will leave scars on you all.</i>
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[END->MainMenu]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
