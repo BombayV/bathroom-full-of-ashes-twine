@@ -1,1 +1,551 @@
 :: Day3BloodBackup-0
+<div class="dialog">
+  <p class="typing-effect">
+    The air is cold and smells of salt and rust. A driving, miserable rain slicks the asphalt.
+    Several black SWAT vans and police cruisers are parked in a semi-circle, their headlights cutting through the darkness, all focused on a massive, decaying brick warehouse.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-1
+<div class="dialog">
+  <p class="typing-effect">
+    You stand next to Chief Miller, who is coordinating the raid from behind the door of his cruiser. You're wearing a tactical vest over your jacket, your hand trembling slightly on the grip of your pistol.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-2
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    (Into radio) All teams, final check. We go on my signal. We have two confirmed civilian hostages. Primary objective is recovery. Mavin is to be taken alive if possible, but containment is the priority.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-3
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    He's in there. I know he is. Kaitlyn... Lily...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-4
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    We'll get them, son. We're going to bring them home.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-5]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-5
+<div class="dialog">
+  <p class="typing-effect">
+    The SWAT team leader gives Miller a 'ready' signal from the breach point. You start to move forward with the breach team. Miller's hand shoots out and grabs your shoulder, stopping you.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-6]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-6
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    Whoa. Not you.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-7]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-7
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    What do you mean, 'not me'? They're my family! I'm ending this.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-8]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-8
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    You're exactly why you're not going in. You're not a cop on this one. You're a target, and you're a wrecking ball. I need clear heads in there, not a man on a vendetta.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[(Furious) Like hell I'm waiting! That's an order you can shove!->EndingAshes-9]]
+  </button>
+  <button class="btn">
+    [[(Begging) Miller, please. I have to be the one. Don't ask me to stand here.->EndingAshes-9]]
+  </button>
+  <button class="btn">
+    [[(Cold) I am the only one who can stop him. You know that.->EndingAshes-9]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-9
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    (Shakes his head) And that's exactly why you'd get them killed. You'd go for Mavin, not for them. You will stay here. You will wait for my all-clear. That is a direct order, Detective. Don't make me have my men restrain you.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-10]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-10
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    (Into radio) All teams... Breach! Breach! Breach!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-11]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-11
+<div class="dialog">
+  <p class="typing-effect">
+    The night erupts. The SWAT team uses a small explosive charge on the door, which blows inward. They pour into the darkness, flashlights cutting the black. Shouts of "POLICE! HANDS UP!" echo from inside.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-12]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-12
+<div class="dialog">
+  <p class="typing-effect">
+    You are left standing outside the perimeter, helpless, your fists clenched so hard your knuckles are white. You watch the building, every fiber of your being screaming to run inside.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-13]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-13
+<div class="dialog">
+  <p class="typing-effect">
+    You hear muffled sounds from within. Static-filled shouts crackle over Miller's radio.
+  </p>
+  <p class="typing-effect">
+    <b>RADIO (V.O.):</b> "Moving to the main floor! Clear!"
+  </p>
+  <p class="typing-effect">
+    <b>RADIO (V.O.):</b> "Secondary team, check the upper gantry!"
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-14]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-14
+<div class="dialog">
+  <p class="typing-effect">
+    <b>RADIO (V.O.):</b> "Wait... I see movement! I see... It's the hostages! They're here!"
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-15]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-15
+<div class="dialog">
+  <p class="typing-effect">
+    A wave of impossible relief washes over you. You take a step forward, whispering "Kaitlyn..."
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-16]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-16
+<div class="dialog">
+  <p class="typing-effect">
+    <b>RADIO (V.O.):</b> (A new, panicked voice) "Chief! We have a problem! The hostages are... they're strapped. There are... oh God, there are barrels everywhere! It's a trap! The whole place is wired!"
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-17]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-17
+<div class="dialog">
+  <p class="title">Chief Miller</p>
+  <p class="typing-effect">
+    (Screaming into his radio) ALL UNITS, PULL BACK! EVACUATE NOW! PULL B—
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[...->EndingAshes-18]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-18
+<div class="dialog">
+  <p class="typing-effect">
+    The radio cuts to static. A sudden, low THUMP echoes from inside the building. The rain stops, as if the air itself has been sucked in. The warehouse windows glow a brilliant, terrible orange from within.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[...->EndingAshes-19]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-19
+<div class="dialog">
+  <p class="typing-effect">
+    A split second of perfect, deafening silence.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[...->EndingAshes-20]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-20
+<div class="dialog">
+  <p class="typing-effect">
+    The world explodes.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[...->EndingAshes-21]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-21
+<div class="dialog">
+  <p class="typing-effect">
+    The camera is violently thrown back as a massive shockwave tears across the lot. You are hurled off your feet, slamming against a cruiser. The sound is overwhelming; a deafening, catastrophic ROAR. The entire warehouse disintegrates, blossoming into a colossal fireball that punches a column of black smoke and fire thousands of feet into the night sky.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-22]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-22
+<div class="dialog">
+  <p class="typing-effect">
+    Silence, broken only by a high-pitched ringing in your ears. You lie on the wet asphalt, the air super-heated. The ringing fades, replaced by the roar of the inferno.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-23]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-23
+<div class="dialog">
+  <p class="typing-effect">
+    You push yourself to your knees, your face cut and bleeding. You stare at the spot where the warehouse stood. It's gone. There is nothing left but a mountain of raging fire.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-24]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-24
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Kaitlyn?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-25]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-25
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Lily...?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-26]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-26
+<div class="dialog">
+  <p class="typing-effect">
+    You slowly, painfully, get to your feet. You stumble forward, walking like a ghost, your arms limp at your sides. You stop at the edge of the inferno, the heat scorching your face.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-27]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-27
+<div class="dialog">
+  <p class="typing-effect">
+    Nothing could have survived. Miller. The team. Mavin.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-28]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-28
+<div class="dialog">
+  <p class="typing-effect">
+    Kaitlyn. Lily.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-29]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-29
+<div class="dialog">
+  <p class="typing-effect">
+    They are all gone.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-30]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-30
+<div class="dialog">
+  <p class="typing-effect">
+    You are the only one left. You are the only one who... waited.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-31]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-31
+<div class="dialog">
+  <p class="typing-effect">
+    You drop to your knees in the mud and ash. A single, agonizing sound of pure loss tears itself from your throat.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->EndingAshes-32]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: EndingAshes-32
+<div class="dialog">
+  <p class="typing-effect">
+    He took everything. And left you with only ashes.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[END->MainMenu]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
