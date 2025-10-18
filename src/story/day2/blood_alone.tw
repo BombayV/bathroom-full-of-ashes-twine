@@ -125,7 +125,7 @@ setTimeout(() => {
     [[Search the living room->AloneBloodLivingRoom-0]]
   </button>
   <button class="btn">  
-    [[Search the kitchen->MainMenu]]
+    [[Search the kitchen->AloneBloodKitchen-0]]
   </button>
   <button class="btn">  
     [[Search the bedroom->AloneBloodBedroom-0]]
@@ -144,11 +144,211 @@ setTimeout(() => {
 <div class="dialog">
   <p class="title me">Who am I?</p>
   <p class="typing-effect">
-    The living room is a mess. There are broken picture frames and furniture scattered around the room.
+    He seems like a very messy person. There are clothes and empty food containers all over the place. There is a TV on the wall, but it is turned off.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go back->AloneBloodSearch-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBloodKitchen-0
+<<set $openedFridge = $openedFridge ?? false>>
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    There is a knife on the counter, covered in blood. It might have been used during the break in.
+  </p>
+  <span class="separator"></span>
+  <button class="btn"> 
+    [[Go back->AloneBloodSearch-0]] 
+  </button>
+  <<if !$openedFridge>>
+    <button class="btn">  
+      [[Open the fridge->AloneBloodKitchen-1A]]
+    </button>
+  <</if>>
+  <button class="btn">  
+    [[Examine the knife->AloneBloodKitchen-1B]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBloodKitchen-1A
+<<set $openedFridge = true>>
+<div class="dialog">
+  <p class="typing-effect">
+    The fridge is mostly empty, there appears to be some leftovers and a single bottle of milk.
   </p>
   <span class="separator"></span>
   <button class="btn">  
-    [[Search the room->AloneBloodLivingRoom-1]]
+    [[Go back->AloneBloodKitchen-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBloodKitchen-1B
+<div class="dialog">
+  <p class="typing-effect">
+    The knife appears to have a custom design, with an obsidian handle and a serrated blade made out of gold. There is dried blood on the blade, but it is too old to determine whose it is.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Go back->AloneBloodKitchen-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBloodBedroom-0
+<<set $lampOn = $lampOn ?? false>>
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    The bedroom is a mess, clothes and other items are scattered all over the floor. There is a nightstand next to the bed with a lamp and a card on it.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Go back->AloneBloodSearch-0]]
+  </button>
+  <button class="btn">  
+    [[Examine the card->AloneBloodBedroom-1A]]
+  </button>
+  <<if !$lampOn>>
+  <button class="btn">  
+    [[Turn on the lamp->AloneBloodBedroom-1B]]
+  </button>
+  <</if>>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBloodBedroom-1A
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    <<if $lampOn>>
+      It... It has my address on it...
+    <<else>>
+      It is too dark to read the card properly.
+    <</if>>
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Go back->AloneBloodBedroom-0]]
+  </button>
+  <<if $lampOn>>
+    <button class="btn">  
+      [[Flip the card over->AloneBloodBedroom-2]]
+    </button>
+  <</if>>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBloodBedroom-1B
+<<set $lampOn = true>>
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Woah. This lamp is really bright.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Go back->AloneBloodBedroom-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+
+:: AloneBloodBathroom-0
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    The bathroom is surprisingly clean compared to the rest of the house. There is a mirror above the sink, and a shower curtain drawn across the bathtub.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Go back->AloneBloodSearch-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBloodBedroom-2
+<div class="dialog">
+  <p class="typing-effect">
+    On the back of the card, there is a handwritten note that says "Meet me at the old warehouse at midnight. -M"
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneBloodBedroom-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBloodBedroom-3
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    The old warehouse... That must be where he is going, or at least where he left Kaitlyn and Lily.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneBloodBedroom-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneBloodBedroom-4
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    I don't know if it's a good idea to go there by myself again. Maybe I should ask Miller for help.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Go to warehouse->Day3BloodAlone]]
+  </button>
+  <button class="btn">  
+    [[Call Miller for help->Day3BloodBackup]]
   </button>
 </div>
 <<script>>

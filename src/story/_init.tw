@@ -19,12 +19,9 @@
 <<run Config.history.controls = false>>
 
 <<script>>
-// Make SugarCube objects available globally for all passages
 if (typeof window !== 'undefined') {
-  // Check if SugarCube is already defined and avoid overwriting readonly property
   if (!window.SugarCube) {
     try {
-      // Try to define the property
       Object.defineProperty(window, 'SugarCube', {
         value: {
           Engine: typeof Engine !== 'undefined' ? Engine : null,
@@ -38,7 +35,6 @@ if (typeof window !== 'undefined') {
         enumerable: true
       });
     } catch (e) {
-      // Fallback: use a different property name if SugarCube is protected
       window.SugarCubeAPI = {
         Engine: typeof Engine !== 'undefined' ? Engine : null,
         State: typeof State !== 'undefined' ? State : null,
@@ -50,7 +46,6 @@ if (typeof window !== 'undefined') {
     }
   }
   
-  // Dispatch event to notify TypeScript that SugarCube is ready
   const event = new CustomEvent('sugarcube-ready', {
     detail: {
       engine: typeof Engine !== 'undefined',

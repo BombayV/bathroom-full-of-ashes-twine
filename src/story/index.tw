@@ -10,3 +10,31 @@
     BombayV Games
   </p>
 </div>
+
+<<script>>
+setTimeout(() => {
+  const loading = document.getElementById('loading');
+
+  if (loading) {
+    setTimeout(() => {
+      const img = loading.querySelector('img');
+      const p = loading.querySelector('p');
+      if (img) img.classList.remove('opacity-0');
+      if (p) p.classList.remove('opacity-0');
+      setTimeout(() => {
+        if (loading) {
+          if (p) p.classList.add('opacity-0');
+          if (img) img.classList.add('opacity-0');
+          setTimeout(() => {
+            if (Engine) {
+              Engine.play('MainMenu');
+            } else {
+              alert('Engine not found. Try restarting the game.');
+            }
+          }, 6000);
+        }
+      }, 6000);
+    }, 100);
+  }
+}, 100);
+<</script>>

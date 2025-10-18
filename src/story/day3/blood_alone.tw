@@ -1,0 +1,85 @@
+:: Day3BloodAlone-0
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    This should be it. There was only one abandoned warehouse close to the house.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Go inside->Day3BloodAlone-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-1
+<div class="dialog">
+  <p class="typing-effect">
+    As you approach the warehouse, a chilling sensation runs down your spine. The air is thick with an unsettling silence, broken only by the faint rustling of leaves in the wind. The large, rusted doors of the warehouse loom ahead, slightly ajar as if inviting you in. Gathering your courage, you push the doors open and step inside.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day3BloodAlone-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodAlone-2
+<div class="dialog">
+  <p class="title me">Mavin</p>
+  <p class="typing-effect">
+    Hello <span class="me">who am I</span>, I've been expecting you.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Who are you? And where do you have my wife and daughter?->Day3BloodAlone-3]]
+  </button>
+</div>
+
+:: Day3BloodAlone-3
+<div class="dialog">
+  <p class="title me">Mavin</p>
+  <p class="typing-effect">
+    Ah, straight to the point. I like that. Your wife and daughter are safe, for now.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[What do you want from me?->Day3BloodAlone-4]]
+  </button>
+</div>
+
+:: Day3BloodAlone-4
+<div class="dialog">
+  <p class="title me">Mavin</p>
+  <p class="typing-effect">
+    You see, I've been watching you for some time. You been quite the nuisance, meddling in affairs that don't concern you. But I have a proposition for you.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[What kind of proposition?->Day3BloodAlone-5]]
+  </button>
+</div>
+
+:: Day3BloodAlone-5
+<div class="dialog">
+  <p class="title me">Mavin</p>
+  <p class="typing-effect">
+    Stop working on the Crimson Syndicate case, and in return, your family will be released unharmed.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[TBD->Day3BloodAlone-6]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>

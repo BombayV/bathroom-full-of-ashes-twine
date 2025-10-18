@@ -287,7 +287,7 @@ setTimeout(() => {
 <div class="dialog">
   <p class="title me">Unknown Caller</p>
   <p class="typing-effect">
-    Hmm, let me check my records... Ah yes, that casing was sold to a guy named Danny Morales a couple of days ago. He mentioned something about needing it for protection. I don't know much more than that, sorry.
+    Hmm, let me check my records... Ah yes, that casing was sold to a guy named Luis Juarez a couple of days ago. He mentioned something about needing it for protection. I don't know much more than that, sorry.
   </p>
   <span class="separator"></span>
   <button class="btn">  
@@ -304,11 +304,11 @@ setTimeout(() => {
 <div class="dialog">
   <p class="title me">Who am I?</p>
   <p class="typing-effect">
-    With the information I got from the guy, I can now look for Danny Morales and hopefully find some clues about my wife and daughter.
+    With the information I got from the guy, I can now look for Luis Juarez and hopefully find some clues about my wife and daughter.
   </p>
   <span class="separator"></span>
   <button class="btn">  
-    [[Continue->Day2Casing]]
+    [[Continue->Day1CasingFake]]
   </button>
 </div>
 <<script>>

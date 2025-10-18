@@ -1,14 +1,6 @@
 import { DayTransition } from '../scripts/DayTransition';
-import { InitMainMenu } from '../scripts/MainMenu';
-import { InitStart } from '../scripts/Start';
 
 const EVENTS: Record<string, () => void> = {
-  Start: () => {
-    InitStart();
-  },
-  MainMenu: () => {
-    InitMainMenu();
-  },
   Day0: () => {
     DayTransition('KitchenDay0', 'day-0');
   },
@@ -30,6 +22,9 @@ const EVENTS: Record<string, () => void> = {
   Day1DeadCasing: () => {
     DayTransition('Day1DeadScreenCasing', 'day-1-dead-casing');
   },
+  Day1CasingFake: () => {
+    DayTransition('Day1CasingFakeScreen', 'day-1-casing-fake');
+  },
   Day2AloneFinger: () => {
     DayTransition('Day2AloneFingerStory', 'day-2-alone-finger');
   },
@@ -44,7 +39,22 @@ const EVENTS: Record<string, () => void> = {
   },
   Day2Casing: () => {
     DayTransition('Day2CasingStory', 'day-2-casing');
-  }
+  },
+  Day2BackupFingerDead: () => {
+    DayTransition('Day2BackupFingerDeadScreen', 'day-2-backup-finger-dead');
+  },
+  Day3BloodAlone: () => {
+    DayTransition('Day3BloodAlone-0', 'day-3-blood-alone');
+  },
+  Day3BloodBackup: () => {
+    DayTransition('Day3BloodBackup-0', 'day-3-blood-backup');
+  },
+  Day3FingerAlone: () => {
+    DayTransition('Day3FingerAlone-0', 'day-3-finger-alone');
+  },
+  Day3FingerBackup: () => {
+    DayTransition('Day3FingerBackup-0', 'day-3-finger-backup');
+  },
 };
 
 const passageRenderHandler = (e: any) => {

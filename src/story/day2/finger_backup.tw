@@ -1,1 +1,199 @@
 :: Day2BackupFingerStory
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    This should be the place. Miller, is the team ready?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day2BackupFingerStory-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupFingerStory-1
+<div class="dialog">
+  <p class="title">Miller (radio)</p>
+  <p class="typing-effect">
+    Affirmative, team is in position. Awaiting your signal.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Move in->Day2BackupFingerStory-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupFingerStory-2
+<div class="dialog">
+  <p class="typing-effect">
+    You quietly approach the building, signaling your team to move in. The tension is palpable as you prepare to confront the unknown assailant.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Enter the building->Day2BackupFingerStory-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupFingerStory-3
+<div class="dialog">
+  <p class="title">Police Team</p>
+  <p class="typing-effect">
+    Police! Drop your weapon and surrender!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day2BackupFingerStory-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupFingerStory-4
+<div class="dialog">
+  <p class="typing-effect">
+    The assailant hesitates, realizing they are outnumbered. Slowly, they lower their weapon and raise their hands in surrender.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Arrest the assailant->Day2BackupFingerStory-5]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupFingerStory-5
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    You're under arrest for suspicion of assault with a deadly weapon. You have the right to remain silent...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Move him to the squad car->Day2BackupFingerStory-6]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupFingerStory-6
+<div class="dialog">
+  <p class="typing-effect">
+    Just as you are moving him to the squad car, something unexpected happens...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day2BackupFingerStory-7]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupFingerStory-7
+<<cacheaudio "gunshot" "https://cdn.bombayv.com/gunshot.mp3">>
+<<audio "gunshot" volume 0.5>>
+<<audio "gunshot" play>>
+<div class="dialog">
+  <p class="typing-effect">
+    ...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day2BackupFingerStory-8]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupFingerStory-8
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    SHOOTER! Everyone down!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Take cover and return fire->Day2BackupFingerStory-9]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day2BackupFingerStory-9
+<div class="dialog">
+  <p class="typing-effect">
+    In the chaos, you see him on the floor, laying motionless. You rush to his side to check for a pulse, but it's too late.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[End->Day2BackupFingerDeadScreen]]
+  </button>
+</div>
+
+:: Day2BackupFingerDead
+<div class="w-full relative flex flex-col items-center justify-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <h1 id="day-2-backup-finger-dead" class="text-4xl md:text-5xl lg:text-6xl font-bbh text-center mb-8 transition-opacity duration-5000 opacity-0 ease-in-out">
+    You couldn't obtain any information
+  </h1>
+</div>
+
+
+:: Day2BackupFingerDeadScreen
+<div class="w-full relative flex flex-col items-center h-full px-8 md:px-10 lg:px-24 overflow-y-auto text-white">
+  <div class="w-full max-w-xl mt-12 text-lg">
+    <p class="typing-effect">
+      The assailant was fatally wounded during the confrontation. Despite your efforts, you were unable to extract any information from him before he passed away.
+      <span class="mt-4 block"></span>
+      You were not able to find Lily, nor Kaitlyn.
+      <span class="mt-4 block"></span>
+      Lily thought you were a hero. You were not.
+
+      <button class="mt-4 block text-neutral-400 transition-all duration-300 hover:text-neutral-300 hover:underline cursor-pointer" id="restart">
+        Play again?
+      </button>
+    </p>
+  </div>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'), () => {
+    setTimeout(() => {
+      const restartButton = document.getElementById('restart');
+      if (restartButton) {
+        restartButton.addEventListener('click', window.restartGame);
+      }
+    }, 300);
+  });
+}, 100);
+<</script>>

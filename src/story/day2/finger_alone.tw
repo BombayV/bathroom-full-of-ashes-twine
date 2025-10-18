@@ -1,1 +1,273 @@
 :: Day2AloneFingerStory
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    This should be the place. There seems to be someone in the kitchen. I should bring my gun just in case.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Go inside->AloneFinger-0]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-0
+<div class="dialog">
+  <p class="typing-effect">
+    You sneak into the house through the front door, lockpicking it open with a bobby pin Kaitlyn gave you. You step inside, gun drawn, and slowly make your way to the kitchen.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneFinger-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-1
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Put your hands up! Don't move!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneFinger-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-2
+<div class="dialog">
+  <p class="typing-effect">
+    The figure slowly raises their hands, as he yells back.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneFinger-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-3
+<div class="dialog">
+  <p class="title me">Danny</p>
+  <p class="typing-effect">
+    Don't shoot! I'm unarmed!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Who are you?->AloneFinger-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-4
+<div class="dialog">
+  <p class="title">Danny</p>
+  <p class="typing-effect">
+    My name is Danny. Please, I don't want any trouble.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Where is my wife and daughter?->AloneFinger-5]]
+  </button>
+</div>
+
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-5
+<div class="dialog">
+  <p class="title">Danny</p>
+  <p class="typing-effect">
+    I don't know where they are. Please, I swear I don't know anything.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneFinger-6]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-6
+<div class="dialog">
+  <p class="typing-effect">
+    You lower your gun slightly, still keeping it trained on Danny. He notices this and makes a break for the counter where a knife is kept. It is covered in dried blood, and seems to be made out of gold and obsidian.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneFinger-7]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-7
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Stop! Don't move!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Shoot him->AloneFinger-8]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-8
+<<cacheaudio "gunshot" "https://cdn.bombayv.com/gunshot.mp3">>
+<<audio "gunshot" volume 0.5>>
+<<audio "gunshot" play>>
+<div class="dialog">
+  <p class="typing-effect">
+  ...
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneFinger-9]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-9
+<div class="dialog">
+  <p class="title">Danny</p>
+  <p class="typing-effect">
+    AGGGH! PLEASE DON'T KILL ME! I'LL TELL YOU EVERYTHING!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Where is my wife and daughter?->AloneFinger-10]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-10
+<div class="dialog">
+  <p class="title">Danny</p>
+  <p class="typing-effect">
+    They... they took them. I gave them to my boss, Mavin. Please, don't hurt me!
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Where is your boss Mavin?->AloneFinger-11]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-11
+<div class="dialog">
+  <p class="title">Danny</p>
+  <p class="typing-effect">
+    He... he operates out of an old warehouse down by the docks. Please, I beg you, don't hurt me anymore.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneFinger-12]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-12
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Thank you for your cooperation, Danny. I hope you find peace in prison.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Call the police and leave->AloneFinger-13]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-13
+<div class="dialog">
+  <p class="typing-effect">
+    You call the police and inform them of the situation. They arrive shortly after and take Danny into custody. You leave the house, and wait in your car as you think of what to do next.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->AloneFinger-14]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: AloneFinger-14
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    I know where to find Mavin now. Time to rescue Kaitlyn and Lily. I don't know what I'm going to face, but I have to try.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Go to the warehouse by yourself->Day3FingerAlone]]
+  </button>
+  <button class="btn">  
+    [[Call Miller for help->Day3FingerBackup]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
