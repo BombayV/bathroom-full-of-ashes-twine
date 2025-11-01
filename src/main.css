@@ -42,7 +42,7 @@
   }
 
   .dialog {
-    @apply whitespace-pre-line text-pretty fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-xl text-neutral-300 bg-neutral-900 py-3 px-6 rounded-sm border-neutral-700 border flex gap-2 flex-col items-start justify-start -skew-x-6;
+    @apply whitespace-pre-line text-pretty fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-xl text-neutral-300 bg-neutral-900 py-3 px-6 rounded-sm border-neutral-700 border flex gap-2 flex-col items-start justify-start -skew-x-6;
   }
 
   .title {
@@ -79,5 +79,9 @@
     display: inline-block;
     width: 100% !important;
     @apply py-1 px-4;
+  }
+
+  .bg-img {
+    @apply fixed top-0 left-0 w-full h-full object-cover z-0 opacity-60 grayscale pointer-events-none overflow-y-auto;
   }
 }

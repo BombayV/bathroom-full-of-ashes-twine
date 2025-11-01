@@ -63,6 +63,7 @@ setTimeout(() => {
     [[Look at the floor->BathroomFloor-0]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/bathroom.jpg" alt="Background" class="bg-img">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -82,6 +83,7 @@ setTimeout(() => {
     [[Go Back->Day1Bathroom-2]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/bathroom.jpg" alt="Background" class="bg-img">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -101,6 +103,7 @@ setTimeout(() => {
     [[Go Back->BathroomSink-0]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/bathroom.jpg" alt="Background" class="bg-img">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -124,6 +127,7 @@ setTimeout(() => {
     [[Go Back->Day1Bathroom-2]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/bathroom.jpg" alt="Background" class="bg-img">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -146,6 +150,7 @@ setTimeout(() => {
     [[Go Back->BathroomShower-0]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/bathroom.jpg" alt="Background" class="bg-img">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -163,6 +168,7 @@ setTimeout(() => {
     [[Go Back->BathroomShower-1]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/bathroom.jpg" alt="Background" class="bg-img">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -186,6 +192,7 @@ setTimeout(() => {
     [[Go Back->BathroomShower-1]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/bathroom.jpg" alt="Background" class="bg-img">
 <<set $tastedHair = true>>
 
 :: BathroomShower-1-0
@@ -201,6 +208,7 @@ setTimeout(() => {
     [[Go Back->BathroomShower-0]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/bathroom.jpg" alt="Background" class="bg-img">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -220,6 +228,7 @@ setTimeout(() => {
     [[Go Back->Day1Bathroom-2]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/bathroom.jpg" alt="Background" class="bg-img">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -239,6 +248,7 @@ setTimeout(() => {
     [[Go Back->BathroomFloor-0]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/bathroom.jpg" alt="Background" class="bg-img">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));

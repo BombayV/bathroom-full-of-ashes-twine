@@ -8,6 +8,7 @@
     [[Continue->HouseDay0-1]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/sky.jpg" alt="Background" class="bg-img grayscale-0">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -25,6 +26,8 @@ setTimeout(() => {
     [[Continue->HouseDay0-2]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/sky.jpg" alt="Background" class="bg-img grayscale-0">
+
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -43,6 +46,7 @@ setTimeout(() => {
     [[Continue->HouseDay0-3]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/sky.jpg" alt="Background" class="bg-img grayscale-0">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -62,6 +66,7 @@ setTimeout(() => {
     [[Continue->HouseDay0-4]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/sky.jpg" alt="Background" class="bg-img grayscale-0">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -79,6 +84,7 @@ setTimeout(() => {
     [[Continue->HouseDay0-5]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/sky.jpg" alt="Background" class="bg-img grayscale-0">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -98,6 +104,7 @@ setTimeout(() => {
     [[Continue->HouseDay1-0]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/sky.jpg" alt="Background" class="bg-img grayscale-0">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -115,6 +122,7 @@ setTimeout(() => {
     [[Continue->HouseDay1-1]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/sky.jpg" alt="Background" class="bg-img grayscale-0">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -133,6 +141,7 @@ setTimeout(() => {
     [[Continue->HouseDay1-2]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/sky.jpg" alt="Background" class="bg-img grayscale-0">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -150,6 +159,7 @@ The fire was too fast. The initial report says arson. Heavy accelerant used. Son
     [[Continue->HouseDay1-3]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/sky.jpg" alt="Background" class="bg-img grayscale-0">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -168,6 +178,7 @@ setTimeout(() => {
     [[Continue->HouseDay1-4]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/sky.jpg" alt="Background" class="bg-img grayscale-0">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
@@ -186,6 +197,7 @@ setTimeout(() => {
     [[Enter the house->Day0EnterHouse]]
   </button>
 </div>
+<img src="https://cdn.bombayv.com/sky.jpg" alt="Background" class="bg-img grayscale-0">
 <<script>>
 setTimeout(() => {
   window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
