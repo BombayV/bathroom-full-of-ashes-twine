@@ -1,1 +1,268 @@
 :: Day3BloodBackupAlone-0
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    If that warehouse is truly the backup location, I can't wait for the police. I have to go now, while I still have the chance.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Go to the warehouse alone->Day3BloodBackupAlone-1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-1
+<div class="dialog">
+  <p class="typing-effect">
+    The night is cold and wet. Rain hammers against the windshield as you drive. The warehouse looms ahead, silhouetted against the dark sky. Your hand trembles on the steering wheel.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day3BloodBackupAlone-2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-2
+<div class="dialog">
+  <p class="typing-effect">
+    You cut the engine and kill the lights. The parking lot is empty except for a single black sedan parked near the entrance. Your heart races. This could be it. Or it could be another trap.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Go inside->Day3BloodBackupAlone-3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-3
+<div class="dialog">
+  <p class="typing-effect">
+    The warehouse entrance is unguarded. The doors hang open, creaking slightly in the wind. Your pistol is drawn as you step inside, every nerve on edge.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day3BloodBackupAlone-4]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-4
+<div class="dialog">
+  <p class="title">Mavin</p>
+  <p class="typing-effect">
+    (Voice echoing from the darkness) Detective. I was wondering when you'd come. Took you long enough.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Where are they? Kaitlyn and Lily!->Day3BloodBackupAlone-5]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-5
+<div class="dialog">
+  <p class="title">Mavin</p>
+  <p class="typing-effect">
+    Here. They are here. Safe. For now.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[What do you want?->Day3BloodBackupAlone-6]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-6
+<div class="dialog">
+  <p class="title">Mavin</p>
+  <p class="typing-effect">
+    I want you to understand something. You came here alone. Foolish. Brave. But foolish. You're in my world now. You're surrounded by things you can't see.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Let them go and face me like a man.->Day3BloodBackupAlone-7]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-7
+<div class="dialog">
+  <p class="typing-effect">
+    Lights suddenly flood the warehouse. You see them now—Kaitlyn and Lily, bound to a metal beam in the center of the floor. Mavin emerges from the shadows, flanked by two armed men.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[Continue->Day3BloodBackupAlone-8]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-8
+<div class="dialog">
+  <p class="title">Mavin</p>
+  <p class="typing-effect">
+    You see, you should have accepted my first offer. You should have run. Instead, you came here, alone, to play hero.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">  
+    [[You won't get away with this.->Day3BloodBackupAlone-9]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-9
+<div class="dialog">
+  <p class="typing-effect">
+    A cold smile crosses Mavin's face. He gestures to his men. You realize now that you have limited options. Your finger tightens on the trigger, but so do theirs.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Try to negotiate->Day3BloodBackupAlone-10]]
+  </button>
+  <button class="btn">
+    [[Open fire->Day3BloodBackupAlone-badfinal1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-10
+<div class="dialog">
+  <p class="title me">Who am I?</p>
+  <p class="typing-effect">
+    Mavin. Listen to me. You don't have to do this. Let them go. Let's end this.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodBackupAlone-11]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-11
+<div class="dialog">
+  <p class="title">Mavin</p>
+  <p class="typing-effect">
+    End it? You destroyed my entire operation. You took everything from me. And now you want it to end?
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodBackupAlone-12]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-12
+<div class="dialog">
+  <p class="typing-effect">
+    He raises his hand. The three guns trained on you don't waver.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[...->Day3BloodBackupAlone-badfinal1]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-badfinal1
+<<cacheaudio "gunshot" "https://cdn.bombayv.com/gunshot.mp3">>
+<<audio "gunshot" volume 0.5>>
+<<audio "gunshot" play>>
+<div class="dialog">
+  <p class="typing-effect">
+    Everything happens at once. The gunshots are deafening. Your body burns with pain.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodBackupAlone-badfinal2]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-badfinal2
+<div class="dialog">
+  <p class="typing-effect">
+    You fall to the concrete floor. Your vision blurs. You hear Kaitlyn screaming. Lily crying. Mavin's laughter echoing through the warehouse.
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[Continue->Day3BloodBackupAlone-badfinal3]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>
+
+:: Day3BloodBackupAlone-badfinal3
+<div class="dialog">
+  <p class="typing-effect">
+    <i>You came alone. You came unarmed. You came too late.</i>
+  </p>
+  <span class="separator"></span>
+  <button class="btn">
+    [[END->MainMenu]]
+  </button>
+</div>
+<<script>>
+setTimeout(() => {
+  window.setupTypingAnimation?.(document.querySelector('.typing-effect'));
+}, 100);
+<</script>>

@@ -260,10 +260,10 @@ setTimeout(() => {
   </p>
   <span class="separator"></span>
   <button class="btn">  
-    [[Go to the warehouse by yourself->Day3BloodBackupAlone-0]]
+    [[Go to the warehouse by yourself->Day3BloodBackupAlone]]
   </button>
   <button class="btn">  
-    [[Call Miller for help->Day3BloodBackupBackup-0]]
+    [[Call Miller for help->Day3BloodBackupBackup]]
   </button>
 </div>
 <<script>>
